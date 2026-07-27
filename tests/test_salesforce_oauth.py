@@ -12,6 +12,7 @@ from services.metadata_provider_factory import create_metadata_provider
 from services.salesforce_oauth_service import (
     SF_ACCESS_TOKEN,
     SF_INSTANCE_URL,
+    SF_OAUTH_ERROR,
     SF_OAUTH_STATE,
     SF_PKCE_VERIFIER,
     SF_USERNAME,
@@ -20,6 +21,7 @@ from services.salesforce_oauth_service import (
     exchange_authorization_code,
     handle_oauth_callback,
     is_connected,
+    is_oauth_configured,
     store_connection,
 )
 import pandas as pd
@@ -137,6 +139,48 @@ class SalesforceOAuthServiceTests(unittest.TestCase):
                 handled = handle_oauth_callback(self.session, query_params)
         self.assertTrue(handled)
         self.assertTrue(is_connected(self.session))
+
+    def test_handle_oauth_callback_no_code_returns_false(self) -> None:
+        handled = handle_oauth_callback(self.session, {})
+        self.assertFalse(handled)
+
+    def test_handle_oauth_callback_state_mismatch(self) -> None:
+        self.session[SF_OAUTH_STATE] = "expected-state"
+        self.session[SF_PKCE_VERIFIER] = "verifier-1"
+        handled = handle_oauth_callback(
+            self.session,
+            {"code": "auth-code", "state": "wrong-state"},
+        )
+        self.assertTrue(handled)
+        self.assertFalse(is_connected(self.session))
+        self.assertIn("state mismatch", str(self.session.get(SF_OAUTH_ERROR, "")).lower())
+
+    def test_handle_oauth_callback_oauth_cancel(self) -> None:
+        handled = handle_oauth_callback(
+            self.session,
+            {"error": "access_denied", "error_description": "User cancelled"},
+        )
+        self.assertTrue(handled)
+        self.assertEqual(self.session.get(SF_OAUTH_ERROR), "User cancelled")
+
+    @patch("services.salesforce_oauth_service.exchange_authorization_code")
+    def test_handle_oauth_callback_token_failure(self, exchange_mock: MagicMock) -> None:
+        self.session[SF_OAUTH_STATE] = "state-1"
+        self.session[SF_PKCE_VERIFIER] = "verifier-1"
+        exchange_mock.side_effect = ConnectionError("Salesforce authorization failed.")
+        handled = handle_oauth_callback(
+            self.session,
+            {"code": "auth-code", "state": "state-1"},
+        )
+        self.assertTrue(handled)
+        self.assertFalse(is_connected(self.session))
+        self.assertIn("authorization failed", str(self.session.get(SF_OAUTH_ERROR, "")).lower())
+
+    @patch.dict(os.environ, {}, clear=True)
+    def test_build_authorize_url_requires_configuration(self) -> None:
+        with self.assertRaises(RuntimeError):
+            build_authorize_url(self.session, environment="production")
+        self.assertFalse(is_oauth_configured())
 
     def test_disconnect_clears_session_keys(self) -> None:
         self.session[SF_ACCESS_TOKEN] = "token"

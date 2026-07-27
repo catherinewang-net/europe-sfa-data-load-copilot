@@ -1,10 +1,12 @@
-# Europe SFA Data Load Copilot
+# PepFlow AI
 
-Prepare and validate CSV files before uploading them into Salesforce using local EUSFA Salesforce DX metadata.
+**Prepare. Validate. Load.**
+
+Prepare and validate CSV files before uploading them into Salesforce using live org metadata or an approved EUSFA metadata snapshot.
 
 ## Share with your team
 
-Teammates run the Copilot **locally** (each person needs their own EUSFA metadata clone). Full onboarding, env vars, demo CSV, and troubleshooting:
+Teammates run PepFlow AI **locally** (each person needs their own EUSFA metadata clone). Full onboarding, env vars, demo CSV, and troubleshooting:
 
 **→ [docs/TEAM_SETUP.md](docs/TEAM_SETUP.md)**
 
@@ -49,13 +51,13 @@ pip install -r requirements.txt
 git clone <eusfa-sfdx-repo-url> "%USERPROFILE%\.cursor\EUSFA SF\EUROPE_SFA"
 ```
 
-4. Point the Copilot at your local Salesforce metadata clone (optional if using the default path above):
+4. Point PepFlow AI at your local Salesforce metadata clone (optional if using the default path above):
 
 ```powershell
 $env:EUSFA_SFDX_REPO_PATH = "C:\path\to\EUROPE_SFA"
 ```
 
-The Copilot reads metadata from `EUSFA_SFDX_REPO_PATH` only. It never modifies Salesforce repository files automatically.
+The app reads metadata from `EUSFA_SFDX_REPO_PATH` only. It never modifies Salesforce repository files automatically.
 
 ## Run the app
 
@@ -67,7 +69,7 @@ streamlit run app.py
 
 ## Salesforce metadata refresh
 
-Use the **Salesforce Metadata Source** panel at the top of the app:
+Use the **Metadata Source** panel at the top of the app:
 
 | Action | What it does |
 |--------|----------------|
@@ -79,7 +81,7 @@ If a non-fast-forward update is required, the Copilot stops and asks you to reso
 
 ### Session metadata version lock
 
-When you upload a CSV, the Copilot records the current Salesforce metadata commit hash for that session. If metadata changes later (refresh or pull), you will see a warning that validation may no longer match the version used when you started.
+When you upload a CSV, PepFlow AI records the current Salesforce metadata commit hash for that session. If metadata changes later (refresh or pull), you will see a warning that validation may no longer match the version used when you started.
 
 ## Project layout
 
@@ -93,7 +95,7 @@ pytest
 
 ## Leadership demo deployment (Phase 1)
 
-Hosted demo runs on **Azure Container Apps** with **Entra ID SSO** and a **bundled read-only EUSFA metadata snapshot** (no Salesforce OAuth yet).
+Hosted demo runs on **Azure Container Apps** with optional **Entra ID SSO** and a **bundled read-only EUSFA metadata snapshot**. Connect Salesforce via OAuth for live org metadata.
 
 1. Bundle metadata: `.\scripts\bundle_metadata_snapshot.ps1`
 2. Audit: `python scripts\audit_bundled_metadata.py`
@@ -109,7 +111,7 @@ Rollback: [docs/deployment/ROLLBACK_PLAN.md](docs/deployment/ROLLBACK_PLAN.md)
 | `SSO_DISABLED` | `true` (optional) | unset |
 | Metadata path | `EUSFA_SFDX_REPO_PATH` | `/app/bundled_metadata` |
 
-Phase 2 (live Salesforce OAuth metadata) is documented in the deployment guide only.
+Phase 2 (live Salesforce OAuth metadata) is implemented — see [docs/SALESFORCE_OAUTH.md](docs/SALESFORCE_OAUTH.md).
 
 ## Streamlit Community Cloud (team demo)
 

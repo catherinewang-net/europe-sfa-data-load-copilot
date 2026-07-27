@@ -16,7 +16,7 @@ def generate_summary(reports: list[dict]) -> str:
     total_warnings = 0
     total_corrections = 0
 
-    lines.append("## Europe SFA Data Load Validation Summary\n")
+    lines.append("## PepFlow AI Validation Summary\n")
 
     for report in reports:
         filename = report.get("filename", "unknown")

@@ -14,7 +14,7 @@ def generate_copilot_summary(
 ) -> str:
     """Build a plain-English executive summary of the copilot session."""
     lines = [
-        "## Europe SFA Data Load Copilot Summary\n",
+        "## PepFlow AI Summary\n",
         f"**Upload method:** {upload_method}",
         f"**Template:** {template}\n",
     ]

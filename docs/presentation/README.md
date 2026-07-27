@@ -1,13 +1,15 @@
-# Europe SFA Data Load Copilot — Presentation
+# PepFlow AI — Presentation
 
-A self-contained HTML slide deck for leadership and stakeholder presentations (15 minutes per person).
+A self-contained HTML slide deck for leadership and stakeholder presentations (~15 minutes). Includes plain-language Europe SFA context for audiences not on the SFA team.
 
 ## Files
 
 | File | Purpose |
 |------|---------|
-| `final_project_presentation.html` | **Final project deck** — self-contained, leadership-focused (12 slides) |
-| `index.html` | Extended slide deck (13 slides, external CSS) |
+| `final_project_presentation.html` | **Final project deck** — self-contained, PepFlow AI branding (17 slides) |
+| `PRESENTER_SCRIPT.md` | Full presenter script, demo steps, Q&A backup |
+| `IMAGE_PLACEHOLDER_GUIDE.md` | Where to insert your own screenshots |
+| `index.html` | Extended slide deck (external CSS) |
 | `styles.css` | PepsiCo-branded styles (linked from `index.html`) |
 | `README.md` | This file |
 
@@ -45,26 +47,33 @@ No server or internet connection required after download. Works fully offline.
 4. Click the **dots** in the navigation bar to jump to any slide.
 5. **Home** / **End** jump to first / last slide.
 
-## Slide Overview (12 slides)
+## Slide Overview (17 slides)
 
-| # | Title | ~Time |
+| # | Title | Notes |
 |---|-------|-------|
-| 1 | Title / Hook | — |
-| 2 | The Problem | 2 min |
-| 3 | Who It Helps | — |
-| 4 | Our Approach | 2 min |
-| 5 | Key Decisions & Tradeoffs | — |
-| 6 | Solution Overview (Architecture) | 2 min |
-| 7 | Unified Prepare & Validate Flow | — |
-| 8 | Key Features Built | 2 min |
-| 9 | Demo Script (2–3 min) | 2–3 min |
-| 10 | Impact & Value | — |
-| 11 | What's Next / Roadmap | 1 min |
-| 12 | Q&A | 5 min |
+| 1 | PepFlow AI — Title / Hook | Prepare. Validate. Load. |
+| 2 | What is Europe SFA? | Context for non-SFA audience |
+| 3 | The Problem | Quote callout |
+| 4 | Two Upload Paths | DIT vs Workbench split |
+| 5 | DIT vs Workbench comparison | Side-by-side table |
+| 6 | Broken Data: Dates | CSS spreadsheet mock |
+| 7 | Missing + Picklists | Split panel |
+| 8 | IDs & Formatting | Scientific notation, duplicates |
+| 9 | **Live Demo** | **Mid-deck — switch to Streamlit** |
+| 10 | Workbench errors vs PepFlow | Before/after panels |
+| 11 | How PepFlow Fixes It | Granular fix cards |
+| 12 | Process Walkthrough | Timeline |
+| 13 | Salesforce OAuth | Brief connection story |
+| 14 | Impact | Outcomes list |
+| 15 | Final Outcome + Next Steps | Split panel |
+| 16 | Recap | Problem/solution pair |
+| 17 | Q&A + Sources | 5 min |
+
+See `PRESENTER_SCRIPT.md` for full talking points and demo script.
 
 ## Live Demo Setup
 
-Before presenting slide 9, start the Streamlit app:
+Before presenting **slide 9** (mid-deck), start the Streamlit app:
 
 ```powershell
 cd C:\Users\cwangz162\Europe-SFA-Data-Load-Copilot

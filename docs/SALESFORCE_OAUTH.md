@@ -1,4 +1,4 @@
-# Salesforce OAuth — Europe SFA Data Load Copilot
+# Salesforce OAuth — PepFlow AI
 
 Salesforce OAuth is the **primary** authentication path for live org metadata. Microsoft Entra SSO (`st.login()`) remains an optional app-level gate configured separately and does not replace Salesforce connection.
 

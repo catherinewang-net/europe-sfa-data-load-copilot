@@ -2,11 +2,14 @@
 
 from __future__ import annotations
 
+import logging
 from pathlib import Path
 
 from adapters.repository_metadata_provider import RepositoryMetadataProvider
 from adapters.sfdx_metadata.models import FieldDefinition, PicklistValue, TemplateDefinition
 from services.salesforce.live_metadata_provider import LiveSalesforceMetadataProvider
+
+_logger = logging.getLogger(__name__)
 
 
 class HybridMetadataProvider:
@@ -46,17 +49,32 @@ class HybridMetadataProvider:
         return self._repository.list_templates()
 
     def get_object_fields(self, object_name: str) -> dict[str, FieldDefinition]:
-        return self._live.get_object_fields(object_name)
+        return self._with_live_fallback(
+            "object fields",
+            object_name,
+            lambda: self._live.get_object_fields(object_name),
+            lambda: self._repository.get_object_fields(object_name),
+        )
 
     def get_picklist_values(self, object_name: str, field_name: str) -> list[str]:
-        return self._live.get_picklist_values(object_name, field_name)
+        return self._with_live_fallback(
+            "picklist values",
+            object_name,
+            lambda: self._live.get_picklist_values(object_name, field_name),
+            lambda: self._repository.get_picklist_values(object_name, field_name),
+        )
 
     def get_picklist_value_details(
         self,
         object_name: str,
         field_name: str,
     ) -> list[PicklistValue]:
-        return self._live.get_picklist_value_details(object_name, field_name)
+        return self._with_live_fallback(
+            "picklist value details",
+            object_name,
+            lambda: self._live.get_picklist_value_details(object_name, field_name),
+            lambda: self._repository.get_picklist_value_details(object_name, field_name),
+        )
 
     def get_allowed_values_for_record_type(
         self,
@@ -64,10 +82,28 @@ class HybridMetadataProvider:
         record_type: str,
         field_name: str,
     ) -> list[str]:
-        return self._live.get_allowed_values_for_record_type(object_name, record_type, field_name)
+        return self._with_live_fallback(
+            "record-type picklist values",
+            object_name,
+            lambda: self._live.get_allowed_values_for_record_type(
+                object_name,
+                record_type,
+                field_name,
+            ),
+            lambda: self._repository.get_allowed_values_for_record_type(
+                object_name,
+                record_type,
+                field_name,
+            ),
+        )
 
     def get_record_type_names(self, object_name: str) -> list[str]:
-        return self._live.get_record_type_names(object_name)
+        return self._with_live_fallback(
+            "record types",
+            object_name,
+            lambda: self._live.get_record_type_names(object_name),
+            lambda: self._repository.get_record_type_names(object_name),
+        )
 
     def has_record_type_picklist_restriction(
         self,
@@ -75,8 +111,29 @@ class HybridMetadataProvider:
         record_type_name: str,
         field_name: str,
     ) -> bool:
-        return self._live.has_record_type_picklist_restriction(
+        return self._with_live_fallback(
+            "record-type picklist restriction",
             object_name,
-            record_type_name,
-            field_name,
+            lambda: self._live.has_record_type_picklist_restriction(
+                object_name,
+                record_type_name,
+                field_name,
+            ),
+            lambda: self._repository.has_record_type_picklist_restriction(
+                object_name,
+                record_type_name,
+                field_name,
+            ),
         )
+
+    def _with_live_fallback(self, operation: str, object_name: str, live_call, repo_call):
+        try:
+            return live_call()
+        except ConnectionError as exc:
+            _logger.warning(
+                "Live Salesforce %s failed for %s; using approved snapshot. %s",
+                operation,
+                object_name,
+                exc,
+            )
+            return repo_call()

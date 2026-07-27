@@ -11,6 +11,11 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 load_dotenv(PROJECT_ROOT / ".env")
 
+# User-facing product identity (internal package/repo names unchanged).
+APP_NAME = "PepFlow AI"
+APP_TAGLINE = "Prepare. Validate. Load."
+APP_DESCRIPTION = "Prepare Salesforce data with live metadata from your organization."
+
 # ---------------------------------------------------------------------------
 # Deployment and metadata source configuration
 # ---------------------------------------------------------------------------

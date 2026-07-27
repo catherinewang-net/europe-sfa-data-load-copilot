@@ -28,6 +28,11 @@ from services.salesforce_oauth_service import (
 )
 
 
+SESSION_NOTE = (
+    "Your Salesforce connection is active only for this browser session."
+)
+
+
 def _format_timestamp(value: datetime | None) -> str:
     if value is None:
         return "Not refreshed this session"
@@ -86,6 +91,11 @@ def render_salesforce_connection_card() -> dict[str, Any]:
                 st.markdown(f"**Org:** {info.org_name}")
                 st.markdown(f"**Environment:** {info.environment.title()}")
                 st.markdown(f"**User:** {info.username or info.user_id}")
+                st.markdown(f"**Instance:** `{info.instance_url}`")
+                st.markdown(
+                    f"**Last refresh:** {_format_timestamp(info.metadata_refreshed_at)}"
+                )
+            st.caption(SESSION_NOTE)
 
             action_cols = st.columns(2)
             with action_cols[0]:

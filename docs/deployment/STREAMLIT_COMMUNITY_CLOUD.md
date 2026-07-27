@@ -1,6 +1,6 @@
 # Streamlit Community Cloud deployment
 
-Deploy the Europe SFA Data Load Copilot for a **shareable team demo** without requiring each teammate to clone the EUSFA Salesforce DX repository.
+Deploy PepFlow AI for a **shareable team demo** without requiring each teammate to clone the EUSFA Salesforce DX repository.
 
 ## Prerequisites
 

@@ -216,6 +216,10 @@ class SalesforceConnectionUiStructureTests(unittest.TestCase):
         self.assertIn("Refresh Salesforce Metadata", source)
         self.assertIn("Disconnect", source)
 
+    def test_connected_card_shows_instance_url(self) -> None:
+        source = inspect.getsource(salesforce_connection.render_salesforce_connection_card)
+        self.assertIn("info.instance_url", source)
+
     def test_refresh_failure_does_not_claim_current_metadata(self) -> None:
         source = inspect.getsource(salesforce_connection.render_salesforce_connection_card)
         self.assertIn("_sf_refresh_error", source)
@@ -227,11 +231,9 @@ class MetadataSourceUiStructureTests(unittest.TestCase):
         source = inspect.getsource(metadata_source.render_metadata_source_panel)
         self.assertIn('st.subheader("Metadata Source")', source)
 
-    def test_snapshot_panel_does_not_show_sf_metadata_connected(self) -> None:
+    def test_snapshot_panel_shows_automatic_fallback_caption(self) -> None:
         source = inspect.getsource(metadata_source._render_snapshot_metadata_source_panel)
-        self.assertNotIn("Salesforce Metadata Connected", source)
-        self.assertIn("metadata_source_label(live_connected=False)", source)
-        self.assertIn("Refresh Snapshot", source)
+        self.assertIn("SNAPSHOT_FALLBACK_CAPTION", source)
 
     def test_live_panel_shows_last_refreshed_timestamp(self) -> None:
         source = inspect.getsource(metadata_source._render_live_metadata_source_panel)
@@ -249,6 +251,13 @@ class MetadataSourceUiStructureTests(unittest.TestCase):
 
 
 class AppLayoutOrderTests(unittest.TestCase):
+    def test_landing_before_salesforce_connection(self) -> None:
+        with open("app.py", encoding="utf-8") as handle:
+            source = handle.read()
+        landing_index = source.index("render_landing_hero()")
+        sf_index = source.index("render_salesforce_connection_card()")
+        self.assertLess(landing_index, sf_index)
+
     def test_salesforce_connection_before_metadata_source(self) -> None:
         with open("app.py", encoding="utf-8") as handle:
             source = handle.read()

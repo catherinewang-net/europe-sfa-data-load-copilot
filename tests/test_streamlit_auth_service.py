@@ -62,7 +62,7 @@ class EnforceStreamlitLoginGateTests(unittest.TestCase):
         with patch("services.streamlit_auth_service.st", mock_st):
             with self.assertRaises(_StreamlitStop):
                 enforce_streamlit_login_gate()
-        mock_st.title.assert_called_once_with("Europe SFA Data Load Copilot")
+        mock_st.title.assert_called_once_with("PepFlow AI")
         mock_st.error.assert_called_once_with(_SSO_NOT_CONFIGURED_MESSAGE)
         mock_st.stop.assert_called_once()
         mock_st.login.assert_not_called()
@@ -75,7 +75,7 @@ class EnforceStreamlitLoginGateTests(unittest.TestCase):
         with patch("services.streamlit_auth_service.st", mock_st):
             with self.assertRaises(_StreamlitStop):
                 enforce_streamlit_login_gate()
-        mock_st.title.assert_called_once_with("Europe SFA Data Load Copilot")
+        mock_st.title.assert_called_once_with("PepFlow AI")
         mock_st.write.assert_called_once_with("Sign in to continue.")
         mock_st.button.assert_called_once_with("Sign in")
         mock_st.stop.assert_called_once()

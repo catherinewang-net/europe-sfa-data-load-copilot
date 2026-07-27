@@ -1,8 +1,8 @@
-# Europe SFA Data Load Copilot — Presenter Script & Demo Guide
+# PepFlow AI — Presenter Script & Demo Guide
 
-**Audience:** Leadership  
+**Audience:** Leadership and team members who are NOT on Europe SFA — plain-language context throughout  
 **Total time:** ~15 minutes (7–8 min talk · 2–3 min live demo · 5 min Q&A)  
-**Deck:** `docs/presentation/final_project_presentation.html` (12 slides)  
+**Deck:** `docs/presentation/final_project_presentation.html` (17 slides)  
 **Demo file:** `test_data/retail_promotion/RO_Promotion_Faulty_Validation_Test.csv`  
 **Demo path:** Data Import Tool → Retail Promotion → Prepare & Validate File
 
@@ -10,266 +10,306 @@
 
 ## Part 1: Full Presenter Script (~7–8 minutes)
 
-Read naturally — these are talking points, not a word-for-word teleprompter. Pause briefly after each slide transition.
+Read naturally — talking points, not a teleprompter. Pause briefly after each slide transition.
 
 ---
 
 ### Slide 1 — Title / Hook (~45 sec)
 
-**Europe SFA Data Load Copilot**
+**PepFlow AI · Prepare. Validate. Load.**
 
 > Good [morning/afternoon], everyone. Thank you for the time.
 >
 > I want to start with a question most of us have lived through: *How many hours have we lost fixing a CSV that Salesforce still rejects at upload?*
 >
-> That gap — between a business spreadsheet and a file Workbench or the Data Import Tool will accept — is exactly what the **Europe SFA Data Load Copilot** addresses.
+> That's the gap **PepFlow AI** addresses — the Europe SFA Data Load Copilot. It prepares and validates data *before* upload to Workbench or the Data Import Tool: faster, safer, fewer errors.
 >
-> It's a Streamlit application that prepares and validates data *before* upload: faster, safer, and with fewer errors. This is my final project, built against our local EUSFA Salesforce metadata.
+> Tagline: **Prepare. Validate. Load.**
 
-*Leadership should notice:* Clear problem framing, not a feature tour yet.
+*Audience should notice:* Clear problem framing; PepFlow AI branding.
 
 ---
 
-### Slide 2 — The Problem (~60 sec)
+### Slide 2 — What is Europe SFA? (~60 sec)
 
-**Manual data prep slows every SFA load**
+**Context for non-SFA audience**
 
-> Every load cycle, teams juggle Excel, template PDFs, and tribal knowledge. The same checks get repeated by hand.
+> If you're not on the Europe SFA team, here's the context.
 >
-> Picklist labels, date formats, header names — none of that is validated until someone tries to upload. And when Workbench or DIT rejects the file, the team goes back to square one.
+> **SFA — Sales Force Automation** — is PepsiCo's Salesforce deployment for European markets: promotions, customers, products, routing.
 >
-> The pain point isn't Salesforce itself. It's the **preparation gap**: turning a market spreadsheet into something the platform will actually accept, without finding out at the last minute.
+> When a market launches or updates data, teams don't type row-by-row. They prepare **CSV spreadsheet exports** with hundreds or thousands of rows and bulk-upload them.
+>
+> Imagine shipping a product catalog to 20 countries — each fills an Excel template, and every file must match Salesforce's exact rules or the whole upload fails.
 
-*Leadership should notice:* This is an operational workflow problem, not an IT tooling complaint.
+*Audience should notice:* Plain-language SFA explanation; why CSV uploads matter at scale.
 
 ---
 
-### Slide 3 — Why It Matters (~50 sec)
+### Slide 3 — The Problem (~50 sec)
 
-**Bad data has real deployment cost**
+**The preparation gap**
 
-> When loads fail, the cost is real. Invalid picklists, wrong date formats, malformed rows — Salesforce rejects the whole file.
+> Read the quote on screen — this story is familiar on every deployment.
 >
-> Each failure sends teams back to Excel and delays SFA deployment timelines across markets. Loaders end up guessing API values and hoping the upload succeeds.
+> Teams juggle Excel, template PDFs, and tribal knowledge. The same checks get repeated by hand.
 >
-> And as Europe SFA expands templates and markets, **manual review simply doesn't scale**. This is operational risk and wasted capacity — not just an inconvenience for admins.
+> Picklist labels, date formats, header names — none validated until someone tries to upload. One bad row can reject the entire file.
+>
+> The pain isn't Salesforce itself. It's the **preparation gap** between a market spreadsheet and a file the platform will accept.
 
-*Leadership should notice:* Business impact — delays, rework, scale risk — tied to data quality.
+*Audience should notice:* Operational workflow problem, not an IT complaint.
 
 ---
 
-### Slide 4 — My Approach (~60 sec)
+### Slide 4 — Two Upload Paths (~50 sec)
 
-**A guided path from upload to corrected CSV**
+**DIT vs Workbench intro**
 
-> The Copilot is a **preparation layer**, not a replacement for Salesforce upload tools. Workbench and DIT remain the upload path.
+> There are **two ways** to bulk-load data into Salesforce for Europe SFA.
 >
-> Walk through the flow on screen: upload a file → the app detects the template and upload method → validates against EUSFA metadata → proposes fixes → the user approves → downloads a ready CSV.
+> **Data Import Tool (DIT)** — PepsiCo's spreadsheet template tool. Friendly headers like `*Promotion Name`, dates as DD/MM/YYYY. Used by market ops.
 >
-> Importantly, it supports **both Workbench and the Data Import Tool** — API field names and YYYY-MM-DD for Workbench; friendly headers and DD/MM/YYYY for DIT — all validated against the same metadata source.
+> **Salesforce Workbench** — alternative path with API field names like `Name`, `Market__c`, dates as YYYY-MM-DD. Often used by admins.
+>
+> Both validate against the same org — but expect **different column names and date formats**. PepFlow supports both.
 
-*Leadership should notice:* Complements existing tools; doesn't bypass Salesforce governance.
+*Audience should notice:* Two paths, two rule sets — loaders must know their target tool.
 
 ---
 
-### Slide 5 — Key Decisions (~60 sec)
+### Slide 5 — DIT vs Workbench Comparison (~45 sec)
 
-**Design choices that keep the Copilot trustworthy**
+**Same data, two formats**
 
-> Four decisions shaped the architecture.
+> Walk through the comparison table. Same Retail Promotion row — different headers and date formats depending on upload path.
 >
-> First, **data preparation, not Salesforce replacement** — we prepare CSVs before upload; we don't write to Salesforce.
+> DIT: `*Promotion Name`, `*Market`, `06/07/2026`. Workbench: `Name`, `Market__c`, `2026-07-06`.
 >
-> Second, **EUSFA metadata is the single source of truth** — picklists, field types, required fields come from our local Salesforce DX clone, read-only.
->
-> Third, **users stay in control** — safe fixes are proposed for approval; risky changes like picklists and duplicates require explicit action. The Copilot **never auto-guesses** picklist values.
->
-> Fourth, **action-based fixes** — validation results become clear, approvable corrections through **Fix Issues in Copilot**, so loaders can edit inline without leaving the workflow.
+> PepFlow detects which tool you're targeting from your headers and applies the right validation rules.
 
-*Leadership should notice:* Trust and control are deliberate design choices, not afterthoughts.
+*Audience should notice:* Concrete side-by-side difference; not abstract.
 
 ---
 
-### Slide 6 — What the Copilot Does (~60 sec)
+### Slide 6 — Broken Data: Dates (~45 sec)
 
-**Capabilities overview**
+**Malformed dates**
 
-> Quick tour — I won't read every card.
+> Point to the red cells. These look fine in Excel but fail validation.
 >
-> Header and template checks map uploaded columns to EUSFA config. Date formatting catches ambiguous and invalid dates per upload method. Picklist validation shows allowed values but never invents replacements.
+> Row 3: `6/7/2026` — ambiguous US vs EU. Row 5: `31/02/2026` — impossible date. Row 6: `46209` — Excel serial number. Row 7: `July 6, 2026` — text, not DD/MM/YYYY.
 >
-> Whitespace cleanup, leading-zero protection for EANs and SKUs, duplicate detection — all the things that silently break in Excel.
->
-> The app surfaces **blocking vs. review items** with a clear readiness status, and offers two downloads: a **Tool-Ready CSV** for upload and a **Review CSV** with audit context. Over 140 automated tests cover the core validators.
+> All from our fault-injection test file — real patterns loaders hit every cycle.
 
-*Leadership should notice:* Breadth of validation; dual download model; test coverage for credibility.
+*Audience should notice:* Visual proof; issues are subtle in Excel, obvious to Salesforce.
 
 ---
 
-### Slide 7 — Demo Flow (~45 sec)
+### Slide 7 — Missing + Picklists (~45 sec)
 
-**Three steps — faulty file to upload-ready CSV**
+**Required fields and picklist mismatches**
 
-> Before we go live, here's the story we'll walk through in about two minutes.
+> Left table: blank Promotion Name, blank Market — required fields marked with `*` in DIT templates.
 >
-> Step one: upload a **Retail Promotion** test file with intentional errors — dates, picklists, whitespace, formatting.
+> `NOT_A_MARKET` isn't a valid picklist value. `leaflet` vs `Leaflet` — case matters. Salesforce is exact-match.
 >
-> Step two: the Copilot identifies issues. We'll use **Fix Issues in Copilot** for manual corrections and approve safe cleanup changes.
->
-> Step three: when readiness passes, download the **Tool-Ready CSV** for DIT upload — or the **Review CSV** for audit.
->
-> The test file is `RO_Promotion_Faulty_Validation_Test.csv` — a fault-injection file designed to show the full workflow.
+> Loaders often guess from a PDF template. PepFlow shows allowed values from org metadata — but never auto-guesses replacements.
 
-*Leadership should notice:* Demo is scripted and repeatable; not a happy-path-only demo.
+*Audience should notice:* Required fields and picklist precision.
 
 ---
 
-### Slide 8 — Impact (~50 sec)
+### Slide 8 — IDs & Formatting (~40 sec)
 
-**Value delivered to data loading teams**
+**Silent Excel damage**
 
-> Let me lead with outcomes, not features.
+> Scientific notation: Material ID `3.40061E+08` — Excel destroyed the number. Whitespace in promotion names. Duplicate External IDs on rows 12 and 14.
 >
-> The Copilot **reduces manual review time** — validation runs against metadata before anyone touches Workbench or DIT.
->
-> It **prevents common upload failures** — dates, picklists, headers, formatting — caught early, not at upload.
->
-> It **improves data quality** with user-approved corrections and download gating: you can't get a tool-ready file while blockers remain.
->
-> It **makes loading easier for non-technical users** — guided workflow, plain-language fixes.
->
-> And it creates a **reusable foundation** for future markets and templates across Europe SFA.
+> These pass visual Excel review but break at upload.
 
-*Leadership should notice:* Time saved, failures prevented, accessibility for loaders, extensibility.
+*Audience should notice:* Excel is part of the problem, not the solution.
 
 ---
 
-### Slide 9 — Final Outcome (~50 sec)
+### Slide 9 — LIVE DEMO (~15 sec transition → 2–3 min demo)
 
-**A working Copilot — ready for pilot use**
+**Let's see PepFlow catch these issues**
 
-> What was built: a working Streamlit app connected to local EUSFA metadata, full prepare → validate → approve → download workflow, both Workbench and DIT paths.
+> **Now let's test PepFlow.** Switch to the Streamlit app.
 >
-> It runs on Python 3.11+ with a local EUSFA SFDX clone. There's a metadata refresh panel — fetch, compare, pull updates — and session metadata version lock with change warnings.
->
-> Critical point for security and governance: the Copilot **reads metadata from the local repo only**. It never modifies Salesforce repository files and never writes data to Salesforce. It's suitable for pilot use with ops teams now.
+> We'll upload the Retail Promotion validation test file and walk through the full workflow.
 
-*Leadership should notice:* Deliverable is real and pilot-ready; clear security boundary.
+*Then proceed to Part 2 below. After demo, advance to Slide 10.*
 
 ---
 
-### Slide 10 — Next Steps (~40 sec)
+### Slide 10 — Workbench Errors vs PepFlow (~45 sec)
 
-**Where the Copilot goes next**
+**Before vs after upload**
 
-> This isn't a dead end — there's a clear roadmap.
+> Back to the deck. Left panel: typical Workbench failure messages — cryptic, after upload, file rejected.
 >
-> **Expand business rules** — template-specific validation and dependency checks beyond current stubs.
+> Right panel: PepFlow catches the same issues *before* upload — plain language, row numbers, suggested fixes.
 >
-> **Improve metadata refresh** — streamline fetch/pull and CI-ready metadata sync for teams.
->
-> **Batch upload planning** — multi-file preparation and load sequencing for large deployments.
->
-> **UI refinement** — continue improving layout and Fix Issues UX based on loader feedback.
->
-> These are natural extensions of the foundation we've built.
+> This is the value prop: **shift data quality left** — fix before upload, not after failure.
 
-*Leadership should notice:* Forward-looking roadmap; investment already de-risked.
+*Audience should notice:* Contrast is stark; PepFlow complements existing tools.
 
 ---
 
-### Slide 11 — Live Demo Transition (~15 sec)
+### Slide 11 — How PepFlow Fixes It (~50 sec)
 
-**Let's see it in action**
+**Granular fixes**
 
-> **Now let's test the Copilot.**
+> Quick tour — won't read every card.
 >
-> *[Exit fullscreen if needed — Alt+F11 — and switch to the Streamlit app tab. The app should already be running at localhost:8501 or your hosted URL.]*
+> **Whitespace trim** — automatic safe fix. **Date conversion** — per upload method. **Picklist selection** — user picks from allowed values, never auto-guessed. **Leading zeros** — EAN codes only. **Duplicate IDs** flagged. **Scientific notation** detected.
 >
-> I'll walk through the Retail Promotion validation test we just described.
+> Two downloads: **Review CSV** for audit, **Tool-Ready CSV** gated until blockers cleared.
 
-*Then proceed to Part 2 below. After the demo, advance to Slide 12 for Q&A.*
+*Audience should notice:* Safe automation vs. manual control where it matters.
+
+---
+
+### Slide 12 — Process Walkthrough (~45 sec)
+
+**Upload to tool-ready CSV**
+
+> Walk the timeline: Upload → Header Review → Data Cleanup → Fix Issues → Picklist Review → Review CSV → Tool-Ready CSV.
+>
+> PepFlow is a **preparation layer** — loaders download the Tool-Ready CSV and upload via DIT or Workbench as they do today. Original file is never modified.
+
+*Audience should notice:* Concrete, repeatable workflow.
+
+---
+
+### Slide 13 — Salesforce OAuth (~40 sec)
+
+**Connect Salesforce — brief**
+
+> Primary auth: **Connect Salesforce** via OAuth PKCE — not Microsoft Entra.
+>
+> Live org pulls current field types and picklists. Fallback: **Approved Snapshot** for Streamlit Cloud demo.
+>
+> **Read-only** — PepFlow never writes to Salesforce. Entra is optional app gate for hosted deployments only.
+
+*Audience should notice:* Security boundary; flexible deployment.
+
+---
+
+### Slide 14 — Impact (~40 sec)
+
+**Outcomes, not features**
+
+> Less manual review. Fewer upload failures. Better data quality with user-approved corrections. Easier for non-technical loaders. Reusable foundation for new markets.
+
+*Audience should notice:* Business value tied to each outcome.
+
+---
+
+### Slide 15 — Final Outcome (~40 sec)
+
+**Ready for pilot**
+
+> Working Streamlit app, OAuth, hybrid metadata, both upload paths, 140+ tests. Phase 1 on Streamlit Cloud. Next steps: expand rules, production OAuth, batch uploads, UI refinement.
+
+*Audience should notice:* Deliverable is real and pilot-ready.
+
+---
+
+### Slide 16 — Recap (~30 sec)
+
+**Tie back to opening hook**
+
+> The file we started with would have failed in DIT. We caught it in PepFlow — before upload, with plain-language fixes and user approval.
+>
+> **Prepare. Validate. Load.**
+
+*Audience should notice:* Full-circle narrative.
+
+---
+
+### Slide 17 — Q&A (~5 min)
+
+**Time for Q&A**
+
+> Open the floor. Sources on screen for reference.
+
+*See Part 3 for backup answers.*
 
 ---
 
 ## Part 2: Live Demo Script (2–3 minutes)
 
-**Setup:** App running · test CSV path ready · browser tab pre-opened  
+**Setup:** App running (Streamlit Cloud or localhost) · test CSV ready · browser tab pre-opened  
+**Trigger:** Slide 9 — demo is in the **middle** of the deck  
 **Path:** Data Import Tool → Retail Promotion → Prepare & Validate File
 
-| Step | Action | Say (short) | Leadership should notice |
+| Step | Action | Say (short) | Audience should notice |
 |------|--------|-------------|--------------------------|
-| **1** | Switch to Streamlit app (`localhost:8501` or hosted URL) | "Here's the Copilot — same workflow our loaders would use." | Clean, guided UI with labeled steps |
-| **2** | **Step 1:** Select **Data Import Tool** from "Select Target Tool" | "We're using the Data Import Tool path — friendly headers, DD/MM/YYYY dates." | Tool-specific validation rules |
-| **3** | **Step 2:** Select **Retail Promotion** from "Select Business Template" | "Retail Promotion for Romania — one of our active SFA templates." | Template tied to EUSFA metadata |
-| **4** | **Step 3:** Click **🛠️ Prepare & Validate File (Recommended)** | "Full prepare and validate — not just formatting." | Task selection before upload |
-| **5** | **Step 4:** Upload `RO_Promotion_Faulty_Validation_Test.csv` | "This is a fault-injection test file — intentional errors built in." | File overview + 10-row preview appear |
-| **6** | **Header Review:** Review template match status → click **Continue to Data Validation** (or **Approve All High-Confidence Header Changes** if prompted, then Continue) | "Headers are checked against the DIT template first. Original file is never modified." | "Needs User Action" or match % banner; user approves before row validation |
-| **7** | **Data Cleanup:** In the 🧹 **Data Cleanup** card → click **Apply All Safe Changes** | "Safe fixes — whitespace trim, formatting — applied with one click." | Category breakdown (whitespace, punctuation, etc.); success message |
-| **8** | **Fix Issues in Copilot:** Scroll to **Fix Issues in Copilot** → expand **Row 5 — *Start Date(dd/mm/yyyy)** (Invalid Calendar Date, `31/02/2026`) → enter a valid date e.g. `06/07/2026` → click **Save Correction** | "Invalid dates can't be auto-guessed — the loader fixes them inline with metadata-aware validation." | Issue count decreases; expander shows row, field, problem; correction saved to working copy |
-| **9** | **Picklist Review:** Scroll to **Picklist Review** → on **\*Market** or **\*Promotion Type** card → click **Review N Values** → in inline editor, select a valid allowed value (e.g. change `NOT_A_MARKET` → `RO`, or `INVALID_TYPE` → `Leaflet`) → click **Apply Selected Picklist Replacements** | "Picklists show allowed values from metadata — we choose, the Copilot never guesses." | Allowed values expander; valid options only; no invented replacements |
-| **10** | Scroll to **Upload Readiness** and download section | "Readiness is explicit — we're not ready for tool upload yet." | **Upload Readiness: NOT READY** status with explanation |
-| **11** | Click **Download Review CSV** | "Even when not tool-ready, teams get an audit file with approved changes and issue notes." | Review CSV always available; Tool-Ready button disabled or shows gating message |
-| **12** *(optional, ~30 sec)* | Fix one more issue in **Fix Issues in Copilot** (e.g. Row 6 — Text Date) or approve another picklist trim | "Each fix improves readiness — watch the status update." | Issue count drops; readiness explanation shortens |
-| **13** | Point to **Download Tool-Ready CSV** (disabled if blockers remain) | "Tool-Ready CSV unlocks only when all blocking issues are resolved — that's the file that goes straight to DIT." | Gating message: "Tool-ready download will become available after blocking issues are resolved." |
-| **Close** | Return to Slide 12 (Q&A) | "That's the full loop — upload, validate, fix with approval, download when ready." | End-to-end workflow in under three minutes |
+| **1** | Switch to Streamlit app | "Here's PepFlow — same workflow our loaders use." | Clean, guided UI |
+| **2** | Point to **Salesforce Connection** card | "Phase 1 uses Approved Snapshot. Devs can Connect Salesforce for live metadata." | Metadata source labeled |
+| **3** | Select **Data Import Tool** | "DIT path — friendly headers, DD/MM/YYYY dates." | Tool-specific rules |
+| **4** | Select **Retail Promotion** | "Romania Retail Promotion — one of our active templates." | Template tied to EUSFA |
+| **5** | Click **Prepare & Validate File** | "Full prepare and validate — not just formatting." | Task before upload |
+| **6** | Upload `RO_Promotion_Faulty_Validation_Test.csv` | "Fault-injection test file — 26 rows of intentional errors." | Preview + file overview |
+| **7** | **Header Review** → Continue | "Headers checked first. Original file never modified." | Match % banner |
+| **8** | **Data Cleanup** → Apply All Safe Changes | "Whitespace trim — one click." | Category breakdown |
+| **9** | **Fix Issues:** Row 5 invalid date → Save | "Ambiguous dates need loader input — inline fix." | Issue count drops |
+| **10** | **Picklist Review:** NOT_A_MARKET → select RO → Apply | "Allowed values only — we choose, PepFlow never guesses." | No invented replacements |
+| **11** | Scroll to **Upload Readiness** | "NOT READY until blockers cleared." | Gating works |
+| **12** | **Download Review CSV** | "Audit file even when not tool-ready." | Review CSV always available |
+| **13** | Point to **Tool-Ready CSV** (disabled if blockers) | "Unlocks only when all blocking issues resolved." | Download gating |
+| **Close** | Return to Slide 10 | "That's the loop — upload, validate, fix, download when ready." | End-to-end in under 3 min |
 
-### Demo highlights to call out (if time allows)
+### Demo highlights (if time allows)
 
-- **Metadata source panel** at top — shows connected EUSFA repo (read-only).
-- **Original file never modified** — all changes on a working copy.
-- **Fix Issues vs. Picklist Review** — dates/duplicates in Fix Issues; picklists in Picklist Review (by design).
-- **Review CSV vs. Tool-Ready CSV** — audit trail vs. upload file.
+- **Salesforce Connection card** — Approved Snapshot or live org.
+- **Fix Issues vs Picklist Review** — dates/duplicates vs picklists (by design).
+- **Review CSV vs Tool-Ready CSV** — audit vs upload file.
 
 ---
 
 ## Part 3: Q&A Prep (~5 minutes)
 
-*Speaker backup only — not on slides.*
+*Speaker backup — not on slides.*
 
-### Q1: "Why not just use Excel? Our teams already know Excel."
+### Q1: "Why not just use Excel?"
 
-- Excel is great for editing; it is **not metadata-aware**. It strips leading zeros, misreads dates, and has no picklist validation.
-- The Copilot **doesn't replace Excel** — it sits between Excel and Salesforce, catching errors Excel cannot see.
-- Loaders still work in familiar CSV format; the app adds **guided validation and approval**, not a new data entry tool.
-- Review CSV gives an audit trail Excel macros cannot replicate against live Salesforce metadata.
+- Excel isn't metadata-aware — strips leading zeros, misreads dates, no picklist validation.
+- PepFlow sits **between Excel and Salesforce**, not replacing Excel.
+- Review CSV gives an audit trail Excel macros can't replicate against live metadata.
 
-### Q2: "How is this different from Salesforce's native Data Import Tool or Workbench?"
+### Q2: "How is this different from DIT or Workbench?"
 
-- Workbench and DIT **upload** data; they reject bad files at upload time — after hours of prep.
-- The Copilot **prepares and validates before upload** — same metadata rules, but errors surface early with plain-language fixes.
-- It supports **both upload paths** with method-specific date formats and header conventions.
-- It is complementary: download Tool-Ready CSV → upload via DIT or Workbench as today.
+- DIT and Workbench **upload** data; they reject bad files at upload time.
+- PepFlow **prepares before upload** — same rules, errors surface early with plain-language fixes.
+- Complementary: download Tool-Ready CSV → upload via DIT or Workbench as today.
 
-### Q3: "What's the deployment timeline? When can teams use this?"
+### Q3: "What's the deployment timeline?"
 
-- The app is **working today** for local/pilot use (`streamlit run app.py` + local EUSFA SFDX clone).
-- Phase 1 demo deployment docs exist (`docs/deployment/PHASE1_DEMO_DEPLOYMENT.md`) for hosted pilot.
-- Production rollout depends on hosting decision (internal Streamlit server, container, etc.) and ops onboarding — **weeks, not months**, for a controlled pilot.
-- 140+ automated tests reduce regression risk during rollout.
+- Phase 1 demo live on Streamlit Community Cloud with bundled snapshot.
+- Local dev: `streamlit run app.py` + SFDX clone or Connect Salesforce.
+- Controlled pilot: **weeks, not months**. 140+ tests reduce regression risk.
 
-### Q4: "What about security? Does this touch production Salesforce?"
+### Q4: "What about security?"
 
-- **No writes to Salesforce** — read-only access to local EUSFA metadata repo (`EUSFA_SFDX_REPO_PATH`).
-- User CSVs are processed **in-session**; no data persisted to external services in the default local setup.
-- Metadata refresh (fetch/pull) is **user-initiated** and targets the local clone, not production orgs directly.
-- SSO can be enabled via Streamlit auth when hosted (`is_sso_required()` in app config).
-- Suitable for review by InfoSec as a **pre-upload preparation utility**, not a data integration platform.
+- **No writes to Salesforce** — read-only metadata via OAuth or snapshot.
+- OAuth tokens in session state only — not persisted.
+- CSVs processed in-session. Optional Entra OIDC is app-level gate only.
 
-### Q5: "Can this work for other markets and templates beyond Retail Promotion?"
+### Q5: "Other markets and templates?"
 
-- **Yes — by design.** Template configs and validators are metadata-driven from EUSFA.
-- Workbench and DIT paths already support multiple templates (Customers, Products, Routing, etc.).
-- Retail Promotion is the demo because the fault-injection test file is comprehensive and Romania-specific.
-- Adding a new template is primarily **metadata + template config**, not a rebuild — the roadmap includes expanding business rules per template.
+- **Yes — by design.** Metadata-driven from EUSFA.
+- Retail Promotion is the demo because the fault-injection file is comprehensive.
+- New template = metadata + config, not a rebuild.
 
-### Q6: "Who maintains this after the project? What's the ongoing cost?"
+### Q6: "Who maintains this?"
 
-- Built in **Python / Streamlit** — standard stack, no proprietary runtime.
-- Validators and template configs are **modular**; metadata sync follows existing SFDX workflows teams already use.
-- Maintenance = metadata refresh when EUSFA org changes + adding template rules as new markets onboard.
-- Automated test suite (140+ tests) catches regressions when metadata or templates change.
-- Low hosting footprint for Streamlit; no Salesforce license consumption beyond existing DX clone.
+- Python / Streamlit — standard stack.
+- Modular validators; metadata sync via SFDX or Connect Salesforce.
+- 140+ automated tests catch regressions.
 
 ---
 
@@ -279,51 +319,46 @@ Read naturally — these are talking points, not a word-for-word teleprompter. P
 
 | Action | How |
 |--------|-----|
-| Fullscreen | **F11** (recommended for projector) |
-| Next / previous slide | **→** / **←**, Space, Page Down/Up |
-| Presenter notes | **N** or click **Notes (N)** — shows `data-notes` for current slide |
-| Jump to slide | Click dots in nav bar, or **Home** / **End** |
-| Open deck | Double-click `final_project_presentation.html` or `start docs\presentation\final_project_presentation.html` |
+| Fullscreen | **F11** |
+| Next / previous | **→** / **←**, Space, Page Down/Up |
+| Presenter notes | **N** or **Notes (N)** button |
+| Jump to slide | Click dots, or **Home** / **End** |
+| Open deck | `start docs\presentation\final_project_presentation.html` |
 
-### Pre-demo checklist (complete before Slide 11)
+### Pre-demo checklist (before Slide 9)
 
-- [ ] Streamlit app running: `cd C:\Users\cwangz162\Europe-SFA-Data-Load-Copilot` → `.\venv\Scripts\Activate.ps1` → `streamlit run app.py`
-- [ ] Browser tab open to `http://localhost:8501` (or hosted URL)
-- [ ] Metadata connected — green status in **Metadata Source** panel; no startup validation error
-- [ ] Test file ready: `test_data\retail_promotion\RO_Promotion_Faulty_Validation_Test.csv`
-- [ ] Deck open in separate browser window/tab; Slide 11 ready
+- [ ] Streamlit app running (Cloud URL or `localhost:8501`)
+- [ ] Browser tab open to app
+- [ ] Metadata source visible (Snapshot or Connected)
+- [ ] Test file: `test_data\retail_promotion\RO_Promotion_Faulty_Validation_Test.csv`
+- [ ] Deck open; Slide 9 ready
 - [ ] Close unrelated tabs; disable notifications
-- [ ] Optional: run through demo once the morning of the presentation
 
-### Backup if the demo fails
+### Backup if demo fails
 
-If the app won't start, metadata is disconnected, or upload errors:
-
-1. **Stay on Slide 7 (Demo Flow)** or Slide 11 and ** narrate the workflow** using the three-step cards on screen.
-2. Describe what leadership **would** see:
-   - Upload faulty CSV → template match banner → Header Review → Data Cleanup with "Apply All Safe Changes"
-   - Fix Issues in Copilot: Row 5 invalid date `31/02/2026` corrected inline
-   - Picklist Review: `NOT_A_MARKET` flagged; user selects `RO` from allowed values
-   - Upload Readiness: **NOT READY** until blockers cleared → Review CSV available → Tool-Ready CSV gated
-3. Reference the test file intentionally contains **26 rows of fault injections** (dates, picklists, whitespace, scientific notation, duplicates, blanks).
-4. Offer to share a **screen recording** or schedule a follow-up walkthrough.
-5. Pivot to Slide 8 (Impact) and Slide 9 (Final Outcome) — the deliverable exists regardless of live demo.
+1. Stay on **Slide 9** and narrate the three-step cards.
+2. Describe what audience would see (upload → Header Review → Fix Issues → Picklist Review → NOT READY → Review CSV).
+3. Reference **26 rows of fault injections** in test file.
+4. Offer screen recording or follow-up walkthrough.
+5. Pivot to Slides 10–15 — deliverable exists regardless.
 
 ### Timing guardrails
 
 | Segment | Target | If running long… |
 |---------|--------|-------------------|
-| Slides 1–10 | 7–8 min | Shorten Slide 6 (capabilities) and Slide 10 (next steps) |
-| Live demo | 2–3 min | Skip optional Step 12; show NOT READY + Review CSV only |
-| Q&A | 5 min | Prioritize security and deployment questions |
+| Slides 1–8 | 5–6 min | Shorten Slides 2, 5 |
+| Live demo (Slide 9) | 2–3 min | Skip optional fix; show NOT READY + Review CSV |
+| Slides 10–16 | 2–3 min | Shorten Slide 11 (capabilities) |
+| Q&A (Slide 17) | 5 min | Prioritize security and deployment |
 
-### Professional delivery notes
+### Delivery notes
 
-- Stand slightly to the side of the screen; face the audience, not the monitor.
-- On Slide 5, emphasize **"never auto-guesses picklist values"** — leadership cares about trust.
-- On demo Step 10, pause on **NOT READY** — it proves the gating works.
-- End demo with confidence: "The file we started with would have failed in DIT. We caught it here."
+- Slide 2: pause for non-SFA audience — this is their context slide.
+- Slide 9: demo is **mid-deck** — don't rush the broken-data slides before it.
+- Slide 10: pause on Workbench vs PepFlow contrast — leadership cares about shift-left.
+- Slide 11: emphasize **"never auto-guesses picklist values."**
+- End demo: "The file we started with would have failed in DIT. We caught it here."
 
 ---
 
-*Document version: July 2026 · Aligned with `final_project_presentation.html` (12 slides)*
+*Document version: July 2026 · Aligned with `final_project_presentation.html` (17 slides)*

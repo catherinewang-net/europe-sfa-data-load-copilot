@@ -1,4 +1,4 @@
-# Team setup — Europe SFA Data Load Copilot
+# Team setup — PepFlow AI
 
 This guide gets a teammate from zero to a running Copilot on **Windows** (PepsiCo standard). Each person runs the app locally because validation reads **your local EUSFA Salesforce DX metadata clone**.
 

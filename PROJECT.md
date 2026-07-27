@@ -1,10 +1,10 @@
-# Europe SFA Data Load Copilot
+# PepFlow AI
 
 ## Purpose
 
 AI-assisted application that helps the Europe SFA team prepare CSV files before uploading them into Salesforce.
 
-The copilot reduces manual effort by validating, preparing, and explaining files — it does **not** replace Workbench or the Data Import Tool.
+PepFlow AI reduces manual effort by validating, preparing, and explaining files — it does **not** replace Workbench or the Data Import Tool.
 
 ## Architecture
 

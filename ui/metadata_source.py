@@ -57,9 +57,10 @@ SNAPSHOT_UNAVAILABLE_MESSAGE = (
     "Contact the platform team if this persists."
 )
 SNAPSHOT_ACTIVE_MESSAGE = (
-    "The Copilot is currently using a read-only metadata snapshot. "
+    "PepFlow AI is using a read-only metadata snapshot. "
     "Connect Salesforce for live validation against your org."
 )
+SNAPSHOT_FALLBACK_CAPTION = "Automatic fallback when Salesforce is not connected."
 SNAPSHOT_REFRESH_CAPTION = (
     "Reload the approved metadata snapshot used for field and picklist validation."
 )
@@ -247,6 +248,7 @@ def _render_snapshot_metadata_source_panel(
             unsafe_allow_html=True,
         )
         st.markdown(f"**{metadata_source_label(live_connected=False)}**")
+        st.caption(SNAPSHOT_FALLBACK_CAPTION)
 
         if snapshot_available:
             st.markdown(SNAPSHOT_ACTIVE_MESSAGE)

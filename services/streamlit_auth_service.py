@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from core.config import is_sso_required
+from core.config import APP_NAME, is_sso_required
 
 _SSO_NOT_CONFIGURED_MESSAGE = "Application sign-in is enabled but not configured."
 
@@ -30,12 +30,12 @@ def enforce_streamlit_login_gate() -> None:
         return
 
     if not is_streamlit_oidc_configured():
-        st.title("Europe SFA Data Load Copilot")
+        st.title(APP_NAME)
         st.error(_SSO_NOT_CONFIGURED_MESSAGE)
         st.stop()
 
     if not st.user.is_logged_in:
-        st.title("Europe SFA Data Load Copilot")
+        st.title(APP_NAME)
         st.write("Sign in to continue.")
         if st.button("Sign in"):
             st.login()

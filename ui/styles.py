@@ -3,6 +3,33 @@
 PAGE_STYLE = """
 <style>
     .block-container { padding-top: 2rem; }
+    .pepflow-hero {
+        text-align: center;
+        margin: 0 0 1.75rem 0;
+        padding: 0.5rem 0 0.25rem;
+    }
+    .pepflow-hero-title {
+        font-size: clamp(2rem, 4vw, 2.75rem);
+        font-weight: 800;
+        color: #00205B;
+        margin: 0 0 0.35rem 0;
+        letter-spacing: -0.02em;
+    }
+    .pepflow-hero-tagline {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        font-weight: 700;
+        color: #009FE3;
+        margin: 0 0 0.65rem 0;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+    .pepflow-hero-description {
+        font-size: 1.05rem;
+        color: #475569;
+        margin: 0 auto;
+        max-width: 42rem;
+        line-height: 1.5;
+    }
     .step-label {
         font-size: 0.85rem;
         font-weight: 600;

@@ -1,10 +1,10 @@
-"""Europe SFA Data Load Copilot — Streamlit orchestrator."""
+"""PepFlow AI — Streamlit orchestrator."""
 
 from __future__ import annotations
 
 import streamlit as st
 
-from core.config import UPLOAD_METHODS, resolve_metadata_repo_path
+from core.config import APP_NAME, UPLOAD_METHODS, resolve_metadata_repo_path
 from core.csv_loader import load_uploaded_csv
 from services.preparation_task_service import (
     is_preparation_only,
@@ -45,6 +45,7 @@ from ui.salesforce_record_check import (
     render_salesforce_record_check,
 )
 from ui.preparation_task_selector import render_preparation_task_selector
+from ui.landing import render_landing_hero
 from ui.metadata_source import render_metadata_source_panel
 from ui.salesforce_connection import render_salesforce_connection_card
 from ui.prepare_file import render_prepare_file
@@ -80,7 +81,7 @@ from workflow.copilot import (
     run_template_comparison,
 )
 
-st.set_page_config(page_title="Europe SFA Data Load Copilot", page_icon="📋", layout="wide")
+st.set_page_config(page_title=APP_NAME, page_icon="🔵", layout="wide")
 
 # Salesforce OAuth callback — exchange code before rendering UI; clear URL params after.
 if handle_oauth_callback(st.session_state, st.query_params):
@@ -101,10 +102,7 @@ with st.expander("Deployment status", expanded=False):
 
 st.markdown(PAGE_STYLE, unsafe_allow_html=True)
 
-st.title("Europe SFA Data Load Copilot")
-st.caption("Prepare and validate Salesforce data before upload.")
-
-st.divider()
+render_landing_hero()
 
 render_salesforce_connection_card()
 st.divider()
