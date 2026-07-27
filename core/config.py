@@ -133,11 +133,12 @@ def is_sso_required() -> bool:
     if require_sso:
         return require_sso.lower() in _TRUTHY_ENV_VALUES
 
-    if get_deployment_mode() in {"demo", "production"}:
+    if get_deployment_mode() == "production":
         return True
 
+    # Demo / Community Cloud default to open access unless REQUIRE_SSO is set.
     # Local dev defaults to False unless SSO_ENABLED is set for auth-flow testing.
-    return SSO_ENABLED
+    return SSO_ENABLED if get_deployment_mode() == "local" else False
 
 
 def metadata_source_label(*, live_connected: bool = False) -> str:

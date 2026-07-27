@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from core.config import UPLOAD_METHODS, is_sso_required, resolve_metadata_repo_path
+from core.config import UPLOAD_METHODS, resolve_metadata_repo_path
 from core.csv_loader import load_uploaded_csv
 from services.preparation_task_service import (
     is_preparation_only,
@@ -49,6 +49,7 @@ from ui.metadata_source import render_metadata_source_panel
 from ui.salesforce_connection import render_salesforce_connection_card
 from ui.prepare_file import render_prepare_file
 from services.startup_validation import get_deployment_startup_notices, validate_startup_metadata
+from services.streamlit_auth_service import enforce_streamlit_login_gate
 from services.git_repository_service import get_repository_status
 from services.metadata_session_service import (
     METADATA_VERSION_KEY,
@@ -87,11 +88,7 @@ if handle_oauth_callback(st.session_state, st.query_params):
     st.rerun()
 
 # Optional Entra app gate — separate from Salesforce OAuth (primary metadata auth).
-if is_sso_required():
-    if not st.user.is_logged_in:
-        st.login()
-    if not st.user.is_logged_in:
-        st.stop()
+enforce_streamlit_login_gate()
 
 _metadata_ok, _metadata_error = validate_startup_metadata()
 if not _metadata_ok:
