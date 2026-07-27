@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GPID__c</fullName>
+    <description>Stores the global PepsiCo identifier for the frontline user logged into Savvy. Used for cross-system alignment of activity, KPIs, and workforce reporting.</description>
+    <externalId>false</externalId>
+    <label>GPID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

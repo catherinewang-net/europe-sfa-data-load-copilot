@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GTM_Model__c</fullName>
+    <description>Go-To-Market model of the customer</description>
+    <label>GTM Model</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DSD</fullName>
+                <default>false</default>
+                <label>DSD</label>
+            </value>
+            <value>
+                <fullName>Wholesaler</fullName>
+                <default>false</default>
+                <label>Wholesaler</label>
+            </value>
+            <value>
+                <fullName>Distributor</fullName>
+                <default>false</default>
+                <label>Distributor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

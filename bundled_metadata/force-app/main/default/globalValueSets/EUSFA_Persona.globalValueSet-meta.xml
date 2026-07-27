@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>BDR</fullName>
+        <default>false</default>
+        <label>BDR</label>
+    </customValue>
+    <customValue>
+        <fullName>Supervisor</fullName>
+        <default>false</default>
+        <label>Supervisor</label>
+    </customValue>
+    <customValue>
+        <fullName>Back-office</fullName>
+        <default>false</default>
+        <label>Back-office</label>
+    </customValue>
+    <customValue>
+        <fullName>Teleseller</fullName>
+        <default>false</default>
+        <label>Teleseller</label>
+    </customValue>
+    <customValue>
+        <fullName>WDR</fullName>
+        <default>false</default>
+        <label>WDR</label>
+    </customValue>
+    <masterLabel>Persona</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

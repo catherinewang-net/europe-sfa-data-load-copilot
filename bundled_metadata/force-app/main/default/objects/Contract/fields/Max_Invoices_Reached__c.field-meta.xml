@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Max_Invoices_Reached__c</fullName>
+    <description>Indicates whether the number of signed Invoice agreements on the Contract has reached the Contract Duration value. Returns true when Number_of_Invoices_Signed__c equals the numeric value of the Duration picklist.</description>
+    <formula>AND(
+    NOT(ISBLANK(TEXT(Duration__c))),
+    BLANKVALUE(Number_of_Invoices_Signed__c, 0) &gt;= VALUE(TEXT(Duration__c))
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Max Invoices Reached</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

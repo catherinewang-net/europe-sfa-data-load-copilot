@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejection_Reason_Description__c</fullName>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>Rejection Reason Description</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Store refused to remove competitor products</fullName>
+                <default>true</default>
+                <label>Store refused to remove competitor products</label>
+            </value>
+            <value>
+                <fullName>Contract exclusivity not applicable</fullName>
+                <default>false</default>
+                <label>Contract exclusivity not applicable</label>
+            </value>
+            <value>
+                <fullName>Store under renovation / unavailable</fullName>
+                <default>false</default>
+                <label>Store under renovation / unavailable</label>
+            </value>
+            <value>
+                <fullName>Cooler shared with other brands by store decision</fullName>
+                <default>false</default>
+                <label>Cooler shared with other brands by store decision</label>
+            </value>
+            <value>
+                <fullName>Cooler not accessible during visit</fullName>
+                <default>false</default>
+                <label>Cooler not accessible during visit</label>
+            </value>
+            <value>
+                <fullName>Competitor products removed before check</fullName>
+                <default>false</default>
+                <label>Competitor products removed before check</label>
+            </value>
+            <value>
+                <fullName>No available space for new display</fullName>
+                <default>false</default>
+                <label>No available space for new display</label>
+            </value>
+            <value>
+                <fullName>Store rejected installation</fullName>
+                <default>false</default>
+                <label>Store rejected installation</label>
+            </value>
+            <value>
+                <fullName>Equipment pending delivery</fullName>
+                <default>false</default>
+                <label>Equipment pending delivery</label>
+            </value>
+            <value>
+                <fullName>Out of stock at wholesaler</fullName>
+                <default>false</default>
+                <label>Out of stock at wholesaler</label>
+            </value>
+            <value>
+                <fullName>SKU discontinued or replaced</fullName>
+                <default>false</default>
+                <label>SKU discontinued or replaced</label>
+            </value>
+            <value>
+                <fullName>Customer refused product</fullName>
+                <default>false</default>
+                <label>Customer refused product</label>
+            </value>
+            <value>
+                <fullName>Product not supplied in recent deliveries</fullName>
+                <default>false</default>
+                <label>Product not supplied in recent deliveries</label>
+            </value>
+            <value>
+                <fullName>Cooler/display full – no capacity</fullName>
+                <default>false</default>
+                <label>Cooler/display full – no capacity</label>
+            </value>
+            <value>
+                <fullName>Low rotation – product removed</fullName>
+                <default>false</default>
+                <label>Low rotation – product removed</label>
+            </value>
+            <value>
+                <fullName>No POS materials available</fullName>
+                <default>false</default>
+                <label>No POS materials available</label>
+            </value>
+            <value>
+                <fullName>Store declined branding</fullName>
+                <default>false</default>
+                <label>Store declined branding</label>
+            </value>
+            <value>
+                <fullName>POS damaged / waiting replacement</fullName>
+                <default>false</default>
+                <label>POS damaged / waiting replacement</label>
+            </value>
+            <value>
+                <fullName>Menu update pending approval</fullName>
+                <default>false</default>
+                <label>Menu update pending approval</label>
+            </value>
+            <value>
+                <fullName>Customer refused combo inclusion</fullName>
+                <default>false</default>
+                <label>Customer refused combo inclusion</label>
+            </value>
+            <value>
+                <fullName>Menu printing scheduled for next cycle</fullName>
+                <default>false</default>
+                <label>Menu printing scheduled for next cycle</label>
+            </value>
+            <value>
+                <fullName>Cooler recently repaired / replaced</fullName>
+                <default>false</default>
+                <label>Cooler recently repaired / replaced</label>
+            </value>
+            <value>
+                <fullName>Store requested to keep cooler temporarily</fullName>
+                <default>false</default>
+                <label>Store requested to keep cooler temporarily</label>
+            </value>
+            <value>
+                <fullName>Pending logistics pickup</fullName>
+                <default>false</default>
+                <label>Pending logistics pickup</label>
+            </value>
+            <value>
+                <fullName>Sales impacted by low footfall</fullName>
+                <default>false</default>
+                <label>Sales impacted by low footfall</label>
+            </value>
+            <value>
+                <fullName>Cooler under maintenance</fullName>
+                <default>false</default>
+                <label>Cooler under maintenance</label>
+            </value>
+            <value>
+                <fullName>Seasonal demand drop</fullName>
+                <default>false</default>
+                <label>Seasonal demand drop</label>
+            </value>
+            <value>
+                <fullName>Shelf shared with competitors per store policy</fullName>
+                <default>false</default>
+                <label>Shelf shared with competitors per store policy</label>
+            </value>
+            <value>
+                <fullName>Layout recently changed by store</fullName>
+                <default>false</default>
+                <label>Layout recently changed by store</label>
+            </value>
+            <value>
+                <fullName>Out of stock – cannot comply</fullName>
+                <default>false</default>
+                <label>Out of stock – cannot comply</label>
+            </value>
+            <value>
+                <fullName>Insufficient stock to increase share</fullName>
+                <default>false</default>
+                <label>Insufficient stock to increase share</label>
+            </value>
+            <value>
+                <fullName>Space reduced by store manager</fullName>
+                <default>false</default>
+                <label>Space reduced by store manager</label>
+            </value>
+            <value>
+                <fullName>Competitor promotion active</fullName>
+                <default>false</default>
+                <label>Competitor promotion active</label>
+            </value>
+            <value>
+                <fullName>Segment not applicable for this store</fullName>
+                <default>false</default>
+                <label>Segment not applicable for this store</label>
+            </value>
+            <value>
+                <fullName>Out of stock for specific SKUs</fullName>
+                <default>false</default>
+                <label>Out of stock for specific SKUs</label>
+            </value>
+            <value>
+                <fullName>Store layout limits display space</fullName>
+                <default>false</default>
+                <label>Store layout limits display space</label>
+            </value>
+            <value>
+                <fullName>Menu update pending</fullName>
+                <default>false</default>
+                <label>Menu update pending</label>
+            </value>
+            <value>
+                <fullName>Printed menu not yet replaced</fullName>
+                <default>false</default>
+                <label>Printed menu not yet replaced</label>
+            </value>
+            <value>
+                <fullName>Customer refused changes</fullName>
+                <default>false</default>
+                <label>Customer refused changes</label>
+            </value>
+            <value>
+                <fullName>Platform managed by HQ, no local control</fullName>
+                <default>false</default>
+                <label>Platform managed by HQ, no local control</label>
+            </value>
+            <value>
+                <fullName>Update in progress by digital partner</fullName>
+                <default>false</default>
+                <label>Update in progress by digital partner</label>
+            </value>
+            <value>
+                <fullName>Product temporarily unavailable online</fullName>
+                <default>false</default>
+                <label>Product temporarily unavailable online</label>
+            </value>
+            <value>
+                <fullName>No suitable space available</fullName>
+                <default>false</default>
+                <label>No suitable space available</label>
+            </value>
+            <value>
+                <fullName>Store refused extra equipment</fullName>
+                <default>false</default>
+                <label>Store refused extra equipment</label>
+            </value>
+            <value>
+                <fullName>Secondary display removed for maintenance</fullName>
+                <default>false</default>
+                <label>Secondary display removed for maintenance</label>
+            </value>
+            <value>
+                <fullName>Segment not applicable for store</fullName>
+                <default>false</default>
+                <label>Segment not applicable for store</label>
+            </value>
+            <value>
+                <fullName>Space assigned to other category</fullName>
+                <default>false</default>
+                <label>Space assigned to other category</label>
+            </value>
+            <value>
+                <fullName>Awaiting new display materials</fullName>
+                <default>false</default>
+                <label>Awaiting new display materials</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

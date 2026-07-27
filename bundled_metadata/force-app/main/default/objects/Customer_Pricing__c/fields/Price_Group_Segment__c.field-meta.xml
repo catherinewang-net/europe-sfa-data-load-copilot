@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Group_Segment__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    NOT(ISBLANK(TEXT(Pricing_Configuration__r.Price_Group_Segment_Drinks__c))),
+    TEXT(Customer__r.L3_Bevs_Pricegroup_Cluster__c),
+    IF(
+        NOT(ISBLANK(TEXT(Pricing_Configuration__r.Price_Group_Segment_Snacks__c))),
+        TEXT(Customer__r.L3_Snacks_Pricegroup_Cluster__c),
+        &apos;&apos;
+    )
+)</formula>
+    <label>Price Group Segment</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

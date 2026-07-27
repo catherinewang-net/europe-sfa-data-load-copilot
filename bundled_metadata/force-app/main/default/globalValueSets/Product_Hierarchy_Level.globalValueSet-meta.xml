@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Product Line</fullName>
+        <default>false</default>
+        <label>Product Line</label>
+    </customValue>
+    <customValue>
+        <fullName>Product Brand Group</fullName>
+        <default>false</default>
+        <label>Product Brand Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Product Brand</fullName>
+        <default>false</default>
+        <label>Product Brand</label>
+    </customValue>
+    <customValue>
+        <fullName>Product Sub-brand</fullName>
+        <default>false</default>
+        <label>Product Sub-brand</label>
+    </customValue>
+    <customValue>
+        <fullName>Product Flavor</fullName>
+        <default>false</default>
+        <label>Product Flavor</label>
+    </customValue>
+    <customValue>
+        <fullName>Product category</fullName>
+        <default>false</default>
+        <label>Product category</label>
+    </customValue>
+    <customValue>
+        <fullName>Manufacturer</fullName>
+        <default>false</default>
+        <label>Manufacturer</label>
+    </customValue>
+    <customValue>
+        <fullName>Container</fullName>
+        <default>false</default>
+        <label>Container</label>
+    </customValue>
+    <customValue>
+        <fullName>Size</fullName>
+        <default>false</default>
+        <label>Size</label>
+    </customValue>
+    <customValue>
+        <fullName>Product SKU</fullName>
+        <default>true</default>
+        <label>Product SKU</label>
+    </customValue>
+    <masterLabel>Product Hierarchy Level</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

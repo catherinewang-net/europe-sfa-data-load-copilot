@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Lock_Fields_After_Create</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISNEW()),
+
+    OR(
+        ISCHANGED(Price_Group_Segment_Snacks__c),
+        ISCHANGED(Price_Group_Segment_Drinks__c),
+        ISCHANGED(KeyAccountId__c),
+
+        ISCHANGED(Product_Line__c),
+        ISCHANGED(Product_Group__c),
+        ISCHANGED(Product_Brand__c),
+        ISCHANGED(Product_Subbrand__c),
+        ISCHANGED(Product_SKU__c),
+        ISCHANGED(Manufacturer__c),
+        ISCHANGED(Container__c),
+        ISCHANGED(Size__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>After creation, only Discount and Valid From/To dates can be updated.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,48 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\cwangz162\Europe-SFA-Data-Load-Copilot\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\cwangz162\Europe-SFA-Data-Load-Copilot
+plugins: anyio-4.14.2
+collecting ... collected 39 items
+
+tests/test_date_conversion.py::DateConversionServiceTests::test_ambiguous_resolved_with_dit_source PASSED [  2%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_ambiguous_resolved_with_us_source PASSED [  5%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_ambiguous_without_source_format_defaults_day_first PASSED [  7%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_apply_conversions_updates_dataframe PASSED [ 10%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_both_single_digit_accepted PASSED [ 12%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_convert_column_mixed_formats PASSED [ 15%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_convert_dmy_second_example PASSED [ 17%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_convert_dmy_to_dit_zero_padded PASSED [ 20%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_convert_dmy_to_workbench PASSED [ 23%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_convert_to_dit_format PASSED [ 25%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_corrected_preview_uses_corrected_df PASSED [ 28%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_dash_dmy_format PASSED [ 30%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_dd_mm_yyyy_still_works PASSED [ 33%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_default_source_format_dit PASSED [ 35%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_default_source_format_workbench PASSED [ 38%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_dit_target_slash_unchanged PASSED [ 41%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_dit_to_workbench_via_validator PASSED [ 43%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_download_uses_corrected_df PASSED [ 46%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_excel_serial_detection PASSED [ 48%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_invalid_date_feb_31 PASSED [ 51%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_invalid_month_13 PASSED [ 53%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_invalid_text_date PASSED [ 56%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_iso_datetime_conversion PASSED [ 58%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_iso_datetime_space_separator PASSED [ 61%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_iso_datetime_to_dit PASSED [ 64%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_iso_to_workbench_unchanged PASSED [ 66%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_pandas_timestamp_conversion PASSED [ 69%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_post_conversion_validation_dit PASSED [ 71%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_post_conversion_validation_workbench PASSED [ 74%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_single_digit_day_accepted PASSED [ 76%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_single_digit_month_accepted PASSED [ 79%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_unambiguous_dmy_day_gt_12 PASSED [ 82%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_workbench_default_source_converts_single_digit_slash PASSED [ 84%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_workbench_target_iso_unchanged PASSED [ 87%]
+tests/test_date_conversion.py::DateConversionServiceTests::test_yyyy_slash_mm_dd PASSED [ 89%]
+tests/test_date_conversion.py::DateFieldResolutionTests::test_datetime_field_type_preserved PASSED [ 92%]
+tests/test_date_conversion.py::DateFieldResolutionTests::test_metadata_date_fields_without_date_in_name PASSED [ 94%]
+tests/test_date_conversion.py::DateFieldResolutionTests::test_template_date_fields_from_fallback_config PASSED [ 97%]
+tests/test_date_conversion.py::DateConversionPlanTests::test_plan_all_date_columns PASSED [100%]
+
+============================= 39 passed in 1.30s ==============================

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InfluenceDate_Less_Than_StartDate</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(Influence_Date__c)),
+    NOT(ISBLANK(StartDate)),
+    Influence_Date__c &gt;= StartDate
+)</errorConditionFormula>
+    <errorMessage>Influence Date must be earlier than Start Date.</errorMessage>
+</ValidationRule>

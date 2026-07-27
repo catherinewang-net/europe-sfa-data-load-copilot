@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_PosKit_Channel__c</fullName>
+    <description>Stores the channels for which the POS Kit is available. Used to filter kits based on the user’s channel.</description>
+    <label>POS Channel</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>AFH_Channel</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

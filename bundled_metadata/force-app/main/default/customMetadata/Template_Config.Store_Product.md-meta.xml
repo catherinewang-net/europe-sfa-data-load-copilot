@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Store Product</label>
+    <protected>false</protected>
+    <values>
+        <field>Fields__c</field>
+        <value xsi:type="xsd:string">{
+&quot;Account_External_Id__c&quot;: &quot;Wholesaler External ID&quot;,
+&quot;Prod_External_Id__c&quot;: &quot;*Product External ID&quot;,
+&quot;Wholesaler_Product_Id__c&quot;: &quot;Wholesaler Product Id&quot;,
+&quot;StartDate&quot;: &quot;*Start Date(dd/mm/yyyy)&quot;,
+&quot;EndDate&quot;: &quot;End Date(dd/mm/yyyy)&quot;,
+&quot;Market__c&quot;: &quot;*Market&quot;
+}</value>
+    </values>
+    <values>
+        <field>Is_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Object_API_Name__c</field>
+        <value xsi:type="xsd:string">StoreProduct</value>
+    </values>
+    <values>
+        <field>Template_Label__c</field>
+        <value xsi:type="xsd:string">Store Product</value>
+    </values>
+</CustomMetadata>

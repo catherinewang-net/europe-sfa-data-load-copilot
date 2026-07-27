@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pricegroup_Cluster__c</fullName>
+    <description>Grouping of customers by pricing logic</description>
+    <label>Pricegroup Cluster</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

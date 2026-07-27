@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AWAY FROM HOME</fullName>
+        <default>false</default>
+        <label>AWAY FROM HOME</label>
+    </customValue>
+    <customValue>
+        <fullName>DISTRIBUTOR</fullName>
+        <default>false</default>
+        <label>DISTRIBUTOR</label>
+    </customValue>
+    <customValue>
+        <fullName>E-COMMERCE</fullName>
+        <default>false</default>
+        <label>E-COMMERCE</label>
+    </customValue>
+    <customValue>
+        <fullName>LARGE FORMAT</fullName>
+        <default>false</default>
+        <label>LARGE FORMAT</label>
+    </customValue>
+    <customValue>
+        <fullName>OTHER</fullName>
+        <default>false</default>
+        <label>OTHER</label>
+    </customValue>
+    <customValue>
+        <fullName>SMALL FORMAT</fullName>
+        <default>false</default>
+        <label>SMALL FORMAT</label>
+    </customValue>
+    <customValue>
+        <fullName>TRADITIONAL TRADE</fullName>
+        <default>false</default>
+        <label>TRADITIONAL TRADE</label>
+    </customValue>
+    <customValue>
+        <fullName>WHOLESALE</fullName>
+        <default>false</default>
+        <label>WHOLESALE</label>
+    </customValue>
+    <customValue>
+        <fullName>TRADITIONAL SALE</fullName>
+        <default>false</default>
+        <label>TRADITIONAL SALE</label>
+    </customValue>
+    <customValue>
+        <fullName>ORGANIZED TRADE</fullName>
+        <default>false</default>
+        <label>ORGANIZED TRADE</label>
+    </customValue>
+    <customValue>
+        <fullName>PRE-SELLER</fullName>
+        <default>false</default>
+        <label>PRE-SELLER</label>
+    </customValue>
+    <description>L1 Channels</description>
+    <masterLabel>L1 Channel</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

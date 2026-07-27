@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Environment__c</fullName>
+    <description
+    >Environment code the Savvy mobile app matches against to pick the correct PEPIRiS URLs for the logged-in org. One record per environment: DEV, QA, PREPROD, PROD.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Environment</label>
+    <length>50</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

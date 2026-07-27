@@ -1,0 +1,26 @@
+*Promotion Name,*Market,Key Account/Banner Value,Account External ID,PS Value Segmentation Snacks,Material ID,*Start Date(dd/mm/yyyy),*End Date(dd/mm/yyyy),*Influence Date(dd/mm/yyyy),*Promotion Type,Placement Type
+Valid Promotion,RO,Profi,ACC000001,VALUE_SEGMENT_1,340056294,06/07/2026,09/08/2026,22/06/2026,In store,Main Shelf
+"  Leading Space Promotion  ",RO,Metro,ACC000002,VALUE_SEGMENT_1,340059524,6/7/2026,9/8/2026,6/7/2026,In store,Main Shelf
+Repeated     Spaces,RO,Selgros,ACC000003,VALUE_SEGMENT_1,340055801,2026-07-20,2026-08-15,2026-06-22,In store,Main Shelf
+Invalid Calendar Date,RO,Carrefour,ACC000004,VALUE_SEGMENT_1,340062112,31/02/2026,09/08/2026,22/06/2026,Leaflet,End of gondola
+Text Date,RO,Profi,ACC000005,VALUE_SEGMENT_1,340056057,"July 6, 2026",15/08/2026,06/07/2026,Leaflet,End of gondola
+Excel Serial Date,RO,Auchan,ACC000006,VALUE_SEGMENT_1,340062007,46209,20/07/2026,22/06/2026,Leaflet,Main Shelf
+Invalid Market,NOT_A_MARKET,Carrefour,ACC000007,VALUE_SEGMENT_1,340056189,06/07/2026,09/08/2026,22/06/2026,Leaflet,Main Shelf
+Invalid Promotion Type,RO,Auchan,ACC000008,VALUE_SEGMENT_1,340056285,20/07/2026,20/11/2026,06/07/2026,INVALID_TYPE,Main Shelf
+Picklist Case Difference,RO,Supeco,ACC000009,VALUE_SEGMENT_1,340056190,06/07/2026,20/07/2026,22/06/2026,leaflet,Main Shelf
+Picklist Whitespace,RO,Kaufland,ACC000010,VALUE_SEGMENT_1,340055711,06/07/2026,09/08/2026,22/06/2026," In store ",Main Shelf
+Scientific Material ID,RO,Rewe,ACC000011,VALUE_SEGMENT_1,3.40061E+08,20/07/2026,15/08/2026,06/07/2026,Leaflet,Main Shelf
+Decimal Material ID,RO,Selgros,ACC000012,VALUE_SEGMENT_1,340061454.0,06/07/2026,20/07/2026,22/06/2026,Leaflet,Main Shelf
+Duplicate Account External ID,RO,Carrefour,ACC000012,VALUE_SEGMENT_1,340061455,06/07/2026,09/08/2026,22/06/2026,Leaflet,Main Shelf
+Blank Required Promotion Name,RO,Profi,ACC000014,VALUE_SEGMENT_1,340061456,06/07/2026,09/08/2026,22/06/2026,In store,Main Shelf
+,RO,Metro,ACC000015,VALUE_SEGMENT_1,340061457,06/07/2026,09/08/2026,22/06/2026,In store,Main Shelf
+Blank Required Market,,Selgros,ACC000016,VALUE_SEGMENT_1,340061458,06/07/2026,09/08/2026,22/06/2026,Leaflet,Main Shelf
+Blank Required Start Date,RO,Carrefour,ACC000017,VALUE_SEGMENT_1,340061459,,09/08/2026,22/06/2026,Leaflet,Main Shelf
+Blank Optional Placement,RO,Auchan,ACC000018,VALUE_SEGMENT_1,340061460,06/07/2026,09/08/2026,22/06/2026,Leaflet,
+Quoted Comma Promotion,RO,"Carrefour, Hypermarket",ACC000019,VALUE_SEGMENT_1,340061461,06/07/2026,09/08/2026,22/06/2026,Leaflet,Main Shelf
+Tab And Hidden Space,RO,"Profi	Store",ACC000020,VALUE_SEGMENT_1,340061462,06/07/2026,09/08/2026,22/06/2026,In store,Main Shelf
+Smart “Quote” Promotion,RO,Metro,ACC000021,VALUE_SEGMENT_1,340061463,06/07/2026,09/08/2026,22/06/2026,In store,Main Shelf
+Invalid Segmentation,RO,Selgros,ACC000022,NOT_A_VALID_SEGMENT,340061464,06/07/2026,09/08/2026,22/06/2026,Leaflet,Main Shelf
+Blank Material ID,RO,Carrefour,ACC000023,VALUE_SEGMENT_1,,06/07/2026,09/08/2026,22/06/2026,Leaflet,Main Shelf
+Wrong Date Separators,RO,Auchan,ACC000024,VALUE_SEGMENT_1,340061466,06-07-2026,09-08-2026,22-06-2026,Leaflet,Main Shelf
+Impossible ISO Date,RO,Supeco,ACC000025,VALUE_SEGMENT_1,340061467,2026-13-06,2026-08-09,2026-06-22,Leaflet,Main Shelf

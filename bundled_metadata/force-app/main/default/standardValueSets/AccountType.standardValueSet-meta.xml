@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Prospect</fullName>
+        <default>false</default>
+        <label>Prospect</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Wholesaler</fullName>
+        <default>false</default>
+        <label>Wholesaler</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Payer</fullName>
+        <default>false</default>
+        <label>Payer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer</fullName>
+        <default>false</default>
+        <label>Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Key Account</fullName>
+        <default>false</default>
+        <label>Key Account</label>
+    </standardValue>
+    <standardValue>
+        <fullName>3PL</fullName>
+        <default>false</default>
+        <label>3PL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AFH Journey Completed</fullName>
+        <default>false</default>
+        <label>AFH Journey Completed</label>
+    </standardValue>   
+</StandardValueSet>

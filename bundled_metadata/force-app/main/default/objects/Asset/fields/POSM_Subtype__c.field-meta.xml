@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POSM_Subtype__c</fullName>
+    <label>POSM Subtype</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OF</fullName>
+                <default>false</default>
+                <label>Air Curtain Cooler</label>
+            </value>
+            <value>
+                <fullName>SOF</fullName>
+                <default>false</default>
+                <label>Air Curtain Small Cooler</label>
+            </value>
+            <value>
+                <fullName>Banners</fullName>
+                <default>false</default>
+                <label>Banners</label>
+            </value>
+            <value>
+                <fullName>Box</fullName>
+                <default>false</default>
+                <label>Box</label>
+            </value>
+            <value>
+                <fullName>Chalkboard</fullName>
+                <default>false</default>
+                <label>Chalkboard</label>
+            </value>
+            <value>
+                <fullName>Chiller Basket</fullName>
+                <default>false</default>
+                <label>Chiller Basket</label>
+            </value>
+            <value>
+                <fullName>Chr Tray</fullName>
+                <default>false</default>
+                <label>Chr Tray</label>
+            </value>
+            <value>
+                <fullName>Clipstrip</fullName>
+                <default>false</default>
+                <label>Clipstrip</label>
+            </value>
+            <value>
+                <fullName>Cooler 1 Door Slim</fullName>
+                <default>false</default>
+                <label>Cooler 1 Door Slim</label>
+            </value>
+            <value>
+                <fullName>Cooler 2 Doors Slim</fullName>
+                <default>false</default>
+                <label>Cooler 2 Doors Slim</label>
+            </value>
+            <value>
+                <fullName>POM-CU</fullName>
+                <default>false</default>
+                <label>Cooling Unit Post-Mix</label>
+            </value>
+            <value>
+                <fullName>POM-JCT</fullName>
+                <default>false</default>
+                <label>Counter top Juice Post-Mix</label>
+            </value>
+            <value>
+                <fullName>POM-CT</fullName>
+                <default>false</default>
+                <label>Counter top Post-Mix</label>
+            </value>
+            <value>
+                <fullName>Counter top unit</fullName>
+                <default>false</default>
+                <label>Counter top unit</label>
+            </value>
+            <value>
+                <fullName>Divisible Tray</fullName>
+                <default>false</default>
+                <label>Divisible Tray</label>
+            </value>
+            <value>
+                <fullName>DD</fullName>
+                <default>false</default>
+                <label>Double Door Cooler</label>
+            </value>
+            <value>
+                <fullName>Dumpbin</fullName>
+                <default>false</default>
+                <label>Dumpbin</label>
+            </value>
+            <value>
+                <fullName>Food Display</fullName>
+                <default>false</default>
+                <label>Food Display</label>
+            </value>
+            <value>
+                <fullName>FSDU</fullName>
+                <default>false</default>
+                <label>FSDU</label>
+            </value>
+            <value>
+                <fullName>Glassware</fullName>
+                <default>false</default>
+                <label>Glassware</label>
+            </value>
+            <value>
+                <fullName>Hanging Unit</fullName>
+                <default>false</default>
+                <label>Hanging Unit</label>
+            </value>
+            <value>
+                <fullName>Hessian Basket</fullName>
+                <default>false</default>
+                <label>Hessian Basket</label>
+            </value>
+            <value>
+                <fullName>IM</fullName>
+                <default>false</default>
+                <label>Ice Machine</label>
+            </value>
+            <value>
+                <fullName>Key Period Operation</fullName>
+                <default>false</default>
+                <label>Key Period Operation</label>
+            </value>
+            <value>
+                <fullName>Large Rack</fullName>
+                <default>false</default>
+                <label>Large Rack</label>
+            </value>
+            <value>
+                <fullName>Lemonade Server</fullName>
+                <default>false</default>
+                <label>Lemonade Server</label>
+            </value>
+            <value>
+                <fullName>CT</fullName>
+                <default>false</default>
+                <label>Mini Bar Cooler</label>
+            </value>
+            <value>
+                <fullName>Monoblock</fullName>
+                <default>false</default>
+                <label>Monoblock</label>
+            </value>
+            <value>
+                <fullName>OT</fullName>
+                <default>false</default>
+                <label>Open Top Cooler</label>
+            </value>
+            <value>
+                <fullName>Parasols</fullName>
+                <default>false</default>
+                <label>Parasols</label>
+            </value>
+            <value>
+                <fullName>Perspex Bin</fullName>
+                <default>false</default>
+                <label>Perspex Bin</label>
+            </value>
+            <value>
+                <fullName>Rack 1.5M</fullName>
+                <default>false</default>
+                <label>Rack 1.5M</label>
+            </value>
+            <value>
+                <fullName>Rack 1M</fullName>
+                <default>false</default>
+                <label>Rack 1M</label>
+            </value>
+            <value>
+                <fullName>Rash Bin</fullName>
+                <default>false</default>
+                <label>Rash Bin</label>
+            </value>
+            <value>
+                <fullName>Sandwich Bag</fullName>
+                <default>false</default>
+                <label>Sandwich Bag</label>
+            </value>
+            <value>
+                <fullName>Sidewalk Stopper</fullName>
+                <default>false</default>
+                <label>Sidewalk Stopper</label>
+            </value>
+            <value>
+                <fullName>SD</fullName>
+                <default>false</default>
+                <label>Single Door Cooler</label>
+            </value>
+            <value>
+                <fullName>Slim Rack</fullName>
+                <default>false</default>
+                <label>Slim Rack</label>
+            </value>
+            <value>
+                <fullName>Stacker</fullName>
+                <default>false</default>
+                <label>Stacker</label>
+            </value>
+            <value>
+                <fullName>Tarpaulins</fullName>
+                <default>false</default>
+                <label>Tarpaulins</label>
+            </value>
+            <value>
+                <fullName>POM-T</fullName>
+                <default>false</default>
+                <label>Tower Post-Mix</label>
+            </value>
+            <value>
+                <fullName>Turret</fullName>
+                <default>false</default>
+                <label>Turret</label>
+            </value>
+            <value>
+                <fullName>VM</fullName>
+                <default>false</default>
+                <label>Vending machine</label>
+            </value>
+            <value>
+                <fullName>Wire Basket</fullName>
+                <default>false</default>
+                <label>Wire Basket</label>
+            </value>
+            <value>
+                <fullName>Wooden Crate</fullName>
+                <default>false</default>
+                <label>Wooden Crate</label>
+            </value>
+            <value>
+                <fullName>SD-OD</fullName>
+                <default>false</default>
+                <label>Single Door Outdoor Cooler</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

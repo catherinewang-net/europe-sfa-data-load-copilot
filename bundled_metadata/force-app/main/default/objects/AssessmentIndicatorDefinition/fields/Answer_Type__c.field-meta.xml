@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Answer_Type__c</fullName>
+    <description>Specifies how respondents provide an answer for this survey question (e.g., checklist, multi-select checklist, numeric, rating, free text, binary, or conditional follow-up).</description>
+    <inlineHelpText>Select the expected answer format: Checklist, Multi-Checklist, Numeric, Rating, Free Text, Binary (Yes/No), or Conditional (follow-up shown based on parent answer).</inlineHelpText>
+    <label>Answer Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Binary</fullName>
+                <default>false</default>
+                <label>Binary</label>
+            </value>
+            <value>
+                <fullName>Free Text</fullName>
+                <default>false</default>
+                <label>Free Text</label>
+            </value>
+            <value>
+                <fullName>Numeric</fullName>
+                <default>false</default>
+                <label>Numeric</label>
+            </value>
+            <value>
+                <fullName>Rating</fullName>
+                <default>false</default>
+                <label>Rating</label>
+            </value>
+            <value>
+                <fullName>Checklist</fullName>
+                <default>false</default>
+                <label>Checklist</label>
+            </value>
+            <value>
+                <fullName>Multi-Checklist</fullName>
+                <default>false</default>
+                <label>Multi-Checklist</label>
+            </value>
+            <value>
+                <fullName>Conditional</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Conditional</label>
+            </value>
+            <value>
+                <fullName>Date</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Date</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

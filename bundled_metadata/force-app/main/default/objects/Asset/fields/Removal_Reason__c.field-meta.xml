@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Removal_Reason__c</fullName>
+    <label>Asset Removal Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client closed/doesn&apos;t exist</fullName>
+                <default>false</default>
+                <label>Client closed/doesn&apos;t exist</label>
+            </value>
+            <value>
+                <fullName>Close for renovation</fullName>
+                <default>false</default>
+                <label>Close for renovation</label>
+            </value>
+            <value>
+                <fullName>Decrease of equipment quantity</fullName>
+                <default>false</default>
+                <label>Decrease of equipment quantity</label>
+            </value>
+            <value>
+                <fullName>Equipment broken</fullName>
+                <default>false</default>
+                <label>Equipment broken</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>Low efficiency</fullName>
+                <default>false</default>
+                <label>Low efficiency</label>
+            </value>
+            <value>
+                <fullName>Replacement</fullName>
+                <default>false</default>
+                <label>Replacement</label>
+            </value>
+            <value>
+                <fullName>Stop of cooperation</fullName>
+                <default>false</default>
+                <label>Stop of cooperation</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

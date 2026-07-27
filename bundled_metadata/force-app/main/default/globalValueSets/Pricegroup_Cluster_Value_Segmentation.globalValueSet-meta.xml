@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>A+</fullName>
+        <default>false</default>
+        <label>A+</label>
+    </customValue>
+    <customValue>
+        <fullName>A</fullName>
+        <default>false</default>
+        <label>A</label>
+    </customValue>
+    <customValue>
+        <fullName>B+</fullName>
+        <default>false</default>
+        <label>B+</label>
+    </customValue>
+    <customValue>
+        <fullName>B</fullName>
+        <default>false</default>
+        <label>B</label>
+    </customValue>
+    <customValue>
+        <fullName>C+</fullName>
+        <default>false</default>
+        <label>C+</label>
+    </customValue>
+    <customValue>
+        <fullName>C</fullName>
+        <default>false</default>
+        <label>C</label>
+    </customValue>
+    <customValue>
+        <fullName>D+</fullName>
+        <default>false</default>
+        <label>D+</label>
+    </customValue>
+    <customValue>
+        <fullName>D</fullName>
+        <default>false</default>
+        <label>D</label>
+    </customValue>
+    <customValue>
+        <fullName>NA</fullName>
+        <default>false</default>
+        <label>NA</label>
+    </customValue>
+    <customValue>
+        <fullName>HYPER L</fullName>
+        <default>false</default>
+        <label>HYPER L</label>
+    </customValue>
+    <customValue>
+        <fullName>HYPER S</fullName>
+        <default>false</default>
+        <label>HYPER S</label>
+    </customValue>
+    <customValue>
+        <fullName>HYPER M</fullName>
+        <default>false</default>
+        <label>HYPER M</label>
+    </customValue>
+    <customValue>
+        <fullName>SUPER L</fullName>
+        <default>false</default>
+        <label>SUPER L</label>
+    </customValue>
+    <customValue>
+        <fullName>SUPER M</fullName>
+        <default>false</default>
+        <label>SUPER M</label>
+    </customValue>
+    <customValue>
+        <fullName>HYPER K</fullName>
+        <default>false</default>
+        <label>HYPER K</label>
+    </customValue>
+    <customValue>
+        <fullName>HYPER A</fullName>
+        <default>false</default>
+        <label>HYPER A</label>
+    </customValue>
+    <customValue>
+        <fullName>SUPER S</fullName>
+        <default>false</default>
+        <label>SUPER S</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 1A</fullName>
+        <default>false</default>
+        <label>Segment 1A</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 1B</fullName>
+        <default>false</default>
+        <label>Segment 1B</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 1C</fullName>
+        <default>false</default>
+        <label>Segment 1C</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 1D</fullName>
+        <default>false</default>
+        <label>Segment 1D</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 2A</fullName>
+        <default>false</default>
+        <label>Segment 2A</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 2B</fullName>
+        <default>false</default>
+        <label>Segment 2B</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 2C</fullName>
+        <default>false</default>
+        <label>Segment 2C</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 2D</fullName>
+        <default>false</default>
+        <label>Segment 2D</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 3A</fullName>
+        <default>false</default>
+        <label>Segment 3A</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 3B</fullName>
+        <default>false</default>
+        <label>Segment 3B</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 3C</fullName>
+        <default>false</default>
+        <label>Segment 3C</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 3D</fullName>
+        <default>false</default>
+        <label>Segment 3D</label>
+    </customValue>
+    <customValue>
+        <fullName>Metro A</fullName>
+        <default>false</default>
+        <label>Metro A</label>
+    </customValue>
+    <customValue>
+        <fullName>Metro B</fullName>
+        <default>false</default>
+        <label>Metro B</label>
+    </customValue>
+    <customValue>
+        <fullName>Metro C</fullName>
+        <default>false</default>
+        <label>Metro C</label>
+    </customValue>
+    <customValue>
+        <fullName>Metro D</fullName>
+        <default>false</default>
+        <label>Metro D</label>
+    </customValue>
+    <customValue>
+        <fullName>Promocash S1</fullName>
+        <default>false</default>
+        <label>Promocash S1</label>
+    </customValue>
+    <customValue>
+        <fullName>Promocash S2</fullName>
+        <default>false</default>
+        <label>Promocash S2</label>
+    </customValue>
+    <customValue>
+        <fullName>Promocash S3</fullName>
+        <default>false</default>
+        <label>Promocash S3</label>
+    </customValue>
+    <customValue>
+        <fullName>Promocash S4</fullName>
+        <default>false</default>
+        <label>Promocash S4</label>
+    </customValue>
+    <customValue>
+        <fullName>Promocash S5</fullName>
+        <default>false</default>
+        <label>Promocash S5</label>
+    </customValue>
+    <customValue>
+        <fullName>Promocash S6</fullName>
+        <default>false</default>
+        <label>Promocash S6</label>
+    </customValue>
+    <customValue>
+        <fullName>Pub WL - Main</fullName>
+        <default>false</default>
+        <label>Pub WL - Main</label>
+    </customValue>
+    <customValue>
+        <fullName>Pub FL - Prem</fullName>
+        <default>false</default>
+        <label>Pub FL - Prem</label>
+    </customValue>
+    <customValue>
+        <fullName>Café - Main</fullName>
+        <default>false</default>
+        <label>Café - Main</label>
+    </customValue>
+    <customValue>
+        <fullName>Café - Prem</fullName>
+        <default>false</default>
+        <label>Café - Prem</label>
+    </customValue>
+    <customValue>
+        <fullName>Coffee - Main</fullName>
+        <default>false</default>
+        <label>Coffee - Main</label>
+    </customValue>
+    <customValue>
+        <fullName>Coffee - Prem</fullName>
+        <default>false</default>
+        <label>Coffee - Prem</label>
+    </customValue>
+    <customValue>
+        <fullName>QSR</fullName>
+        <default>false</default>
+        <label>QSR</label>
+    </customValue>
+    <customValue>
+        <fullName>Restaurant</fullName>
+        <default>false</default>
+        <label>Restaurant</label>
+    </customValue>
+    <customValue>
+        <fullName>Cinema</fullName>
+        <default>false</default>
+        <label>Cinema</label>
+    </customValue>
+    <customValue>
+        <fullName>Stadia</fullName>
+        <default>false</default>
+        <label>Stadia</label>
+    </customValue>
+    <customValue>
+        <fullName>Theme Park</fullName>
+        <default>false</default>
+        <label>Theme Park</label>
+    </customValue>
+    <customValue>
+        <fullName>Travel</fullName>
+        <default>false</default>
+        <label>Travel</label>
+    </customValue>
+    <customValue>
+        <fullName>Accommodation </fullName>
+        <default>false</default>
+        <label>Accommodation </label>
+    </customValue>
+    <customValue>
+        <fullName>Workplace</fullName>
+        <default>false</default>
+        <label>Workplace</label>
+    </customValue>
+    <customValue>
+        <fullName>Public Sector</fullName>
+        <default>false</default>
+        <label>Public Sector</label>
+    </customValue>
+    <customValue>
+        <fullName>Education</fullName>
+        <default>false</default>
+        <label>Education</label>
+    </customValue>
+    <customValue>
+        <fullName>CC - Healthcare</fullName>
+        <default>false</default>
+        <label>CC - Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>White Collar</fullName>
+        <default>false</default>
+        <label>White Collar</label>
+    </customValue>
+    <customValue>
+        <fullName>Blue Collar</fullName>
+        <default>false</default>
+        <label>Blue Collar</label>
+    </customValue>
+    <customValue>
+        <fullName>Education/Travel</fullName>
+        <default>false</default>
+        <label>Education/Travel</label>
+    </customValue>
+    <customValue>
+        <fullName>Vending - Healthcare</fullName>
+        <default>false</default>
+        <label>Vending - Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>Golf Club</fullName>
+        <default>false</default>
+        <label>Golf Club</label>
+    </customValue>
+    <customValue>
+        <fullName>Garden Centre</fullName>
+        <default>false</default>
+        <label>Garden Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Large Rural</fullName>
+        <default>false</default>
+        <label>Large Rural</label>
+    </customValue>
+    <customValue>
+        <fullName>Small Rural</fullName>
+        <default>false</default>
+        <label>Small Rural</label>
+    </customValue>
+    <customValue>
+        <fullName>Large Urban</fullName>
+        <default>false</default>
+        <label>Large Urban</label>
+    </customValue>
+    <customValue>
+        <fullName>Small Urban</fullName>
+        <default>false</default>
+        <label>Small Urban</label>
+    </customValue>
+    <customValue>
+        <fullName>Supermarket</fullName>
+        <default>false</default>
+        <label>Supermarket</label>
+    </customValue>
+    <customValue>
+        <fullName>Large Neighbourhood</fullName>
+        <default>false</default>
+        <label>Large Neighbourhood</label>
+    </customValue>
+    <customValue>
+        <fullName>Small Neighbourhood</fullName>
+        <default>false</default>
+        <label>Small Neighbourhood</label>
+    </customValue>
+    <customValue>
+        <fullName>High Convenience</fullName>
+        <default>false</default>
+        <label>High Convenience</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 4A</fullName>
+        <default>false</default>
+        <label>Segment 4A</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment 5A</fullName>
+        <default>false</default>
+        <label>Segment 5A</label>
+    </customValue>
+    <description>Pricegroup Cluster &amp; Value Segmentation</description>
+    <masterLabel>Pricegroup Cluster &amp; Value Segmentation</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

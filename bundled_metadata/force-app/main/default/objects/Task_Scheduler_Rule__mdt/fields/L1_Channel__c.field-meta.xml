@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>L1_Channel__c</fullName>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>L1 Channel</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ORGANIZED TRADE</fullName>
+                <default>true</default>
+                <label>ORGANIZED TRADE</label>
+            </value>
+            <value>
+                <fullName>TRADITIONAL TRADE</fullName>
+                <default>false</default>
+                <label>TRADITIONAL TRADE</label>
+            </value>
+            <value>
+                <fullName>AWAY FROM HOME</fullName>
+                <default>false</default>
+                <label>AWAY FROM HOME</label>
+            </value>
+            <value>
+                <fullName>DISTRIBUTOR</fullName>
+                <default>false</default>
+                <label>DISTRIBUTOR</label>
+            </value>
+            <value>
+                <fullName>E-COMMERCE</fullName>
+                <default>false</default>
+                <label>E-COMMERCE</label>
+            </value>
+            <value>
+                <fullName>LARGE FORMAT</fullName>
+                <default>false</default>
+                <label>LARGE FORMAT</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>SMALL FORMAT</fullName>
+                <default>false</default>
+                <label>SMALL FORMAT</label>
+            </value>
+            <value>
+                <fullName>WHOLESALE</fullName>
+                <default>false</default>
+                <label>WHOLESALE</label>
+            </value>
+            <value>
+                <fullName>TRADITIONAL SALE</fullName>
+                <default>false</default>
+                <label>TRADITIONAL SALE</label>
+            </value>
+            <value>
+                <fullName>PRE-SELLER</fullName>
+                <default>false</default>
+                <label>PRE-SELLER</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

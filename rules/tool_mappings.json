@@ -1,0 +1,505 @@
+{
+  "account_templates": [
+    "Customers",
+    "Wholesalers",
+    "Prospects",
+    "Payers",
+    "Key Account"
+  ],
+  "templates": {
+    "Customers": {
+      "salesforce_object": "Account",
+      "required_type": "Customer",
+      "insert_requires_id": false,
+      "update_requires_id": true,
+      "date_fields": [
+        "Customer Valid from Date(dd/mm/yyyy)",
+        "Deactivate Date(dd/mm/yyyy)",
+        "GDPR date last checked(dd/mm/yyyy)"
+      ],
+      "column_mappings": {
+        "Salesforce Id": {
+          "suggested_api_field": "Id",
+          "default_status": "confirmed"
+        },
+        "*External Id": {
+          "suggested_api_field": null,
+          "default_status": "needs_confirmation",
+          "is_external_id_style": true,
+          "api_field_candidates": [
+            "CUST_ID__c",
+            "SAP_ID__c",
+            "Account_Unified_Id__c",
+            "Wholesaler_Store_ID__c"
+          ]
+        },
+        "*Name": {
+          "suggested_api_field": "Name",
+          "default_status": "confirmed"
+        },
+        "Phone": {
+          "suggested_api_field": "Phone",
+          "default_status": "confirmed"
+        },
+        "Email": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Key Account": {
+          "suggested_api_field": "KeyAccountId__c",
+          "default_status": "confirmed"
+        },
+        "Contracting Account": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Street": {
+          "suggested_api_field": "BillingStreet",
+          "default_status": "confirmed"
+        },
+        "City": {
+          "suggested_api_field": "BillingCity",
+          "default_status": "confirmed"
+        },
+        "Country": {
+          "suggested_api_field": "BillingCountry",
+          "default_status": "confirmed"
+        },
+        "Postal Code": {
+          "suggested_api_field": "BillingPostalCode",
+          "default_status": "confirmed"
+        },
+        "GLN": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "*L1 Channel": {
+          "suggested_api_field": "L1_Channel__c",
+          "default_status": "confirmed"
+        },
+        "L2 Subchannel": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L3 Classification": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L4 Classification": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L4 Microsegments": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L3 Bevs Pricegroup Cluster": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L3 Snacks Pricegroup Cluster": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L3 Snacks Value Segmentation": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L3 Bevs Value Segmentation": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Customer Valid from Date(dd/mm/yyyy)": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Deactivate Date(dd/mm/yyyy)": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Self Certification": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Degree of Centralization": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Customer Tax Classification": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "B2B Status": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "DSD Status": {
+          "suggested_api_field": "DSD_Status__c",
+          "default_status": "confirmed"
+        },
+        "GTM Status": {
+          "suggested_api_field": "Status__c",
+          "default_status": "confirmed"
+        },
+        "Digital Platform Type": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "GDPR date last checked(dd/mm/yyyy)": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "IBAN": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "VAT Tax ID": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "*Market": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        }
+      }
+    },
+    "Wholesalers": {
+      "salesforce_object": "Account",
+      "required_type": "Wholesaler",
+      "insert_requires_id": false,
+      "update_requires_id": true,
+      "date_fields": [],
+      "column_mappings": {
+        "Salesforce Id": {
+          "suggested_api_field": "Id",
+          "default_status": "confirmed"
+        },
+        "*Account External Id": {
+          "suggested_api_field": null,
+          "default_status": "needs_confirmation",
+          "is_external_id_style": true,
+          "api_field_candidates": [
+            "CUST_ID__c",
+            "SAP_ID__c",
+            "Account_Unified_Id__c",
+            "Wholesaler_Store_ID__c"
+          ]
+        },
+        "*Name": {
+          "suggested_api_field": "Name",
+          "default_status": "confirmed"
+        },
+        "Email": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Phone": {
+          "suggested_api_field": "Phone",
+          "default_status": "confirmed"
+        },
+        "*Market": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "*Street": {
+          "suggested_api_field": "BillingStreet",
+          "default_status": "confirmed"
+        },
+        "State": {
+          "suggested_api_field": "BillingState",
+          "default_status": "confirmed"
+        },
+        "*City": {
+          "suggested_api_field": "BillingCity",
+          "default_status": "confirmed"
+        },
+        "*Postal Code": {
+          "suggested_api_field": "BillingPostalCode",
+          "default_status": "confirmed"
+        },
+        "GLN": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "*Channel": {
+          "suggested_api_field": "L1_Channel__c",
+          "default_status": "confirmed"
+        },
+        "L2 Subchannel": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L3 Local Definition": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L4 Local Definition": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        }
+      }
+    },
+    "Prospects": {
+      "salesforce_object": "Account",
+      "required_type": "Prospect",
+      "insert_requires_id": false,
+      "update_requires_id": true,
+      "date_fields": [
+        "Competitor Contract Expiration Date"
+      ],
+      "column_mappings": {
+        "Salesforce Id": {
+          "suggested_api_field": "Id",
+          "default_status": "confirmed"
+        },
+        "Account External Id": {
+          "suggested_api_field": null,
+          "default_status": "needs_confirmation",
+          "is_external_id_style": true,
+          "api_field_candidates": [
+            "CUST_ID__c",
+            "SAP_ID__c",
+            "Account_Unified_Id__c",
+            "Wholesaler_Store_ID__c"
+          ]
+        },
+        "*Name": {
+          "suggested_api_field": "Name",
+          "default_status": "confirmed"
+        },
+        "Phone": {
+          "suggested_api_field": "Phone",
+          "default_status": "confirmed"
+        },
+        "Email": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Street": {
+          "suggested_api_field": "BillingStreet",
+          "default_status": "confirmed"
+        },
+        "State": {
+          "suggested_api_field": "BillingState",
+          "default_status": "confirmed"
+        },
+        "City": {
+          "suggested_api_field": "BillingCity",
+          "default_status": "confirmed"
+        },
+        "Country": {
+          "suggested_api_field": "BillingCountry",
+          "default_status": "confirmed"
+        },
+        "Postal Code": {
+          "suggested_api_field": "BillingPostalCode",
+          "default_status": "confirmed"
+        },
+        "DSD Status": {
+          "suggested_api_field": "DSD_Status__c",
+          "default_status": "confirmed"
+        },
+        "GTM Status": {
+          "suggested_api_field": "Status__c",
+          "default_status": "confirmed"
+        },
+        "Disqualification Reason": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Annual Sales Beverages": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Annual Volume Beverages": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "UoM Beverages": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Annual Sales Foods": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Annual Volume Food": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "UoM Foods": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Buying Categories": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Competitor Contract Expiration Date": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "*L1 Channel": {
+          "suggested_api_field": "L1_Channel__c",
+          "default_status": "confirmed"
+        },
+        "L2 Subchannel": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L3 Local Definition": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L4 Local Definition": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L4 Microsegments": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L3 Bevs Value Segmentation": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "L3 Snacks Value Segmentation": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "External Segmentation Beverages": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "External Segmentation Snacks": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Digital Platform Type": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Tax Classification": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "*Market": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "*Currency Code": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Key Account": {
+          "suggested_api_field": "KeyAccountId__c",
+          "default_status": "confirmed"
+        }
+      }
+    },
+    "Payers": {
+      "salesforce_object": "Account",
+      "required_type": "Payer",
+      "insert_requires_id": false,
+      "update_requires_id": true,
+      "date_fields": [],
+      "column_mappings": {
+        "Salesforce Id": {
+          "suggested_api_field": "Id",
+          "default_status": "confirmed"
+        },
+        "*Account External Id": {
+          "suggested_api_field": null,
+          "default_status": "needs_confirmation",
+          "is_external_id_style": true,
+          "api_field_candidates": [
+            "CUST_ID__c",
+            "SAP_ID__c",
+            "Account_Unified_Id__c",
+            "Wholesaler_Store_ID__c"
+          ]
+        },
+        "*Name": {
+          "suggested_api_field": "Name",
+          "default_status": "confirmed"
+        },
+        "Phone": {
+          "suggested_api_field": "Phone",
+          "default_status": "confirmed"
+        },
+        "Email": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "*Street": {
+          "suggested_api_field": "BillingStreet",
+          "default_status": "confirmed"
+        },
+        "*City": {
+          "suggested_api_field": "BillingCity",
+          "default_status": "confirmed"
+        },
+        "*State": {
+          "suggested_api_field": "BillingState",
+          "default_status": "confirmed"
+        },
+        "*Country": {
+          "suggested_api_field": "BillingCountry",
+          "default_status": "confirmed"
+        },
+        "*Postal Code": {
+          "suggested_api_field": "BillingPostalCode",
+          "default_status": "confirmed"
+        },
+        "Payment Terms": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Payment Type": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "VAT/Tax ID": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Market": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        },
+        "Currency Code": {
+          "suggested_api_field": null,
+          "default_status": "unmapped"
+        }
+      }
+    },
+    "Key Account": {
+      "salesforce_object": "Account",
+      "required_type": "Key Account",
+      "insert_requires_id": false,
+      "update_requires_id": true,
+      "date_fields": [],
+      "column_mappings": {
+        "Salesforce Id": {
+          "suggested_api_field": "Id",
+          "default_status": "confirmed"
+        },
+        "*External Id": {
+          "suggested_api_field": null,
+          "default_status": "needs_confirmation",
+          "is_external_id_style": true,
+          "api_field_candidates": [
+            "CUST_ID__c",
+            "SAP_ID__c",
+            "Account_Unified_Id__c",
+            "Wholesaler_Store_ID__c"
+          ]
+        },
+        "*Name": {
+          "suggested_api_field": "Name",
+          "default_status": "confirmed"
+        }
+      }
+    }
+  }
+}

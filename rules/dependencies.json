@@ -1,0 +1,485 @@
+{
+
+  "rules": [
+
+    {
+
+      "id": "key_accounts_before_customers",
+
+      "type": "object_load_order",
+
+      "parent_template": "Key Account",
+
+      "parent_object": "Account",
+
+      "child_template": "Customers",
+
+      "child_object": "Account",
+
+      "dependency_field": "KeyAccountId__c",
+
+      "message": "Customers may reference Key Accounts. Load Key Accounts first.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "customers_before_contacts",
+
+      "type": "object_load_order",
+
+      "parent_template": "Customers",
+
+      "parent_object": "Account",
+
+      "child_template": "Contact",
+
+      "child_object": "Contact",
+
+      "dependency_field": "AccountId",
+
+      "message": "Contacts require their parent Customer account.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "customers_before_contracts",
+
+      "type": "object_load_order",
+
+      "parent_template": "Customers",
+
+      "parent_object": "Account",
+
+      "child_template": "Contract",
+
+      "child_object": "Contract",
+
+      "dependency_field": "AccountId",
+
+      "message": "Contracts require an active Customer account.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "customers_before_orders",
+
+      "type": "object_load_order",
+
+      "parent_template": "Customers",
+
+      "parent_object": "Account",
+
+      "child_template": "Order",
+
+      "child_object": "Order",
+
+      "dependency_field": "AccountId",
+
+      "message": "Orders require their parent Customer account.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "orders_before_order_items",
+
+      "type": "object_load_order",
+
+      "parent_template": "Order",
+
+      "parent_object": "Order",
+
+      "child_template": "Order Item",
+
+      "child_object": "OrderItem",
+
+      "dependency_field": "OrderId",
+
+      "message": "Order Items require their parent Order.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "products_before_order_items",
+
+      "type": "object_load_order",
+
+      "parent_template": "Products",
+
+      "parent_object": "Product2",
+
+      "child_template": "Order Item",
+
+      "child_object": "OrderItem",
+
+      "dependency_field": "Product2Id",
+
+      "message": "Order Items require Products to be loaded first.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "assortments_before_assortment_products",
+
+      "type": "object_load_order",
+
+      "parent_template": "Assortment",
+
+      "parent_object": "Assortment__c",
+
+      "child_template": "Assortment Product",
+
+      "child_object": "AssortmentProduct__c",
+
+      "dependency_field": "AssortmentId",
+
+      "message": "Assortment Products require Assortments to be loaded first.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "products_before_assortment_products",
+
+      "type": "object_load_order",
+
+      "parent_template": "Products",
+
+      "parent_object": "Product2",
+
+      "child_template": "Assortment Product",
+
+      "child_object": "AssortmentProduct__c",
+
+      "dependency_field": "ProductId",
+
+      "message": "Assortment Products require Products to be loaded first.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "customers_before_customer_to_route",
+
+      "type": "object_load_order",
+
+      "parent_template": "Customers",
+
+      "parent_object": "Account",
+
+      "child_template": "Customer to Route",
+
+      "child_object": "CustomerToRoute__c",
+
+      "dependency_field": "Customer_Account__c",
+
+      "message": "Customer to Route requires Customers to be loaded first.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "routes_before_customer_to_route",
+
+      "type": "object_load_order",
+
+      "parent_template": "Retail Sales Geo",
+
+      "parent_object": "Route__c",
+
+      "child_template": "Customer to Route",
+
+      "child_object": "CustomerToRoute__c",
+
+      "dependency_field": "Route_ID__c",
+
+      "message": "Customer to Route requires Routes to be loaded first.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "parent_products_before_child_products",
+
+      "type": "object_load_order",
+
+      "parent_template": "Products",
+
+      "parent_object": "Product2",
+
+      "child_template": "Products",
+
+      "child_object": "Product2",
+
+      "dependency_field": "BasedOnId",
+
+      "message": "Child Products may reference parent Products in the same hierarchy branch.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "customers_before_account_relationship",
+
+      "type": "object_load_order",
+
+      "parent_template": "Customers",
+
+      "parent_object": "Account",
+
+      "child_template": "Account Relationship",
+
+      "child_object": "AccountRelationship__c",
+
+      "dependency_field": "Customer_Account__c",
+
+      "message": "Account Relationships require Customer accounts to exist first.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "products_before_retail_promotion",
+
+      "type": "object_load_order",
+
+      "parent_template": "Products",
+
+      "parent_object": "Product2",
+
+      "child_template": "Retail Promotion",
+
+      "child_object": "RetailPromotion__c",
+
+      "dependency_field": "Material ID",
+
+      "message": "Retail Promotions may reference Products that must exist first.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "account_relationship_customer",
+
+      "template": "Account Relationship",
+
+      "type": "cross_template_reference",
+
+      "field": "*Customer External Id",
+
+      "parent_template": "Customers",
+
+      "parent_field": "*External Id",
+
+      "parent_object": "Account",
+
+      "upload_order": 2,
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "account_relationship_related_account",
+
+      "template": "Account Relationship",
+
+      "type": "cross_template_reference",
+
+      "field": "*Related Account External Id",
+
+      "parent_template": "Customers",
+
+      "parent_field": "*External Id",
+
+      "parent_object": "Account",
+
+      "upload_order": 2,
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "contracts_customer",
+
+      "template": "Contract",
+
+      "type": "cross_template_reference",
+
+      "field": "*AccountId",
+
+      "parent_template": "Customers",
+
+      "parent_field": "*External Id",
+
+      "parent_object": "Account",
+
+      "upload_order": 2,
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "product_hierarchy_load_order",
+
+      "template": "Products",
+
+      "type": "load_order",
+
+      "depends_on_template": "Products",
+
+      "message": "Load PepsiCo product hierarchy SKUs before competitor products in the same hierarchy branch.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "competitor_product_hierarchy",
+
+      "template": "Products",
+
+      "type": "hierarchy_dependency",
+
+      "field": "*Product Hierarchy Level",
+
+      "reference_field": "*External ID",
+
+      "parent_brand_values": ["Pepsi", "PEPSI"],
+
+      "message": "Competitor hierarchy rows may fail if parent Pepsi SKU is not loaded first.",
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "assortment_product_product",
+
+      "template": "Assortment Product",
+
+      "type": "cross_template_reference",
+
+      "field": "*Product External ID",
+
+      "parent_template": "Products",
+
+      "parent_field": "*External ID",
+
+      "parent_object": "Product2",
+
+      "upload_order": 2,
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "assortment_product_assortment",
+
+      "template": "Assortment Product",
+
+      "type": "cross_template_reference",
+
+      "field": "*Assortment External ID",
+
+      "parent_template": "Assortment",
+
+      "parent_field": "*External ID",
+
+      "parent_object": "Assortment__c",
+
+      "upload_order": 1,
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "retail_promotion_product",
+
+      "template": "Retail Promotion",
+
+      "type": "cross_template_reference",
+
+      "field": "Material ID",
+
+      "parent_template": "Products",
+
+      "parent_field": "*External ID",
+
+      "parent_object": "Product2",
+
+      "upload_order": 2,
+
+      "blocking": true
+
+    },
+
+    {
+
+      "id": "customer_to_route_route",
+
+      "template": "Customer to Route",
+
+      "type": "cross_template_reference",
+
+      "field": "*Route External Id",
+
+      "parent_template": "Retail Sales Geo",
+
+      "parent_field": "*External Id",
+
+      "parent_object": "Route__c",
+
+      "upload_order": 1,
+
+      "blocking": true
+
+    }
+
+  ]
+
+}
+
+

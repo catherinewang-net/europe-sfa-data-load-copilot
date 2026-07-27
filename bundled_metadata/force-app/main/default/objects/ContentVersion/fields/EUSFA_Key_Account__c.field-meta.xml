@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_Key_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to Key Account for document assignment. Used in Store Specific document matching to find stores linked to this Key Account via Account.KeyAccountId__c.</description>
+    <label>Key Account</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Key Account</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Content Versions</relationshipLabel>
+    <relationshipName>EUSFA_Content_Versions</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

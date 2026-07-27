@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Id__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description
+    >External identifier used as the alternate upsert key when Order Number is not available. Populated by the Order Confirmation upload (ADO 158478) and read by the Order Item Confirmation upload (ADO 212013).</description>
+    <externalId>true</externalId>
+    <label>External Id</label>
+    <length>40</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

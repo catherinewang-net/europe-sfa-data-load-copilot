@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Select when the survey should apply to an entire sales Region. Only one assignment group (sales, customer, or store) should be populated.</inlineHelpText>
+    <label>Region</label>
+    <referenceTo>CustomerToRoute__c</referenceTo>
+    <relationshipLabel>Assessment Task Definitions (Region)</relationshipLabel>
+    <relationshipName>Assessment_Task_Definitions_Region</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

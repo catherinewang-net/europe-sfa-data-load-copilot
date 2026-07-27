@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>FR AFH BDR</label>
+    <protected>false</protected>
+    <values>
+        <field>Channel__c</field>
+        <value xsi:type="xsd:string">AWAY FROM HOME</value>
+    </values>
+    <values>
+        <field>Is_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Market__c</field>
+        <value xsi:type="xsd:string">FR</value>
+    </values>
+    <values>
+        <field>Permission_Set_Group_Id__c</field>
+        <value xsi:type="xsd:string">0PGUC0000006pEL4AY</value>
+    </values>
+    <values>
+        <field>Permission_Set_Group_Name__c</field>
+        <value xsi:type="xsd:string">FR_Away_from_Home_BDR</value>
+    </values>
+    <values>
+        <field>Persona__c</field>
+        <value xsi:type="xsd:string">BDR</value>
+    </values>
+    <values>
+        <field>Profile_Id__c</field>
+        <value xsi:type="xsd:string">00eUC000002PwfZ</value>
+    </values>
+    <values>
+        <field>Profile_Name__c</field>
+        <value xsi:type="xsd:string">Commercial Profile</value>
+    </values>
+    <values>
+        <field>Program__c</field>
+        <value xsi:type="xsd:string">SFA</value>
+    </values>
+</CustomMetadata>

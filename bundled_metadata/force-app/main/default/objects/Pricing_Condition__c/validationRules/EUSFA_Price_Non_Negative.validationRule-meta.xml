@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_Price_Non_Negative</fullName>
+    <active>true</active>
+    <description>Blocks save when Pricing Condition Value is negative. Allows null.</description>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(Pricing_Condition_Value__c)),
+  Pricing_Condition_Value__c &lt; 0
+)</errorConditionFormula>
+    <errorMessage>Pricing Condition Value must be zero or a positive number.</errorMessage>
+</ValidationRule>

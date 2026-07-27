@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_Prevent_Hourly_And_TimeOfDay</fullName>
+    <active>true</active>
+    <description>This validation rule exist to prevent Is Hourly and Time of Day to be populated at the same time</description>
+    <errorConditionFormula>AND(
+Is_Hourly__c = TRUE,
+NOT(ISBLANK(Time_of_day__c))
+)</errorConditionFormula>
+    <errorMessage>&apos;Is Hourly&apos; and &apos;Time of Day&apos; fields cannot be filled at the same time. Please enter a value in only one of these fields.</errorMessage>
+</ValidationRule>

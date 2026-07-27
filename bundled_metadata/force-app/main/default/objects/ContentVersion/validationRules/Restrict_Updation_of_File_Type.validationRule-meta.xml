@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Updation_of_File_Type</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(   
+    NOT(
+        ISBLANK(
+            TEXT(EUSFA_Document_Type__c)
+        )
+    ),   
+    NOT(
+        OR(
+            CONTAINS(LOWER(FileType), &quot;pdf&quot;),
+            CONTAINS(LOWER(FileType), &quot;jpg&quot;),
+            CONTAINS(LOWER(FileType), &quot;png&quot;),
+            CONTAINS(LOWER(FileType), &quot;jpeg&quot;)
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>File Type must be one of the following formats: pdf, jpg, png, jpeg.</errorMessage>
+</ValidationRule>

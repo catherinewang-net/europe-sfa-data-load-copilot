@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>3RD P SERV OP</fullName>
+        <default>false</default>
+        <label>3RD P SERV OP</label>
+    </customValue>
+    <customValue>
+        <fullName>ACCESS</fullName>
+        <default>false</default>
+        <label>ACCESS</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR</fullName>
+        <default>false</default>
+        <label>BAR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRAND OWNED</fullName>
+        <default>false</default>
+        <label>BRAND OWNED</label>
+    </customValue>
+    <customValue>
+        <fullName>BUFFET</fullName>
+        <default>false</default>
+        <label>BUFFET</label>
+    </customValue>
+    <customValue>
+        <fullName>CAFETERIA</fullName>
+        <default>false</default>
+        <label>CAFETERIA</label>
+    </customValue>
+    <customValue>
+        <fullName>CASH&amp;CARRY</fullName>
+        <default>false</default>
+        <label>CASH&amp;CARRY</label>
+    </customValue>
+    <customValue>
+        <fullName>CHAIN CONV&amp;GAS</fullName>
+        <default>false</default>
+        <label>CHAIN CONV&amp;GAS</label>
+    </customValue>
+    <customValue>
+        <fullName>CINEMA</fullName>
+        <default>false</default>
+        <label>CINEMA</label>
+    </customValue>
+    <customValue>
+        <fullName>COBO</fullName>
+        <default>false</default>
+        <label>COBO</label>
+    </customValue>
+    <customValue>
+        <fullName>COMAN</fullName>
+        <default>false</default>
+        <label>COMAN</label>
+    </customValue>
+    <customValue>
+        <fullName>CONCIERGE AFH</fullName>
+        <default>false</default>
+        <label>CONCIERGE AFH</label>
+    </customValue>
+    <customValue>
+        <fullName>CONCIERGE CONV</fullName>
+        <default>false</default>
+        <label>CONCIERGE CONV</label>
+    </customValue>
+    <customValue>
+        <fullName>CONCIERGE GROCERY</fullName>
+        <default>false</default>
+        <label>CONCIERGE GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>CONV&amp;GAS DIST</fullName>
+        <default>false</default>
+        <label>CONV&amp;GAS DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>CONVENTIONAL</fullName>
+        <default>false</default>
+        <label>CONVENTIONAL</label>
+    </customValue>
+    <customValue>
+        <fullName>DAIRY</fullName>
+        <default>false</default>
+        <label>DAIRY</label>
+    </customValue>
+    <customValue>
+        <fullName>DELI</fullName>
+        <default>false</default>
+        <label>DELI</label>
+    </customValue>
+    <customValue>
+        <fullName>DEPT STORE</fullName>
+        <default>false</default>
+        <label>DEPT STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>DIRECT VENDING</fullName>
+        <default>false</default>
+        <label>DIRECT VENDING</label>
+    </customValue>
+    <customValue>
+        <fullName>DOMESTIC</fullName>
+        <default>false</default>
+        <label>DOMESTIC</label>
+    </customValue>
+    <customValue>
+        <fullName>DRUG PHARMACY</fullName>
+        <default>false</default>
+        <label>DRUG PHARMACY</label>
+    </customValue>
+    <customValue>
+        <fullName>EDUCATION</fullName>
+        <default>false</default>
+        <label>EDUCATION</label>
+    </customValue>
+    <customValue>
+        <fullName>EMPLOYEE SALES</fullName>
+        <default>false</default>
+        <label>EMPLOYEE SALES</label>
+    </customValue>
+    <customValue>
+        <fullName>EXPORT</fullName>
+        <default>false</default>
+        <label>EXPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>FOBO</fullName>
+        <default>false</default>
+        <label>FOBO</label>
+    </customValue>
+    <customValue>
+        <fullName>FOOD SERVICE DIST</fullName>
+        <default>false</default>
+        <label>FOOD SERVICE DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>FREEZER STORE</fullName>
+        <default>false</default>
+        <label>FREEZER STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>FSR FULL SERV REST</fullName>
+        <default>false</default>
+        <label>FSR FULL SERV REST</label>
+    </customValue>
+    <customValue>
+        <fullName>GAMING&amp;CASINO</fullName>
+        <default>false</default>
+        <label>GAMING&amp;CASINO</label>
+    </customValue>
+    <customValue>
+        <fullName>GOODS&amp;SERVICES</fullName>
+        <default>false</default>
+        <label>GOODS&amp;SERVICES</label>
+    </customValue>
+    <customValue>
+        <fullName>GOVT</fullName>
+        <default>false</default>
+        <label>GOVT</label>
+    </customValue>
+    <customValue>
+        <fullName>GROCERY</fullName>
+        <default>false</default>
+        <label>GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>GROCERY DIST</fullName>
+        <default>false</default>
+        <label>GROCERY DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>HOTEL</fullName>
+        <default>false</default>
+        <label>HOTEL</label>
+    </customValue>
+    <customValue>
+        <fullName>IBS DRUG&amp;PHARMACY</fullName>
+        <default>false</default>
+        <label>IBS DRUG&amp;PHARMACY</label>
+    </customValue>
+    <customValue>
+        <fullName>IBS LOCAL CONV&amp;GAS</fullName>
+        <default>false</default>
+        <label>IBS LOCAL CONV&amp;GAS</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIRECT VENDING</fullName>
+        <default>false</default>
+        <label>INDIRECT VENDING</label>
+    </customValue>
+    <customValue>
+        <fullName>INDUSTRIAL</fullName>
+        <default>false</default>
+        <label>INDUSTRIAL</label>
+    </customValue>
+    <customValue>
+        <fullName>INSTITUTION</fullName>
+        <default>false</default>
+        <label>INSTITUTION</label>
+    </customValue>
+    <customValue>
+        <fullName>INTERCO EXPORT</fullName>
+        <default>false</default>
+        <label>INTERCO EXPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>KEY ACCOUNT</fullName>
+        <default>false</default>
+        <label>KEY ACCOUNT</label>
+    </customValue>
+    <customValue>
+        <fullName>KIOSK</fullName>
+        <default>false</default>
+        <label>KIOSK</label>
+    </customValue>
+    <customValue>
+        <fullName>LARGE DISCOUNTER</fullName>
+        <default>false</default>
+        <label>LARGE DISCOUNTER</label>
+    </customValue>
+    <customValue>
+        <fullName>LARGE GROCERY</fullName>
+        <default>false</default>
+        <label>LARGE GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL CONV&amp;GAS</fullName>
+        <default>false</default>
+        <label>LOCAL CONV&amp;GAS</label>
+    </customValue>
+    <customValue>
+        <fullName>LSR LTD SERV REST</fullName>
+        <default>false</default>
+        <label>LSR LTD SERV REST</label>
+    </customValue>
+    <customValue>
+        <fullName>MASS MERCHANDISER</fullName>
+        <default>false</default>
+        <label>MASS MERCHANDISER</label>
+    </customValue>
+    <customValue>
+        <fullName>MEDIUM GROCERY</fullName>
+        <default>false</default>
+        <label>MEDIUM GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>MILITARY&amp;GOVT</fullName>
+        <default>false</default>
+        <label>MILITARY&amp;GOVT</label>
+    </customValue>
+    <customValue>
+        <fullName>MILITARY&amp;GOVT DIST</fullName>
+        <default>false</default>
+        <label>MILITARY&amp;GOVT DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>MINI MARKET</fullName>
+        <default>false</default>
+        <label>MINI MARKET</label>
+    </customValue>
+    <customValue>
+        <fullName>MISC SALES</fullName>
+        <default>false</default>
+        <label>MISC SALES</label>
+    </customValue>
+    <customValue>
+        <fullName>MULTIFORMAT</fullName>
+        <default>false</default>
+        <label>MULTIFORMAT</label>
+    </customValue>
+    <customValue>
+        <fullName>MULTIFORMAT DIST</fullName>
+        <default>false</default>
+        <label>MULTIFORMAT DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>NATURAL DIST</fullName>
+        <default>false</default>
+        <label>NATURAL DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>OCCUPATIONAL</fullName>
+        <default>false</default>
+        <label>OCCUPATIONAL</label>
+    </customValue>
+    <customValue>
+        <fullName>OMNI AFH</fullName>
+        <default>false</default>
+        <label>OMNI AFH</label>
+    </customValue>
+    <customValue>
+        <fullName>OMNI CONV</fullName>
+        <default>false</default>
+        <label>OMNI CONV</label>
+    </customValue>
+    <customValue>
+        <fullName>OMNI GROCERY MASS</fullName>
+        <default>false</default>
+        <label>OMNI GROCERY MASS</label>
+    </customValue>
+    <customValue>
+        <fullName>PIZZERIA</fullName>
+        <default>false</default>
+        <label>PIZZERIA</label>
+    </customValue>
+    <customValue>
+        <fullName>PURE PLAY</fullName>
+        <default>false</default>
+        <label>PURE PLAY</label>
+    </customValue>
+    <customValue>
+        <fullName>QSR LTD SERV REST</fullName>
+        <default>false</default>
+        <label>QSR LTD SERV REST</label>
+    </customValue>
+    <customValue>
+        <fullName>RECREATION&amp;RETAIL</fullName>
+        <default>false</default>
+        <label>RECREATION&amp;RETAIL</label>
+    </customValue>
+    <customValue>
+        <fullName>RETAIL CLUB</fullName>
+        <default>false</default>
+        <label>RETAIL CLUB</label>
+    </customValue>
+    <customValue>
+        <fullName>RETAIL MILITARY</fullName>
+        <default>false</default>
+        <label>RETAIL MILITARY</label>
+    </customValue>
+    <customValue>
+        <fullName>SF GROCERY</fullName>
+        <default>false</default>
+        <label>SF GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>SMALL GROCERY</fullName>
+        <default>false</default>
+        <label>SMALL GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>SMALL RETAIL CLUB</fullName>
+        <default>false</default>
+        <label>SMALL RETAIL CLUB</label>
+    </customValue>
+    <customValue>
+        <fullName>SOCIAL COMMERCE</fullName>
+        <default>false</default>
+        <label>SOCIAL COMMERCE</label>
+    </customValue>
+    <customValue>
+        <fullName>SPECIAL EVENTS</fullName>
+        <default>false</default>
+        <label>SPECIAL EVENTS</label>
+    </customValue>
+    <customValue>
+        <fullName>SPECIALTY</fullName>
+        <default>false</default>
+        <label>SPECIALTY</label>
+    </customValue>
+    <customValue>
+        <fullName>SPECIALTY DIST</fullName>
+        <default>false</default>
+        <label>SPECIALTY DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>SPORTS&amp;ENTERTAINMENT</fullName>
+        <default>false</default>
+        <label>SPORTS&amp;ENTERTAINMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>SUPERCENTER</fullName>
+        <default>false</default>
+        <label>SUPERCENTER</label>
+    </customValue>
+    <customValue>
+        <fullName>TRANSPORT&amp;TRAVEL</fullName>
+        <default>false</default>
+        <label>TRANSPORT&amp;TRAVEL</label>
+    </customValue>
+    <customValue>
+        <fullName>TRAVEL SERVICES</fullName>
+        <default>false</default>
+        <label>TRAVEL SERVICES</label>
+    </customValue>
+    <customValue>
+        <fullName>TT CONV&amp;GAS</fullName>
+        <default>false</default>
+        <label>TT CONV&amp;GAS</label>
+    </customValue>
+    <customValue>
+        <fullName>TT DRUG&amp;PHARMACY</fullName>
+        <default>false</default>
+        <label>TT DRUG&amp;PHARMACY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT GOODS&amp;SERVICES</fullName>
+        <default>false</default>
+        <label>TT GOODS&amp;SERVICES</label>
+    </customValue>
+    <customValue>
+        <fullName>TT GROCERY</fullName>
+        <default>false</default>
+        <label>TT GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT KIOSKS</fullName>
+        <default>false</default>
+        <label>TT KIOSKS</label>
+    </customValue>
+    <customValue>
+        <fullName>TT LIQUOR STORE</fullName>
+        <default>false</default>
+        <label>TT LIQUOR STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>TT MINI MARKET</fullName>
+        <default>false</default>
+        <label>TT MINI MARKET</label>
+    </customValue>
+    <customValue>
+        <fullName>TT NATURAL</fullName>
+        <default>false</default>
+        <label>TT NATURAL</label>
+    </customValue>
+    <customValue>
+        <fullName>TT SPECIALTY</fullName>
+        <default>false</default>
+        <label>TT SPECIALTY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT WHOLESALER</fullName>
+        <default>false</default>
+        <label>TT WHOLESALER</label>
+    </customValue>
+    <customValue>
+        <fullName>VALUE PRICED</fullName>
+        <default>false</default>
+        <label>VALUE PRICED</label>
+    </customValue>
+    <customValue>
+        <fullName>VENDING</fullName>
+        <default>false</default>
+        <label>VENDING</label>
+    </customValue>
+    <customValue>
+        <fullName>WORKPLACE VENDING</fullName>
+        <default>false</default>
+        <label>WORKPLACE VENDING</label>
+    </customValue>
+    <customValue>
+        <fullName>RESTAURATION RAPIDE</fullName>
+        <default>false</default>
+        <label>RESTAURATION RAPIDE</label>
+    </customValue>
+    <customValue>
+        <fullName>SANDWICHERIES</fullName>
+        <default>false</default>
+        <label>SANDWICHERIES</label>
+    </customValue>
+    <customValue>
+        <fullName>CHR</fullName>
+        <default>false</default>
+        <label>CHR</label>
+    </customValue>
+    <customValue>
+        <fullName>COLLECTIVITES</fullName>
+        <default>false</default>
+        <label>COLLECTIVITES</label>
+    </customValue>
+    <customValue>
+        <fullName>SITES D’ENTREPRISES</fullName>
+        <default>false</default>
+        <label>SITES D’ENTREPRISES</label>
+    </customValue>
+    <customValue>
+        <fullName>COMPLEXES DE DIVERTISSEMENT</fullName>
+        <default>false</default>
+        <label>COMPLEXES DE DIVERTISSEMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>COMPLEXE MULTISPORTS</fullName>
+        <default>false</default>
+        <label>COMPLEXE MULTISPORTS</label>
+    </customValue>
+    <customValue>
+        <fullName>EVENEMENTS</fullName>
+        <default>false</default>
+        <label>EVENEMENTS</label>
+    </customValue>
+    <description>L3 Local Definition</description>
+    <masterLabel>L3 Local Definition</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

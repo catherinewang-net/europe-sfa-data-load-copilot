@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_Wholesaler_Preference__c</fullName>
+    <description>Stores the preferred wholesaler for the business.</description>
+    <label>Wholesaler Preference</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Booker</fullName>
+                <default>false</default>
+                <label>Booker</label>
+            </value>
+            <value>
+                <fullName>Brakes</fullName>
+                <default>false</default>
+                <label>Brakes</label>
+            </value>
+            <value>
+                <fullName>Bidfood</fullName>
+                <default>false</default>
+                <label>Bidfood</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

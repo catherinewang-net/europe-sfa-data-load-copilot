@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_PreventStatusChangeAfterCompleted</fullName>
+    <active>false</active>
+    <description>Prevents editing the visit list record once the status is completed</description>
+    <errorConditionFormula>AND(
+  ISPICKVAL(PRIORVALUE(Status__c), &quot;Completed&quot;),
+  NOT(ISNEW())
+)</errorConditionFormula>
+    <errorMessage>Visit list cannot be changed once the Status is marked as Completed.</errorMessage>
+</ValidationRule>

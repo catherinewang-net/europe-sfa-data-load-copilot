@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Europe SFA Data Load Copilot — Final Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pepsi-blue: #004B93;
+      --bright-blue: #009FE3;
+      --pepsi-red: #E32934;
+      --dark-navy: #00205B;
+      --white: #FFFFFF;
+      --off-white: #F4F7FB;
+      --text-muted: #5A6B7D;
+      --card-shadow: 0 8px 32px rgba(0, 32, 91, 0.12);
+      --slide-pad: clamp(2rem, 5vw, 4.5rem);
+      --nav-height: 72px;
+      --notes-height: 140px;
+      --font: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      font-family: var(--font);
+      color: var(--dark-navy);
+      background: var(--dark-navy);
+    }
+
+    /* ── Deck ── */
+    .deck {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - var(--nav-height));
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--slide-pad);
+      padding-bottom: calc(var(--slide-pad) + 1rem);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(40px);
+      transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s;
+      background: linear-gradient(135deg, var(--off-white) 0%, #E8F0FA 100%);
+      overflow-y: auto;
+    }
+
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+      z-index: 2;
+    }
+
+    .slide.prev {
+      transform: translateX(-40px);
+    }
+
+    .slide--hero {
+      background: linear-gradient(145deg, var(--dark-navy) 0%, var(--pepsi-blue) 55%, var(--bright-blue) 100%);
+      color: var(--white);
+    }
+
+    .slide--accent {
+      background: linear-gradient(160deg, var(--pepsi-blue) 0%, var(--dark-navy) 100%);
+      color: var(--white);
+    }
+
+    .slide--demo {
+      background: linear-gradient(160deg, var(--dark-navy) 0%, #003875 100%);
+      color: var(--white);
+    }
+
+    .slide-number {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      opacity: 0.55;
+      letter-spacing: 0.04em;
+    }
+
+    .eyebrow {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--bright-blue);
+      margin-bottom: 0.75rem;
+    }
+
+    .slide--hero .eyebrow,
+    .slide--accent .eyebrow,
+    .slide--demo .eyebrow {
+      color: rgba(255,255,255,0.75);
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+      margin-bottom: 1.5rem;
+      max-width: 900px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      line-height: 1.5;
+      max-width: 680px;
+      opacity: 0.92;
+    }
+
+    .slide:not(.slide--hero):not(.slide--accent):not(.slide--demo) .subtitle {
+      color: var(--text-muted);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      margin-top: 2.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+
+    .meta-row span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .meta-row span::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--pepsi-red);
+    }
+
+    /* ── Cards & grids ── */
+    .card-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .card-grid--2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card-grid--3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .card-grid--4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+    .card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 1.25rem 1.4rem;
+      box-shadow: var(--card-shadow);
+      border-left: 4px solid var(--bright-blue);
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .card:nth-child(2) { animation-delay: 0.06s; }
+    .card:nth-child(3) { animation-delay: 0.12s; }
+    .card:nth-child(4) { animation-delay: 0.18s; }
+    .card:nth-child(5) { animation-delay: 0.24s; }
+    .card:nth-child(6) { animation-delay: 0.30s; }
+    .card:nth-child(7) { animation-delay: 0.36s; }
+    .card:nth-child(8) { animation-delay: 0.42s; }
+
+    .card--red { border-left-color: var(--pepsi-red); }
+    .card--navy { border-left-color: var(--dark-navy); }
+
+    .card p, .card li {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--text-muted);
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card li {
+      padding-left: 1.1rem;
+      position: relative;
+      margin-bottom: 0.35rem;
+    }
+
+    .card li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--bright-blue);
+      font-size: 0.75rem;
+      top: 0.15rem;
+    }
+
+    /* ── Lists ── */
+    .bullet-list {
+      list-style: none;
+      max-width: 780px;
+    }
+
+    .bullet-list li {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      line-height: 1.6;
+      padding: 0.65rem 0 0.65rem 1.75rem;
+      position: relative;
+      border-bottom: 1px solid rgba(0, 75, 147, 0.08);
+    }
+
+    .bullet-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1.1rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--pepsi-red);
+    }
+
+    /* ── Flow diagram ── */
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .flow-step {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 0.85rem 1.2rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: var(--card-shadow);
+      white-space: nowrap;
+    }
+
+    .flow-arrow {
+      color: var(--bright-blue);
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .slide--accent .flow-step,
+    .slide--demo .flow-step {
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .slide--accent .flow-arrow,
+    .slide--demo .flow-arrow {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ── Demo steps ── */
+    .demo-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .demo-step {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 16px;
+      padding: 1.5rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .demo-step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--pepsi-red);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .demo-step h3 { color: var(--white); font-size: 1.1rem; }
+    .demo-step p { color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.55; margin-top: 0.4rem; }
+
+    .file-ref {
+      display: inline-block;
+      margin-top: 1.25rem;
+      padding: 0.6rem 1rem;
+      background: rgba(0,0,0,0.25);
+      border-radius: 8px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.85);
+      word-break: break-all;
+    }
+
+    /* ── Impact pills ── */
+    .impact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      max-width: 820px;
+    }
+
+    .impact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      box-shadow: var(--card-shadow);
+      font-size: clamp(1rem, 1.7vw, 1.15rem);
+      line-height: 1.5;
+    }
+
+    .impact-icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--pepsi-blue), var(--bright-blue));
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    /* ── Highlight box ── */
+    .highlight-box {
+      background: rgba(0, 75, 147, 0.08);
+      border-left: 4px solid var(--pepsi-blue);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin-top: 1.25rem;
+      max-width: 820px;
+    }
+
+    .highlight-box p {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--dark-navy);
+    }
+
+    .slide--accent .highlight-box,
+    .slide--demo .highlight-box {
+      background: rgba(255,255,255,0.1);
+      border-left-color: var(--pepsi-red);
+    }
+
+    .slide--accent .highlight-box p,
+    .slide--demo .highlight-box p {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.2rem 0.65rem;
+      border-radius: 6px;
+      background: var(--pepsi-blue);
+      color: var(--white);
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin: 0 0.15rem;
+    }
+
+    .tag--red { background: var(--pepsi-red); }
+
+    /* ── Live demo CTA ── */
+    .demo-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      padding: 1.25rem 2.5rem;
+      background: var(--pepsi-red);
+      color: var(--white);
+      border-radius: 16px;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 700;
+      box-shadow: 0 12px 40px rgba(227, 41, 52, 0.4);
+      animation: pulse 2.5s ease infinite;
+      cursor: default;
+    }
+
+    .demo-cta-icon {
+      font-size: 1.8rem;
+    }
+
+    /* ── Timing table ── */
+    .timing-table {
+      width: 100%;
+      max-width: 900px;
+      border-collapse: collapse;
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      font-size: 0.9rem;
+    }
+
+    .timing-table th {
+      background: var(--pepsi-blue);
+      color: var(--white);
+      text-align: left;
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+    }
+
+    .timing-table td {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid rgba(0,75,147,0.08);
+    }
+
+    .timing-table tr:last-child td { border-bottom: none; }
+    .timing-table tr:last-child { font-weight: 700; background: rgba(0,159,227,0.08); }
+
+    .time-col {
+      color: var(--pepsi-red);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* ── Navigation ── */
+    .nav-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-height);
+      background: var(--dark-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0 1.5rem;
+      z-index: 100;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-btn {
+      width: 44px;
+      height: 44px;
+      border: 2px solid rgba(255,255,255,0.25);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--white);
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .nav-btn:hover:not(:disabled) {
+      background: var(--pepsi-blue);
+      border-color: var(--bright-blue);
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    .progress-dots {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 420px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .dot.active {
+      background: var(--bright-blue);
+      transform: scale(1.25);
+    }
+
+    .dot:hover { background: rgba(255,255,255,0.5); }
+
+    .nav-hint {
+      position: absolute;
+      right: 1.5rem;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.45);
+      display: none;
+    }
+
+    @media (min-width: 900px) {
+      .nav-hint { display: block; }
+    }
+
+    .notes-toggle {
+      position: absolute;
+      left: 1.5rem;
+      padding: 0.45rem 0.9rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 8px;
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .notes-toggle:hover,
+    .notes-toggle.active {
+      background: var(--pepsi-blue);
+      color: var(--white);
+    }
+
+    /* ── Presenter notes ── */
+    .notes-panel {
+      position: fixed;
+      bottom: var(--nav-height);
+      left: 0;
+      right: 0;
+      height: 0;
+      background: #1a1a2e;
+      color: rgba(255,255,255,0.88);
+      overflow: hidden;
+      transition: height 0.35s ease;
+      z-index: 90;
+      padding: 0 2rem;
+    }
+
+    .notes-panel.visible {
+      height: var(--notes-height);
+      padding: 1rem 2rem;
+      border-top: 2px solid var(--bright-blue);
+    }
+
+    .notes-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bright-blue);
+      margin-bottom: 0.4rem;
+    }
+
+    #notesContent {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      max-height: 90px;
+      overflow-y: auto;
+    }
+
+    body.notes-open .deck {
+      height: calc(100vh - var(--nav-height) - var(--notes-height));
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 12px 40px rgba(227, 41, 52, 0.4); }
+      50% { box-shadow: 0 12px 50px rgba(227, 41, 52, 0.65); }
+    }
+
+    .slide.active .subtitle,
+    .slide.active h2,
+    .slide.active .bullet-list li {
+      animation: fadeUp 0.55s ease both;
+    }
+
+    .slide.active h2 { animation-delay: 0.05s; }
+    .slide.active .subtitle { animation-delay: 0.1s; }
+
+    /* ── Print ── */
+    @media print {
+      .nav-bar, .notes-panel, .notes-toggle { display: none !important; }
+      .deck { height: auto; overflow: visible; }
+      .slide {
+        position: relative;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        page-break-after: always;
+        min-height: 100vh;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .flow { flex-direction: column; align-items: stretch; }
+      .flow-arrow { text-align: center; }
+      .flow-step { white-space: normal; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+  <!-- 1. Title -->
+  <section class="slide slide--hero active" data-notes="Open with energy: 'How many hours have we lost fixing CSVs that Salesforce still rejects?' Introduce the Europe SFA Data Load Copilot — a Streamlit app that prepares files before Workbench or Data Import Tool upload. Tagline: faster, safer, fewer upload errors. Mention this is a final project built on EUSFA Salesforce metadata.">
+    <span class="slide-number">1 / 12</span>
+    <p class="eyebrow">Europe SFA · PepsiCo · Final Project</p>
+    <h1>Europe SFA<br>Data Load Copilot</h1>
+    <p class="subtitle">Preparing Salesforce data faster, safer, and with fewer upload errors.</p>
+    <div class="meta-row">
+      <span>Streamlit Application</span>
+      <span>Leadership Presentation</span>
+      <span>July 2026</span>
+    </div>
+  </section>
+
+  <!-- 2. The Problem -->
+  <section class="slide" data-notes="Paint the daily pain. Teams juggle Excel, template PDFs, and tribal knowledge. Every load cycle repeats the same manual checks. Emphasize: the problem isn't Salesforce — it's the gap between a business spreadsheet and a file Salesforce will accept.">
+    <span class="slide-number">2 / 12</span>
+    <p class="eyebrow">The Problem</p>
+    <h2>Manual data prep slows every SFA load</h2>
+    <ul class="bullet-list">
+      <li>Teams spend too much time manually checking templates and fixing CSV formatting</li>
+      <li>Picklist labels, date formats, and header names are validated only by trial and error</li>
+      <li>Upload failures in Workbench or the Data Import Tool mean rework from scratch</li>
+      <li>Errors often surface <em>at upload time</em> — after hours of preparation</li>
+    </ul>
+  </section>
+
+  <!-- 3. Why It Matters -->
+  <section class="slide" data-notes="Connect to business impact. Failed loads delay market deployments, erode trust in data quality, and pull admins into firefighting. For leadership: this is operational risk and wasted capacity, not just an IT inconvenience.">
+    <span class="slide-number">3 / 12</span>
+    <p class="eyebrow">Why It Matters</p>
+    <h2>Bad data has real deployment cost</h2>
+    <div class="card-grid card-grid--2" style="margin-top: 0.5rem;">
+      <div class="card card--red">
+        <h3>Failed Loads</h3>
+        <p>Invalid picklists, wrong date formats, and malformed rows cause Salesforce to reject entire files.</p>
+      </div>
+      <div class="card">
+        <h3>Rework & Delays</h3>
+        <p>Each failure sends teams back to Excel — delaying SFA deployment timelines across markets.</p>
+      </div>
+      <div class="card">
+        <h3>Confusion</h3>
+        <p>Without metadata-driven checks, loaders guess API values and hope the upload succeeds.</p>
+      </div>
+      <div class="card card--navy">
+        <h3>Scale Risk</h3>
+        <p>As Europe SFA expands templates and markets, manual review does not scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. My Approach -->
+  <section class="slide slide--accent" data-notes="Walk through the flow left to right. The Copilot is a preparation layer — not a replacement for Salesforce upload tools. Users upload, the app detects template and upload method (Workbench vs DIT), validates against EUSFA metadata, proposes fixes, user approves, then downloads a ready file.">
+    <span class="slide-number">4 / 12</span>
+    <p class="eyebrow">My Approach</p>
+    <h2>A guided path from upload to corrected CSV</h2>
+    <div class="flow">
+      <span class="flow-step">Upload file</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Detect template</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Validate data</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Suggest fixes</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">User approves</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Download ready CSV</span>
+    </div>
+    <div class="highlight-box">
+      <p>Supports both <span class="tag">Workbench</span> (API field names, YYYY-MM-DD) and <span class="tag tag--red">Data Import Tool</span> (friendly headers, DD/MM/YYYY) — validated against the same EUSFA metadata source.</p>
+    </div>
+  </section>
+
+  <!-- 5. Key Decisions -->
+  <section class="slide" data-notes="These four decisions shaped the architecture. Stress 'no auto-guessing picklists' — the Copilot shows valid values but never invents replacements. User approval is a feature, not a limitation. Metadata from the local EUSFA SFDX clone is the single source of truth.">
+    <span class="slide-number">5 / 12</span>
+    <p class="eyebrow">Key Decisions</p>
+    <h2>Design choices that keep the Copilot trustworthy</h2>
+    <div class="card-grid card-grid--2">
+      <div class="card">
+        <h3>Data preparation, not Salesforce replacement</h3>
+        <p>The Copilot prepares and validates CSVs <em>before</em> upload. Workbench and DIT remain the upload path.</p>
+      </div>
+      <div class="card card--red">
+        <h3>EUSFA metadata as source of truth</h3>
+        <p>Picklists, field types, required fields, and templates come from the local EUSFA Salesforce DX clone — read-only, never auto-modified.</p>
+      </div>
+      <div class="card card--navy">
+        <h3>Users stay in control</h3>
+        <p>Safe fixes are proposed for approval. Risky changes — picklists, duplicates, scientific notation — require explicit user action. No auto-guessing picklist values.</p>
+      </div>
+      <div class="card">
+        <h3>Action-based fixes</h3>
+        <p>Technical validation results are translated into clear, approvable corrections via <strong>Fix Issues in Copilot</strong> — in-app editing without leaving the workflow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. What the Copilot Does -->
+  <section class="slide" data-notes="Quick tour of capabilities — don't read every card. Highlight picklist validation (Workbench), dual download outputs, and download gating (blocking issues must be resolved). Mention 140+ automated tests cover core validators.">
+    <span class="slide-number">6 / 12</span>
+    <p class="eyebrow">Capabilities</p>
+    <h2>What the Copilot does</h2>
+    <div class="card-grid card-grid--4">
+      <div class="card"><h3>Header / template checks</h3><p>Maps and validates headers against EUSFA template config for Workbench and DIT.</p></div>
+      <div class="card card--red"><h3>Date formatting</h3><p>Detects ambiguous dates and converts to the correct format per upload method.</p></div>
+      <div class="card"><h3>Picklist validation</h3><p>Validates against metadata values — shows valid options, never auto-guesses replacements.</p></div>
+      <div class="card card--navy"><h3>Whitespace cleanup</h3><p>Trims leading/trailing spaces in phone, address, and identifier fields.</p></div>
+      <div class="card"><h3>Leading zero protection</h3><p>Preserves EAN, SKU, and route IDs that Excel strips or converts.</p></div>
+      <div class="card card--red"><h3>Duplicate detection</h3><p>Flags duplicate external IDs and business keys before upload.</p></div>
+      <div class="card"><h3>Data preparation warnings</h3><p>Surfaces blocking vs. review items with clear readiness status.</p></div>
+      <div class="card card--navy"><h3>Dual CSV download</h3><p><strong>Tool-Ready CSV</strong> for upload plus <strong>Review CSV</strong> with audit context.</p></div>
+    </div>
+  </section>
+
+  <!-- 7. Demo Flow -->
+  <section class="slide slide--demo" data-notes="Set up the live demo narrative. Use Data Import Tool path → Retail Promotion → Prepare & Validate. Upload the faulty test CSV. Walk through: issues detected, Fix Issues in Copilot for manual corrections, approve safe fixes, check readiness, download Tool-Ready CSV. Keep to 2-3 minutes.">
+    <span class="slide-number">7 / 12</span>
+    <p class="eyebrow">Demo Flow</p>
+    <h2>Three steps — faulty file to upload-ready CSV</h2>
+    <div class="demo-steps">
+      <div class="demo-step">
+        <div class="demo-step-num">1</div>
+        <h3>Upload faulty CSV</h3>
+        <p>Select <strong>Data Import Tool → Retail Promotion</strong> and upload the validation test file with intentional errors.</p>
+      </div>
+      <div class="demo-step">
+        <div class="demo-step-num">2</div>
+        <h3>Review & fix issues</h3>
+        <p>Copilot identifies date, picklist, whitespace, and formatting issues. Use <strong>Fix Issues in Copilot</strong> and approve safe corrections.</p>
+      </div>
+      <div class="demo-step">
+        <div class="demo-step-num">3</div>
+        <h3>Download corrected file</h3>
+        <p>When readiness passes, download the <strong>Tool-Ready CSV</strong> for DIT upload — or the <strong>Review CSV</strong> for audit.</p>
+      </div>
+    </div>
+    <code class="file-ref">test_data/retail_promotion/RO_Promotion_Faulty_Validation_Test.csv</code>
+  </section>
+
+  <!-- 8. Impact -->
+  <section class="slide" data-notes="Lead with outcomes, not features. Quantify where you can ('30-60 min per file in Excel' from experience). Emphasize accessibility for non-technical loaders and the reusable foundation for new markets/templates.">
+    <span class="slide-number">8 / 12</span>
+    <p class="eyebrow">Impact</p>
+    <h2>Value delivered to data loading teams</h2>
+    <div class="impact-list">
+      <div class="impact-item"><span class="impact-icon">✓</span><span>Reduces manual review time — validation runs against metadata before upload</span></div>
+      <div class="impact-item"><span class="impact-icon">✓</span><span>Prevents common upload failures — dates, picklists, headers, and formatting caught early</span></div>
+      <div class="impact-item"><span class="impact-icon">✓</span><span>Improves data quality with user-approved corrections and download readiness gating</span></div>
+      <div class="impact-item"><span class="impact-icon">✓</span><span>Makes Salesforce loading easier for non-technical users — guided workflow, plain-language fixes</span></div>
+      <div class="impact-item"><span class="impact-icon">✓</span><span>Creates a reusable foundation for future markets and templates across Europe SFA</span></div>
+    </div>
+  </section>
+
+  <!-- 9. Final Outcome -->
+  <section class="slide" data-notes="This is the 'what I built' slide. Working Streamlit app, connected to EUSFA metadata, both upload paths, full prepare-validate-download workflow. Mention metadata refresh panel (fetch/pull) and session version lock. Suitable for pilot with ops teams now.">
+    <span class="slide-number">9 / 12</span>
+    <p class="eyebrow">Final Outcome</p>
+    <h2>A working Copilot — ready for pilot use</h2>
+    <div class="card-grid card-grid--2">
+      <div class="card">
+        <h3>What was built</h3>
+        <ul>
+          <li>Streamlit-based Copilot (<code>streamlit run app.py</code>)</li>
+          <li>Connected to local EUSFA Salesforce DX metadata</li>
+          <li>Full prepare → validate → approve → download workflow</li>
+          <li>Workbench and Data Import Tool upload paths</li>
+        </ul>
+      </div>
+      <div class="card card--red">
+        <h3>How it runs</h3>
+        <ul>
+          <li>Python 3.11+ with local EUSFA SFDX clone</li>
+          <li>Metadata refresh panel — fetch, compare, pull updates</li>
+          <li>Session metadata version lock with change warnings</li>
+          <li>140+ automated tests covering core validators</li>
+        </ul>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <p>The Copilot reads metadata from <code>EUSFA_SFDX_REPO_PATH</code> only. It never modifies Salesforce repository files or writes data to Salesforce.</p>
+    </div>
+  </section>
+
+  <!-- 10. Next Steps -->
+  <section class="slide" data-notes="Show you have a roadmap, not a dead end. Prioritize: DIT picklist support, formatting review integration, dependency rules. Frame as natural extensions of the foundation you've built.">
+    <span class="slide-number">10 / 12</span>
+    <p class="eyebrow">Next Steps</p>
+    <h2>Where the Copilot goes next</h2>
+    <div class="card-grid card-grid--2">
+      <div class="card"><h3>Expand business rules</h3><p>Template-specific validation rules and dependency checks beyond current stubs.</p></div>
+      <div class="card card--red"><h3>Improve metadata refresh</h3><p>Streamline fetch/pull workflow and CI-ready metadata sync for teams.</p></div>
+      <div class="card card--navy"><h3>Batch upload planning</h3><p>Support multi-file preparation and load sequencing for large deployments.</p></div>
+      <div class="card"><h3>UI refinement</h3><p>Continue improving layout and Fix Issues UX based on loader feedback.</p></div>
+    </div>
+  </section>
+
+  <!-- 11. Live Demo -->
+  <section class="slide slide--hero" data-notes="Transition: 'Let me show you.' Switch to Streamlit app (should already be running). If app isn't running: cd to project, activate venv, streamlit run app.py. Follow slide 7 demo path. End demo on successful Tool-Ready CSV download.">
+    <span class="slide-number">11 / 12</span>
+    <p class="eyebrow">Live Demo · 2–3 min</p>
+    <h2>Let's see it in action</h2>
+    <p class="subtitle" style="margin-bottom: 0;">Switch to the Streamlit app and walk through the Retail Promotion validation test.</p>
+    <div class="demo-cta">
+      <span class="demo-cta-icon">▶</span>
+      Now let's test the Copilot.
+    </div>
+    <div class="meta-row" style="margin-top: 2rem;">
+      <span>streamlit run app.py</span>
+      <span>Data Import Tool → Retail Promotion</span>
+    </div>
+  </section>
+
+  <!-- 12. Q&A -->
+  <section class="slide slide--hero" data-notes="Open the floor for questions. Allow about 5 minutes. Thank the audience for their time.">
+    <span class="slide-number">12 / 12</span>
+    <p class="eyebrow">Q&A · 5 min</p>
+    <h1>Time for Q&amp;A</h1>
+    <p class="subtitle">Questions?</p>
+  </section>
+
+</div>
+
+<!-- Presenter Notes -->
+<div class="notes-panel" id="notesPanel">
+  <div class="notes-label">Presenter Notes · Press N to toggle</div>
+  <div id="notesContent"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="nav-bar" aria-label="Slide navigation">
+  <button class="notes-toggle" id="notesToggle" aria-label="Toggle presenter notes">Notes (N)</button>
+  <button class="nav-btn" id="prevBtn" aria-label="Previous slide">←</button>
+  <div class="progress-dots" id="progressDots"></div>
+  <button class="nav-btn" id="nextBtn" aria-label="Next slide">→</button>
+  <span class="nav-hint">← → · N notes · F11 fullscreen</span>
+</nav>
+
+<script>
+(function () {
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+  let notesVisible = false;
+
+  const notesPanel = document.getElementById('notesPanel');
+  const notesContent = document.getElementById('notesContent');
+  const notesToggle = document.getElementById('notesToggle');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dotsContainer = document.getElementById('progressDots');
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('role', 'button');
+    dot.setAttribute('tabindex', '0');
+    dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+    dot.addEventListener('click', () => goTo(i));
+    dot.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo(i); }
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll('.dot');
+
+  function goTo(index) {
+    if (index < 0 || index >= total) return;
+    slides[current].classList.remove('active');
+    current = index;
+    slides.forEach((s, i) => {
+      s.classList.toggle('prev', i < current);
+      s.classList.toggle('active', i === current);
+    });
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === total - 1;
+    notesContent.textContent = slides[current].dataset.notes || 'No notes for this slide.';
+    history.replaceState(null, '', '#slide-' + (current + 1));
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function toggleNotes() {
+    notesVisible = !notesVisible;
+    notesPanel.classList.toggle('visible', notesVisible);
+    notesToggle.classList.toggle('active', notesVisible);
+    document.body.classList.toggle('notes-open', notesVisible);
+  }
+
+  prevBtn.addEventListener('click', prev);
+  nextBtn.addEventListener('click', next);
+  notesToggle.addEventListener('click', toggleNotes);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.target.matches('input, textarea, select')) return;
+    switch (e.key) {
+      case 'ArrowRight': case 'ArrowDown': case ' ': case 'PageDown':
+        e.preventDefault(); next(); break;
+      case 'ArrowLeft': case 'ArrowUp': case 'PageUp':
+        e.preventDefault(); prev(); break;
+      case 'Home': e.preventDefault(); goTo(0); break;
+      case 'End': e.preventDefault(); goTo(total - 1); break;
+      case 'n': case 'N':
+        toggleNotes(); break;
+    }
+  });
+
+  const hash = location.hash.match(/^#slide-(\d+)$/);
+  if (hash) {
+    const idx = parseInt(hash[1], 10) - 1;
+    if (idx >= 0 && idx < total) current = idx;
+  }
+
+  goTo(current);
+})();
+</script>
+
+<!--
+  ═══════════════════════════════════════════════════════════════════
+  HOW TO OPEN THIS PRESENTATION LOCALLY
+  ═══════════════════════════════════════════════════════════════════
+
+  1. Double-click this file in File Explorer — opens in your default browser.
+
+  2. From the project root (PowerShell):
+       start docs\presentation\final_project_presentation.html
+
+  3. Or drag the file into Chrome, Edge, or Firefox.
+
+  No server required. Works fully offline (except Google Fonts on first load).
+
+  PRESENTING
+  ──────────
+  • F11 for fullscreen (recommended for projector)
+  • → / ← or Space / Page Down to navigate (12 slides)
+  • N or "Notes (N)" button to toggle presenter notes
+  • Click navigation dots to jump to any slide
+  • Home / End for first / last slide
+  • Ctrl+P to print / save as PDF (one slide per page)
+
+  LIVE DEMO SETUP (before slide 11)
+  ──────────────────────────────────
+  cd C:\Users\cwangz162\Europe-SFA-Data-Load-Copilot
+  .\venv\Scripts\Activate.ps1
+  streamlit run app.py
+
+  Demo file: test_data/retail_promotion/RO_Promotion_Faulty_Validation_Test.csv
+  Demo path: Data Import Tool → Retail Promotion → Prepare & Validate
+
+  See docs/presentation/README.md for full documentation.
+  ═══════════════════════════════════════════════════════════════════
+-->
+
+</body>
+</html>

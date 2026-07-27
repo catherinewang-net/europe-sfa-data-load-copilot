@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Store Assortment</label>
+    <protected>false</protected>
+    <values>
+        <field>Fields__c</field>
+        <value xsi:type="xsd:string">{
+&quot;Account_External_Id__c&quot;: &quot;Customer External ID&quot;,
+&quot;Assortment_External_Id__c&quot;: &quot;Assortment External ID&quot;,
+&quot;Cust_L2__c&quot;: &quot;L2&quot;,
+&quot;Cust_L3_bevs__c&quot;: &quot;L3 Bevs&quot;,
+&quot;Cust_L3_snacks__c&quot;: &quot;L3 Snacks&quot;,
+&quot;AccountId&quot;: &quot;AccountId&quot;,
+&quot;AssortmentId&quot;: &quot;AssortmentID&quot;,
+&quot;AssortmentAssignmentId__c&quot;: &quot;AssortmentAssignmentId&quot;,
+&quot;Id&quot;: &quot;Id&quot;,
+&quot;EndDate&quot;: &quot;EndDate(dd/mm/yyyy)&quot;,
+&quot;StartDate&quot;: &quot;StartDate(dd/mm/yyyy)&quot;,
+&quot;IsActive__c&quot;: &quot;Active&quot;
+}</value>
+    </values>
+    <values>
+        <field>Is_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Object_API_Name__c</field>
+        <value xsi:type="xsd:string">StoreAssortment</value>
+    </values>
+    <values>
+        <field>Template_Label__c</field>
+        <value xsi:type="xsd:string">Store Assortment</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Contract</label>
+    <protected>false</protected>
+    <values>
+        <field>Fields__c</field>
+        <value xsi:type="xsd:string">{
+&quot;AccountId&quot;: &quot;*AccountId&quot;,
+&quot;ActivatedDate&quot;: &quot;*Activated Date(dd/mm/yyyy)&quot;,
+&quot;ContractTerm&quot;: &quot;*ContractTerm&quot;,
+&quot;Contract_Type__c&quot;: &quot;*Contract Type&quot;,
+&quot;Contract_Value__c&quot;: &quot;Contract Value&quot;,
+&quot;Id&quot;: &quot;*Salesforce Id&quot;,
+&quot;Market__c&quot;: &quot;*Market&quot;,
+&quot;StartDate&quot;: &quot;*StartDate(dd/mm/yyyy)&quot;,
+&quot;EndDate&quot;: &quot;*EndDate(dd/mm/yyyy)&quot;,
+&quot;Status&quot;: &quot;*Status&quot;,
+&quot;Wholesaler__c&quot;: &quot;Wholesaler&quot;,
+&quot;CurrencyISOCode__c&quot;: &quot;Currency Code&quot;,
+&quot;Period__c&quot;: &quot;*Period&quot;,
+&quot;Name&quot;: &quot;*Contract Name&quot;
+}</value>
+    </values>
+    <values>
+        <field>Is_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Object_API_Name__c</field>
+        <value xsi:type="xsd:string">Contract</value>
+    </values>
+    <values>
+        <field>Template_Label__c</field>
+        <value xsi:type="xsd:string">Contract</value>
+    </values>
+</CustomMetadata>

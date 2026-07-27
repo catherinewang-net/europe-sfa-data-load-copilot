@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Microsegment__c</fullName>
+    <label>Shopper Led Cluster</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>On the Go</fullName>
+                <default>false</default>
+                <label>On the Go</label>
+            </value>
+            <value>
+                <fullName>Premium</fullName>
+                <default>false</default>
+                <label>Premium</label>
+            </value>
+            <value>
+                <fullName>Modern Urban</fullName>
+                <default>false</default>
+                <label>Modern Urban</label>
+            </value>
+            <value>
+                <fullName>Small Town Core</fullName>
+                <default>false</default>
+                <label>Small Town Core</label>
+            </value>
+            <value>
+                <fullName>Diverse Suburban</fullName>
+                <default>false</default>
+                <label>Diverse Suburban</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

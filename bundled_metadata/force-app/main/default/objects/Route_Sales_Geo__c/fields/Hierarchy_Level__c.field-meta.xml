@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hierarchy_Level__c</fullName>
+    <description>Specifies the hierarchy level values in the Route Sales Geo Hierarchy (Route, Territory, Area, etc.)</description>
+    <label>Hierarchy Level</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Hierarchy_Level_Code__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sector</fullName>
+                <default>false</default>
+                <label>Sector</label>
+            </value>
+            <value>
+                <fullName>Cluster</fullName>
+                <default>false</default>
+                <label>Cluster</label>
+            </value>
+            <value>
+                <fullName>Sales Business Org</fullName>
+                <default>false</default>
+                <label>Sales Business Org</label>
+            </value>
+            <value>
+                <fullName>GTM Model</fullName>
+                <default>false</default>
+                <label>GTM Model</label>
+            </value>
+            <value>
+                <fullName>Division</fullName>
+                <default>false</default>
+                <label>Division</label>
+            </value>
+            <value>
+                <fullName>Region</fullName>
+                <default>false</default>
+                <label>Region</label>
+            </value>
+            <value>
+                <fullName>Market</fullName>
+                <default>false</default>
+                <label>Market</label>
+            </value>
+            <value>
+                <fullName>Zone</fullName>
+                <default>false</default>
+                <label>Zone</label>
+            </value>
+            <value>
+                <fullName>Territory</fullName>
+                <default>false</default>
+                <label>Territory</label>
+            </value>
+            <value>
+                <fullName>District</fullName>
+                <default>false</default>
+                <label>District</label>
+            </value>
+            <value>
+                <fullName>Route</fullName>
+                <default>false</default>
+                <label>Route</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>L9</controllingFieldValue>
+            <valueName>Route</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>L1</controllingFieldValue>
+            <valueName>Sector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>L2</controllingFieldValue>
+            <valueName>Cluster</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>L3</controllingFieldValue>
+            <valueName>Sales Business Org</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>L4</controllingFieldValue>
+            <valueName>GTM Model</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>L5</controllingFieldValue>
+            <valueName>Division</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>L6</controllingFieldValue>
+            <valueName>Region</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>L6.5</controllingFieldValue>
+            <valueName>Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>L7</controllingFieldValue>
+            <valueName>Zone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>L7.5</controllingFieldValue>
+            <valueName>Territory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>L8</controllingFieldValue>
+            <valueName>District</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

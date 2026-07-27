@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>L2_Subchannel__c</fullName>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>L2 Subchannel</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EMPLOYEE SALES</fullName>
+                <default>true</default>
+                <label>EMPLOYEE SALES</label>
+            </value>
+            <value>
+                <fullName>EXPORT</fullName>
+                <default>false</default>
+                <label>EXPORT</label>
+            </value>
+            <value>
+                <fullName>CASH&amp;CARRY</fullName>
+                <default>false</default>
+                <label>CASH&amp;CARRY</label>
+            </value>
+            <value>
+                <fullName>COBO</fullName>
+                <default>false</default>
+                <label>COBO</label>
+            </value>
+            <value>
+                <fullName>COMAN</fullName>
+                <default>false</default>
+                <label>COMAN</label>
+            </value>
+            <value>
+                <fullName>CONCIERGE</fullName>
+                <default>false</default>
+                <label>CONCIERGE</label>
+            </value>
+            <value>
+                <fullName>CONV&amp;GAS</fullName>
+                <default>false</default>
+                <label>CONV&amp;GAS</label>
+            </value>
+            <value>
+                <fullName>CONV&amp;GAS DIST</fullName>
+                <default>false</default>
+                <label>CONV&amp;GAS DIST</label>
+            </value>
+            <value>
+                <fullName>DELI</fullName>
+                <default>false</default>
+                <label>DELI</label>
+            </value>
+            <value>
+                <fullName>DEPT STORE</fullName>
+                <default>false</default>
+                <label>DEPT STORE</label>
+            </value>
+            <value>
+                <fullName>DRUG&amp;PHARMACY</fullName>
+                <default>false</default>
+                <label>DRUG&amp;PHARMACY</label>
+            </value>
+            <value>
+                <fullName>DTC</fullName>
+                <default>false</default>
+                <label>DTC</label>
+            </value>
+            <value>
+                <fullName>FOBO</fullName>
+                <default>false</default>
+                <label>FOBO</label>
+            </value>
+            <value>
+                <fullName>FOOD SERVICE DIST</fullName>
+                <default>false</default>
+                <label>FOOD SERVICE DIST</label>
+            </value>
+            <value>
+                <fullName>FREEZER STORE</fullName>
+                <default>false</default>
+                <label>FREEZER STORE</label>
+            </value>
+            <value>
+                <fullName>GROCERY</fullName>
+                <default>false</default>
+                <label>GROCERY</label>
+            </value>
+            <value>
+                <fullName>GROCERY DIST</fullName>
+                <default>false</default>
+                <label>GROCERY DIST</label>
+            </value>
+            <value>
+                <fullName>HYPER SUPER CENTER</fullName>
+                <default>false</default>
+                <label>HYPER SUPER CENTER</label>
+            </value>
+            <value>
+                <fullName>IBS</fullName>
+                <default>false</default>
+                <label>IBS</label>
+            </value>
+            <value>
+                <fullName>INTERCO</fullName>
+                <default>false</default>
+                <label>INTERCO</label>
+            </value>
+            <value>
+                <fullName>LARGE DISCOUNTER</fullName>
+                <default>false</default>
+                <label>LARGE DISCOUNTER</label>
+            </value>
+            <value>
+                <fullName>MILITARY&amp;GOVT</fullName>
+                <default>false</default>
+                <label>MILITARY&amp;GOVT</label>
+            </value>
+            <value>
+                <fullName>MISC SALES</fullName>
+                <default>false</default>
+                <label>MISC SALES</label>
+            </value>
+            <value>
+                <fullName>MULTIFORMAT</fullName>
+                <default>false</default>
+                <label>MULTIFORMAT</label>
+            </value>
+            <value>
+                <fullName>MULTIFORMAT DIST</fullName>
+                <default>false</default>
+                <label>MULTIFORMAT DIST</label>
+            </value>
+            <value>
+                <fullName>NATURAL DIST</fullName>
+                <default>false</default>
+                <label>NATURAL DIST</label>
+            </value>
+            <value>
+                <fullName>OMNI</fullName>
+                <default>false</default>
+                <label>OMNI</label>
+            </value>
+            <value>
+                <fullName>PURE PLAY</fullName>
+                <default>false</default>
+                <label>PURE PLAY</label>
+            </value>
+            <value>
+                <fullName>RECREATION&amp;RETAIL</fullName>
+                <default>false</default>
+                <label>RECREATION&amp;RETAIL</label>
+            </value>
+            <value>
+                <fullName>RESTAURANT</fullName>
+                <default>false</default>
+                <label>RESTAURANT</label>
+            </value>
+            <value>
+                <fullName>SF GROCERY</fullName>
+                <default>false</default>
+                <label>SF GROCERY</label>
+            </value>
+            <value>
+                <fullName>SMALL DISCOUNTER</fullName>
+                <default>false</default>
+                <label>SMALL DISCOUNTER</label>
+            </value>
+            <value>
+                <fullName>SMALL RETAIL CLUB</fullName>
+                <default>false</default>
+                <label>SMALL RETAIL CLUB</label>
+            </value>
+            <value>
+                <fullName>SPECIALTY DIST</fullName>
+                <default>false</default>
+                <label>SPECIALTY DIST</label>
+            </value>
+            <value>
+                <fullName>TT CONV&amp;GAS</fullName>
+                <default>false</default>
+                <label>TT CONV&amp;GAS</label>
+            </value>
+            <value>
+                <fullName>TT DRUG&amp;PHARMACY</fullName>
+                <default>false</default>
+                <label>TT DRUG&amp;PHARMACY</label>
+            </value>
+            <value>
+                <fullName>TT GROCERY</fullName>
+                <default>false</default>
+                <label>TT GROCERY</label>
+            </value>
+            <value>
+                <fullName>TT IBS</fullName>
+                <default>false</default>
+                <label>TT IBS</label>
+            </value>
+            <value>
+                <fullName>VENDING</fullName>
+                <default>false</default>
+                <label>VENDING</label>
+            </value>
+            <value>
+                <fullName>WHOLESALE CLUB</fullName>
+                <default>false</default>
+                <label>WHOLESALE CLUB</label>
+            </value>
+            <value>
+                <fullName>WHOLESALE CONV</fullName>
+                <default>false</default>
+                <label>WHOLESALE CONV</label>
+            </value>
+            <value>
+                <fullName>WORKPLACE</fullName>
+                <default>false</default>
+                <label>WORKPLACE</label>
+            </value>
+            <value>
+                <fullName>NA</fullName>
+                <default>false</default>
+                <label>NA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

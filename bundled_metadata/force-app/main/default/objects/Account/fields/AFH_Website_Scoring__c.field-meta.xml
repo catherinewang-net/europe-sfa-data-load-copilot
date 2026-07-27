@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_Website_Scoring__c</fullName>
+    <description>Stores the total website engagement score for the account, calculated automatically by summarizing related activity or scoring records.</description>
+    <label>Website Scoring</label>
+    <summarizedField>AFH_ScoringMatrix__c.AFH_Score_Count__c</summarizedField>
+    <summaryForeignKey>AFH_ScoringMatrix__c.AFH_Account__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Contract expiring</fullName>
+                <default>false</default>
+                <label>Contract expiring</label>
+            </value>
+            <value>
+                <fullName>Investment/ Rebate</fullName>
+                <default>false</default>
+                <label>Investment/ Rebate</label>
+            </value>
+            <value>
+                <fullName>Asset Status: Removed</fullName>
+                <default>false</default>
+                <label>Asset Status: Removed</label>
+            </value>
+            <value>
+                <fullName>Contract Expired</fullName>
+                <default>false</default>
+                <label>Contract Expired</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

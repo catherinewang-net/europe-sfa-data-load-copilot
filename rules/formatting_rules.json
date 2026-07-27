@@ -1,0 +1,10 @@
+{
+  "leading_zero_fields": [],
+  "phone_fields": [
+    "Phone",
+    "Phone__c",
+    "BillingPhone",
+    "MobilePhone",
+    "Fax"
+  ]
+}

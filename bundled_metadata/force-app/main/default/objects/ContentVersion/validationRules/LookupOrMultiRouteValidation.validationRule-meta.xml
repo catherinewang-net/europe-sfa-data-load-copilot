@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LookupOrMultiRouteValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+	ISPICKVAL(EUSFA_Document_Type__c, &quot;Cycle Priorities&quot;),
+        ISPICKVAL(EUSFA_Document_Type__c, &quot;General Document&quot;)
+      ),
+    
+    NOT(ISBLANK(EUSFA_Multi_Route_Selection__c)),
+    NOT(ISBLANK(EUSFA_Route_Sales_Geo__c))
+)</errorConditionFormula>
+    <errorMessage>File is already linked via Multi Route Picker.</errorMessage>
+</ValidationRule>

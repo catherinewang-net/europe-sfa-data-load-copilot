@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promotion_External_Id_Sequence__c</fullName>
+    <description>System-assigned sequence used with market and timestamp to populate External ID. Not for manual entry.</description>
+    <displayFormat>{0000000}</displayFormat>
+    <externalId>false</externalId>
+    <label>External ID Sequence</label>
+    <startingNumber>1</startingNumber>
+    <trackHistory>false</trackHistory>
+    <type>AutoNumber</type>
+</CustomField>

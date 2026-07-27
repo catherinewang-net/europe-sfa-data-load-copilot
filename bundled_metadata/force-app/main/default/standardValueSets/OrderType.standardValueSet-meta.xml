@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Pre-Sales</fullName>
+        <default>false</default>
+        <label>Pre-Sales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Free of Charge</fullName>
+        <default>false</default>
+        <label>Free of Charge</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Return (non-sellable)</fullName>
+        <default>false</default>
+        <label>Return (non-sellable)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Return (sellable)</fullName>
+        <default>false</default>
+        <label>Return (sellable)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Transfer Order</fullName>
+        <default>false</default>
+        <label>Transfer Order</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Suggested Order</fullName>
+        <default>false</default>
+        <label>Suggested Order</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Car Sales</fullName>
+        <default>false</default>
+        <label>Car Sales</label>
+    </standardValue>
+</StandardValueSet>

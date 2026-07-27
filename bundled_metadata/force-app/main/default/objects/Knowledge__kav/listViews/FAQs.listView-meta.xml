@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FAQs</fullName>
+    <columns>ARTICLE_NUMBER</columns>
+    <columns>TITLE</columns>
+   
+    <columns>PUBLISH_STATUS</columns>
+    <columns>AFH_FAQ_Link__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>LANGUAGE</columns>
+    <columns>LAST_PUBLISHED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Knowledge__kav.FAQ</value>
+    </filters>
+    <filters>
+        <field>PUBLISH_STATUS</field>
+        <operation>equals</operation>
+        <value>2</value>
+    </filters>
+    <label>FAQs</label>
+</ListView>

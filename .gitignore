@@ -1,0 +1,54 @@
+# Local environment and secrets
+.env
+.env.local
+*.env.local
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Test and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OAuth / API tokens (never commit)
+tokens/
+*.token
+sf_tokens/
+.salesforce/
+
+# Runtime user uploads
+uploads/
+*.upload.csv
+
+# Local EUSFA metadata clones (full git repos — never commit)
+local_metadata/
+eusfa_sfdx/
+
+# Confidential logs
+logs/
+*.log
+confidential/
+
+# Bundled snapshot: commit audited contents in bundled_metadata/ for Streamlit Cloud.
+# Regenerate with scripts/bundle_metadata_snapshot.ps1 and audit_bundled_metadata.py.

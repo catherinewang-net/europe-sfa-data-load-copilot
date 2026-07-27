@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>P2_LV_S_F – Record 1</label>
+    <protected>false</protected>
+    <values>
+        <field>Channel__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Development_Task_Type__c</field>
+        <value xsi:type="xsd:string">P2_LV_S_F</value>
+    </values>
+    <values>
+        <field>Market__c</field>
+        <value xsi:type="xsd:string">GB</value>
+    </values>
+    <values>
+        <field>Rejection_Reason_Description__c</field>
+        <value xsi:type="xsd:string">Out of stock at wholesaler</value>
+    </values>
+</CustomMetadata>

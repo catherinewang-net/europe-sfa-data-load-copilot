@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CAN</fullName>
+        <default>false</default>
+        <label>CAN</label>
+    </customValue>
+    <customValue>
+        <fullName>PET</fullName>
+        <default>false</default>
+        <label>PET</label>
+    </customValue>
+    <customValue>
+        <fullName>VC</fullName>
+        <default>false</default>
+        <label>VC</label>
+    </customValue>
+    <customValue>
+        <fullName>BIB</fullName>
+        <default>false</default>
+        <label>BIB</label>
+    </customValue>
+    <customValue>
+        <fullName>TETRA</fullName>
+        <default>false</default>
+        <label>TETRA</label>
+    </customValue>
+    <customValue>
+        <fullName>Bag</fullName>
+        <default>false</default>
+        <label>Bag</label>
+    </customValue>
+    <customValue>
+        <fullName>BOX</fullName>
+        <default>false</default>
+        <label>BOX</label>
+    </customValue>
+    <customValue>
+        <fullName>VP</fullName>
+        <default>false</default>
+        <label>VP</label>
+    </customValue>
+    <customValue>
+        <fullName>JAR</fullName>
+        <default>false</default>
+        <label>JAR</label>
+    </customValue>
+    <customValue>
+        <fullName>Glass</fullName>
+        <default>false</default>
+        <label>Glass</label>
+    </customValue>
+    <customValue>
+        <fullName>TUBE</fullName>
+        <default>false</default>
+        <label>TUBE</label>
+    </customValue>
+    <customValue>
+        <fullName>SD</fullName>
+        <default>false</default>
+        <label>Single Door Cooler</label>
+    </customValue>
+    <customValue>
+        <fullName>DD</fullName>
+        <default>false</default>
+        <label>Double Door Cooler</label>
+    </customValue>
+    <customValue>
+        <fullName>Fountain 8 Dispensers</fullName>
+        <default>false</default>
+        <label>Fountain 8 Dispensers</label>
+    </customValue>
+    <customValue>
+        <fullName>Fountain</fullName>
+        <default>false</default>
+        <label>Fountain</label>
+    </customValue>
+    <customValue>
+        <fullName>Rack 1M</fullName>
+        <default>false</default>
+        <label>Rack 1M</label>
+    </customValue>
+    <customValue>
+        <fullName>OF</fullName>
+        <default>false</default>
+        <label>Air Curtain Cooler</label>
+    </customValue>
+    <customValue>
+        <fullName>SOF</fullName>
+        <default>false</default>
+        <label>Air Curtain Small Cooler</label>
+    </customValue>
+    <customValue>
+        <fullName>OT</fullName>
+        <default>false</default>
+        <label>Open Top Cooler</label>
+    </customValue>
+    <customValue>
+        <fullName>CT</fullName>
+        <default>false</default>
+        <label>Mini Bar Cooler</label>
+    </customValue>
+    <customValue>
+        <fullName>IM</fullName>
+        <default>false</default>
+        <label>Ice Machine</label>
+    </customValue>
+    <customValue>
+        <fullName>VM</fullName>
+        <default>false</default>
+        <label>Vending machine</label>
+    </customValue>
+    <customValue>
+        <fullName>POM-JCT</fullName>
+        <default>false</default>
+        <label>Counter top Juice Post-Mix</label>
+    </customValue>
+    <customValue>
+        <fullName>POM-T</fullName>
+        <default>false</default>
+        <label>Tower Post-Mix</label>
+    </customValue>
+    <customValue>
+        <fullName>POM-CT</fullName>
+        <default>false</default>
+        <label>Counter top Post-Mix</label>
+    </customValue>
+    <customValue>
+        <fullName>POM-CU</fullName>
+        <default>false</default>
+        <label>Cooling Unit Post-Mix</label>
+    </customValue>
+    <customValue>
+        <fullName>Banners</fullName>
+        <default>false</default>
+        <label>Banners</label>
+    </customValue>
+    <customValue>
+        <fullName>Chalkboard</fullName>
+        <default>false</default>
+        <label>Chalkboard</label>
+    </customValue>
+    <customValue>
+        <fullName>Chiller Basket</fullName>
+        <default>false</default>
+        <label>Chiller Basket</label>
+    </customValue>
+    <customValue>
+        <fullName>Chr Tray</fullName>
+        <default>false</default>
+        <label>Chr Tray</label>
+    </customValue>
+    <customValue>
+        <fullName>Clipstrip</fullName>
+        <default>false</default>
+        <label>Clipstrip</label>
+    </customValue>
+    <customValue>
+        <fullName>Counter top unit</fullName>
+        <default>false</default>
+        <label>Counter top unit</label>
+    </customValue>
+    <customValue>
+        <fullName>Divisible Tray</fullName>
+        <default>false</default>
+        <label>Divisible Tray</label>
+    </customValue>
+    <customValue>
+        <fullName>Dumpbin</fullName>
+        <default>false</default>
+        <label>Dumpbin</label>
+    </customValue>
+    <customValue>
+        <fullName>Food Display</fullName>
+        <default>false</default>
+        <label>Food Display</label>
+    </customValue>
+    <customValue>
+        <fullName>FSDU</fullName>
+        <default>false</default>
+        <label>FSDU</label>
+    </customValue>
+    <customValue>
+        <fullName>Glassware</fullName>
+        <default>false</default>
+        <label>Glassware</label>
+    </customValue>
+    <customValue>
+        <fullName>Hanging Unit</fullName>
+        <default>false</default>
+        <label>Hanging Unit</label>
+    </customValue>
+    <customValue>
+        <fullName>Hessian Basket</fullName>
+        <default>false</default>
+        <label>Hessian Basket</label>
+    </customValue>
+    <customValue>
+        <fullName>Key Period Operation</fullName>
+        <default>false</default>
+        <label>Key Period Operation</label>
+    </customValue>
+    <customValue>
+        <fullName>Large Rack</fullName>
+        <default>false</default>
+        <label>Large Rack</label>
+    </customValue>
+    <customValue>
+        <fullName>Lemonade Server</fullName>
+        <default>false</default>
+        <label>Lemonade Server</label>
+    </customValue>
+    <customValue>
+        <fullName>Monoblock</fullName>
+        <default>false</default>
+        <label>Monoblock</label>
+    </customValue>
+    <customValue>
+        <fullName>Parasols</fullName>
+        <default>false</default>
+        <label>Parasols</label>
+    </customValue>
+    <customValue>
+        <fullName>Perspex Bin</fullName>
+        <default>false</default>
+        <label>Perspex Bin</label>
+    </customValue>
+    <customValue>
+        <fullName>Rack 1.5M</fullName>
+        <default>false</default>
+        <label>Rack 1.5M</label>
+    </customValue>
+    <customValue>
+        <fullName>Rash Bin</fullName>
+        <default>false</default>
+        <label>Rash Bin</label>
+    </customValue>
+    <customValue>
+        <fullName>Sandwich Bag</fullName>
+        <default>false</default>
+        <label>Sandwich Bag</label>
+    </customValue>
+    <customValue>
+        <fullName>Sidewalk Stopper</fullName>
+        <default>false</default>
+        <label>Sidewalk Stopper</label>
+    </customValue>
+    <customValue>
+        <fullName>Slim Rack</fullName>
+        <default>false</default>
+        <label>Slim Rack</label>
+    </customValue>
+    <customValue>
+        <fullName>Stacker</fullName>
+        <default>false</default>
+        <label>Stacker</label>
+    </customValue>
+    <customValue>
+        <fullName>Tarpaulins</fullName>
+        <default>false</default>
+        <label>Tarpaulins</label>
+    </customValue>
+    <customValue>
+        <fullName>Turret</fullName>
+        <default>false</default>
+        <label>Turret</label>
+    </customValue>
+    <customValue>
+        <fullName>Wire Basket</fullName>
+        <default>false</default>
+        <label>Wire Basket</label>
+    </customValue>
+    <customValue>
+        <fullName>Wooden Crate</fullName>
+        <default>false</default>
+        <label>Wooden Crate</label>
+    </customValue>
+    <customValue>
+        <fullName>Quarter Pallet</fullName>
+        <default>false</default>
+        <label>Quarter Pallet</label>
+    </customValue>
+    <customValue>
+        <fullName>Half Pallet</fullName>
+        <default>false</default>
+        <label>Half Pallet</label>
+    </customValue>
+    <customValue>
+        <fullName>Full Pallet</fullName>
+        <default>false</default>
+        <label>Full Pallet</label>
+    </customValue>
+    <customValue>
+        <fullName>Rack Beverages</fullName>
+        <default>false</default>
+        <label>Rack Beverages</label>
+    </customValue>
+    <customValue>
+        <fullName>Rack Snacks</fullName>
+        <default>false</default>
+        <label>Rack Snacks</label>
+    </customValue>
+    <customValue>
+        <fullName>Pack Po1</fullName>
+        <default>false</default>
+        <label>Pack Po1</label>
+    </customValue>
+    <customValue>
+        <fullName>SD-OD</fullName>
+        <default>false</default>
+        <label>Single Door Outdoor Cooler</label>
+    </customValue>
+    <customValue>
+        <fullName>GLASS BOTTLE</fullName>
+        <default>false</default>
+        <label>GLASS BOTTLE</label>
+    </customValue>
+    <customValue>
+        <fullName>DISPLAY</fullName>
+        <default>false</default>
+        <label>DISPLAY</label>
+    </customValue>
+    <customValue>
+        <fullName>BAG-IN-BOX</fullName>
+        <default>false</default>
+        <label>BAG-IN-BOX</label>
+    </customValue>
+    <customValue>
+        <fullName>SLIM CAN</fullName>
+        <default>false</default>
+        <label>SLIM CAN</label>
+    </customValue>
+    <customValue>
+        <fullName>STRIP</fullName>
+        <default>false</default>
+        <label>STRIP</label>
+    </customValue>
+    <customValue>
+        <fullName>CANISTER</fullName>
+        <default>false</default>
+        <label>CANISTER</label>
+    </customValue>
+    <customValue>
+        <fullName>BALER BAG</fullName>
+        <default>false</default>
+        <label>BALER BAG</label>
+    </customValue>
+    <customValue>
+        <fullName>TETRA PRISMA</fullName>
+        <default>false</default>
+        <label>TETRA PRISMA</label>
+    </customValue>
+    <customValue>
+        <fullName>CARTON</fullName>
+        <default>false</default>
+        <label>CARTON</label>
+    </customValue>
+    <customValue>
+        <fullName>GLASS RETURNABLE BOTTLE</fullName>
+        <default>false</default>
+        <label>GLASS RETURNABLE BOTTLE</label>
+    </customValue>
+    <customValue>
+        <fullName>PLASTIC CUP</fullName>
+        <default>false</default>
+        <label>PLASTIC CUP</label>
+    </customValue>
+    <customValue>
+        <fullName>POUCH</fullName>
+        <default>false</default>
+        <label>POUCH</label>
+    </customValue>
+    <customValue>
+        <fullName>ALUMINUM BOTTLE</fullName>
+        <default>false</default>
+        <label>ALUMINUM BOTTLE</label>
+    </customValue>
+    <customValue>
+        <fullName>WINDOW BAG</fullName>
+        <default>false</default>
+        <label>WINDOW BAG</label>
+    </customValue>
+    <customValue>
+        <fullName>RESEALABLE BAG</fullName>
+        <default>false</default>
+        <label>RESEALABLE BAG</label>
+    </customValue>
+    <customValue>
+        <fullName>WRAPPER</fullName>
+        <default>false</default>
+        <label>WRAPPER</label>
+    </customValue>
+    <customValue>
+        <fullName>ASSORTED</fullName>
+        <default>false</default>
+        <label>ASSORTED</label>
+    </customValue>
+    <customValue>
+        <fullName>TETRA BRIK</fullName>
+        <default>false</default>
+        <label>TETRA BRIK</label>
+    </customValue>
+    <customValue>
+        <fullName>HAT</fullName>
+        <default>false</default>
+        <label>HAT</label>
+    </customValue>
+    <customValue>
+        <fullName>SQUEEZE POUCH</fullName>
+        <default>false</default>
+        <label>SQUEEZE POUCH</label>
+    </customValue>
+    <customValue>
+        <fullName>SHIRT</fullName>
+        <default>false</default>
+        <label>SHIRT</label>
+    </customValue>
+    <customValue>
+        <fullName>SCARF</fullName>
+        <default>false</default>
+        <label>SCARF</label>
+    </customValue>
+    <customValue>
+        <fullName>TETRA COMBISMILE</fullName>
+        <default>false</default>
+        <label>TETRA COMBISMILE</label>
+    </customValue>
+    <customValue>
+        <fullName>ORNAMENT</fullName>
+        <default>false</default>
+        <label>ORNAMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>CYLINDER</fullName>
+        <default>false</default>
+        <label>CYLINDER</label>
+    </customValue>
+    <customValue>
+        <fullName>STOCKING</fullName>
+        <default>false</default>
+        <label>STOCKING</label>
+    </customValue>
+    <customValue>
+        <fullName>ONESIE</fullName>
+        <default>false</default>
+        <label>ONESIE</label>
+    </customValue>
+    <customValue>
+        <fullName>SLEEVE</fullName>
+        <default>false</default>
+        <label>SLEEVE</label>
+    </customValue>
+    <customValue>
+        <fullName>NOT APPLICABLE</fullName>
+        <default>false</default>
+        <label>NOT APPLICABLE</label>
+    </customValue>
+    <customValue>
+        <fullName>PAPER CUP</fullName>
+        <default>false</default>
+        <label>PAPER CUP</label>
+    </customValue>
+    <customValue>
+        <fullName>SOCKS</fullName>
+        <default>false</default>
+        <label>SOCKS</label>
+    </customValue>
+    <customValue>
+        <fullName>SWEATER</fullName>
+        <default>false</default>
+        <label>SWEATER</label>
+    </customValue>
+    <customValue>
+        <fullName>SIDE TEAR BAG</fullName>
+        <default>false</default>
+        <label>SIDE TEAR BAG</label>
+    </customValue>
+    <customValue>
+        <fullName>FLIP TOP PLASTIC</fullName>
+        <default>false</default>
+        <label>FLIP TOP PLASTIC</label>
+    </customValue>
+    <customValue>
+        <fullName>RACK</fullName>
+        <default>false</default>
+        <label>RACK</label>
+    </customValue>
+    <customValue>
+        <fullName>VIAL</fullName>
+        <default>false</default>
+        <label>VIAL</label>
+    </customValue>
+    <customValue>
+        <fullName>PP POLYPROPYLENE</fullName>
+        <default>false</default>
+        <label>PP POLYPROPYLENE</label>
+    </customValue>
+    <customValue>
+        <fullName>CLAMSHELL</fullName>
+        <default>false</default>
+        <label>CLAMSHELL</label>
+    </customValue>
+    <customValue>
+        <fullName>HDPE HIGH DENSITY POLYETHYLENE</fullName>
+        <default>false</default>
+        <label>HDPE HIGH DENSITY POLYETHYLENE</label>
+    </customValue>
+    <customValue>
+        <fullName>METAL BARREL</fullName>
+        <default>false</default>
+        <label>METAL BARREL</label>
+    </customValue>
+    <customValue>
+        <fullName>TOTE BAG</fullName>
+        <default>false</default>
+        <label>TOTE BAG</label>
+    </customValue>
+    <customValue>
+        <fullName>TETRA RECART</fullName>
+        <default>false</default>
+        <label>TETRA RECART</label>
+    </customValue>
+    <customValue>
+        <fullName>PACK</fullName>
+        <default>false</default>
+        <label>PACK</label>
+    </customValue>
+    <customValue>
+        <fullName>MINI CAN</fullName>
+        <default>false</default>
+        <label>MINI CAN</label>
+    </customValue>
+    <customValue>
+        <fullName>PLASTIC BARREL</fullName>
+        <default>false</default>
+        <label>PLASTIC BARREL</label>
+    </customValue>
+    <customValue>
+        <fullName>PLASTIC PAIL</fullName>
+        <default>false</default>
+        <label>PLASTIC PAIL</label>
+    </customValue>
+    <customValue>
+        <fullName>PILLOW</fullName>
+        <default>false</default>
+        <label>PILLOW</label>
+    </customValue>
+    <customValue>
+        <fullName>SQUEEZE BOTTLE</fullName>
+        <default>false</default>
+        <label>SQUEEZE BOTTLE</label>
+    </customValue>
+    <customValue>
+        <fullName>BANDANA</fullName>
+        <default>false</default>
+        <label>BANDANA</label>
+    </customValue>
+    <customValue>
+        <fullName>BLANKET</fullName>
+        <default>false</default>
+        <label>BLANKET</label>
+    </customValue>
+    <customValue>
+        <fullName>TANKER TRUCK</fullName>
+        <default>false</default>
+        <label>TANKER TRUCK</label>
+    </customValue>
+    <customValue>
+        <fullName>SINGLE SERVE DIPPING CUP</fullName>
+        <default>false</default>
+        <label>SINGLE SERVE DIPPING CUP</label>
+    </customValue>
+    <customValue>
+        <fullName>TIN</fullName>
+        <default>false</default>
+        <label>TIN</label>
+    </customValue>
+    <customValue>
+        <fullName>SLED</fullName>
+        <default>false</default>
+        <label>SLED</label>
+    </customValue>
+    <customValue>
+        <fullName>Single Door Cooler (Event)</fullName>
+        <default>false</default>
+        <label>Single Door Cooler (Event)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cooler Counter</fullName>
+        <default>false</default>
+        <label>Cooler Counter</label>
+    </customValue>
+    <customValue>
+        <fullName>Double Door Cooler (Event)</fullName>
+        <default>false</default>
+        <label>Double Door Cooler (Event)</label>
+    </customValue>
+    <customValue>
+        <fullName>Neon sign</fullName>
+        <default>false</default>
+        <label>Neon sign</label>
+    </customValue>
+    <customValue>
+        <fullName>Menue holder</fullName>
+        <default>false</default>
+        <label>Menue holder</label>
+    </customValue>
+    <customValue>
+        <fullName>Beverage gloryfyer</fullName>
+        <default>false</default>
+        <label>Beverage gloryfyer</label>
+    </customValue>
+    <customValue>
+        <fullName>Single Door Cooler Slim</fullName>
+        <default>false</default>
+        <label>Single Door Cooler Slim</label>
+    </customValue>
+    <customValue>
+        <fullName>Double Door Cooler Slim</fullName>
+        <default>false</default>
+        <label>Double Door Cooler Slim</label>
+    </customValue>
+    <customValue>
+        <fullName>Self Service Hanging Unit</fullName>
+        <default>false</default>
+        <label>Self Service Hanging Unit</label>
+    </customValue>
+    <customValue>
+        <fullName>In Queue Metal Stand</fullName>
+        <default>false</default>
+        <label>In Queue Metal Stand</label>
+    </customValue>
+    <customValue>
+        <fullName>Smiths Countertop unit</fullName>
+        <default>false</default>
+        <label>Smiths Countertop unit</label>
+    </customValue>
+    <customValue>
+        <fullName>BFY shelf insert</fullName>
+        <default>false</default>
+        <label>BFY shelf insert</label>
+    </customValue>
+    <customValue>
+        <fullName>Cheetos shelf insert</fullName>
+        <default>false</default>
+        <label>Cheetos shelf insert</label>
+    </customValue>
+    <customValue>
+        <fullName>Doritos Dip clip strip</fullName>
+        <default>false</default>
+        <label>Doritos Dip clip strip</label>
+    </customValue>
+    <customValue>
+        <fullName>Walkers SRP multipack box</fullName>
+        <default>false</default>
+        <label>Walkers SRP multipack box</label>
+    </customValue>
+    <customValue>
+        <fullName>Take Home Shelf Insert</fullName>
+        <default>false</default>
+        <label>Take Home Shelf Insert</label>
+    </customValue>
+    <customValue>
+        <fullName>BFY slim foamex unit</fullName>
+        <default>false</default>
+        <label>BFY slim foamex unit</label>
+    </customValue>
+    <customValue>
+        <fullName>Multipack Foamex FSDU</fullName>
+        <default>false</default>
+        <label>Multipack Foamex FSDU</label>
+    </customValue>
+    <customValue>
+        <fullName>Slim SS Foamex FSDU</fullName>
+        <default>false</default>
+        <label>Slim SS Foamex FSDU</label>
+    </customValue>
+    <customValue>
+        <fullName>WIDE Sharing Foamex FSDU</fullName>
+        <default>false</default>
+        <label>WIDE Sharing Foamex FSDU</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Large Waterfall Unit (IOI)</fullName>
+        <default>false</default>
+        <label>Large Waterfall Unit (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Walkers Wire Bin (IOI)</fullName>
+        <default>false</default>
+        <label>Walkers Wire Bin (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Walkers Standard Arcadia (IOI)</fullName>
+        <default>false</default>
+        <label>Walkers Standard Arcadia (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Walkers Slim Arcadia (IOI)</fullName>
+        <default>false</default>
+        <label>Walkers Slim Arcadia (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Walkers Deli Basket  (IOI)</fullName>
+        <default>false</default>
+        <label>Walkers Deli Basket  (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Walkers Clipstrip Permanent (IOI)</fullName>
+        <default>false</default>
+        <label>Walkers Clipstrip Permanent (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Walkers 8 Box (IOI)</fullName>
+        <default>false</default>
+        <label>Walkers 8 Box (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Walkers 4 Box (IOI)</fullName>
+        <default>false</default>
+        <label>Walkers 4 Box (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Slim Waterfall Unit (IOI)</fullName>
+        <default>false</default>
+        <label>Slim Waterfall Unit (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Quaker FSDU (IOI)</fullName>
+        <default>false</default>
+        <label>Quaker FSDU (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Quaker Gutter Tray (IOI)</fullName>
+        <default>false</default>
+        <label>Quaker Gutter Tray (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Quaker Pots Counter Top  (IOI)</fullName>
+        <default>false</default>
+        <label>Quaker Pots Counter Top  (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Counter Top Unit (IOI)</fullName>
+        <default>false</default>
+        <label>Counter Top Unit (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Chiller Basket (IOI)</fullName>
+        <default>false</default>
+        <label>Chiller Basket (IOI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hex Bin Display (ROI)</fullName>
+        <default>false</default>
+        <label>Hex Bin Display (ROI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Walkers FSDU (ROI)</fullName>
+        <default>false</default>
+        <label>Walkers FSDU (ROI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Half Pallet Display (ROI)</fullName>
+        <default>false</default>
+        <label>Half Pallet Display (ROI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Foamex Deli Purse Rail</fullName>
+        <default>false</default>
+        <label>Foamex Deli Purse Rail</label>
+    </customValue>
+    <customValue>
+        <fullName>2 Shelves or More on End</fullName>
+        <default>false</default>
+        <label>2 Shelves or More on End</label>
+    </customValue>
+    <customValue>
+        <fullName>Full Ladder Rack (ROI)</fullName>
+        <default>false</default>
+        <label>Full Ladder Rack (ROI)</label>
+    </customValue>
+    <customValue>
+        <fullName>WOW Display (ROI)</fullName>
+        <default>false</default>
+        <label>WOW Display (ROI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Pre filled Stacker</fullName>
+        <default>false</default>
+        <label>Pre filled Stacker</label>
+    </customValue>
+    <customValue>
+        <fullName>Full Gondola End (ROI)</fullName>
+        <default>false</default>
+        <label>Full Gondola End (ROI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Store wire basket</fullName>
+        <default>false</default>
+        <label>Store wire basket</label>
+    </customValue>
+    <customValue>
+        <fullName>Shroud</fullName>
+        <default>false</default>
+        <label>Shroud</label>
+    </customValue>
+    <customValue>
+        <fullName>Slim Blue Metal Stand</fullName>
+        <default>false</default>
+        <label>Slim Blue Metal Stand</label>
+    </customValue>
+    <customValue>
+        <fullName>1/5 Pallet</fullName>
+        <default>false</default>
+        <label>1/5 Pallet</label>
+    </customValue>
+    <customValue>
+        <fullName>Cooler</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cooler</label>
+    </customValue>
+    <customValue>
+        <fullName>Cooler 1 Door Slim</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cooler 1 Door Slim</label>
+    </customValue>
+    <customValue>
+        <fullName>Cooler 2 Doors Slim</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cooler 2 Doors Slim</label>
+    </customValue>
+    <masterLabel>Product Container</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

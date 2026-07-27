@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ScoringOppMustHavePositiveValue</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK(Scoring_Opportunity__c) || Scoring_Opportunity__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>Scoring_Opportunity__c</errorDisplayField>
+    <errorMessage>Scoring Opportunity cannot be empty and must have a value of 0 or greater.</errorMessage>
+</ValidationRule>

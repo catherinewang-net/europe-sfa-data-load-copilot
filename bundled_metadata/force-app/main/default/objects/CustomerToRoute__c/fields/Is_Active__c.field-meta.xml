@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Active__c</fullName>
+    <description
+  >Formula field. True when today falls within the Valid from / Valid to date range (or Valid to is blank). Used by the visit generation batch to determine which CTR records should produce visits.</description>
+    <formula
+  >(ISBLANK(Valid_to_Date__c) &amp;&amp; Valid_from_Date__c &lt;= TODAY())
+|| (Valid_to_Date__c &gt;= TODAY() &amp;&amp; Valid_from_Date__c &lt;= TODAY())</formula>
+    <label>Is Active</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

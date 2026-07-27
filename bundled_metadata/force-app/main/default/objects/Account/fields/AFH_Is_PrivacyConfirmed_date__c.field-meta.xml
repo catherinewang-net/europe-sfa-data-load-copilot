@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_Is_PrivacyConfirmed_date__c</fullName>
+    <description>Stores the date when the customer confirmed or agreed to the privacy policy.</description>
+    <label>Is Privacy Confirmed date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

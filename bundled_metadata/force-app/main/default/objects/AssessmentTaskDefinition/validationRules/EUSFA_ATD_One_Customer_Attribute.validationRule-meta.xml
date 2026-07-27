@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_ATD_One_Customer_Attribute</fullName>
+    <active>true</active>
+    <description>At most one of L1_Channel__c, L2_Subchannel__c, L3_Snacks_Val_Segment__c may be populated. Does not apply to Local Survey (may combine customer hierarchy, store, and sales assignment).</description>
+    <errorConditionFormula>AND(
+  NOT(ISPICKVAL(Type__c, &quot;Local Survey&quot;)),
+  (
+    IF(NOT(ISBLANK(TEXT(L1_Channel__c))), 1, 0) +
+    IF(NOT(ISBLANK(TEXT(L2_Subchannel__c))), 1, 0) +
+    IF(NOT(ISBLANK(TEXT(L3_Snacks_Val_Segment__c))), 1, 0)
+  ) &gt; 1
+)</errorConditionFormula>
+    <errorMessage>Only one value can be entered across L1 Channel, L2 Subchannel, and L3 Snacks Val Segment.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FAQ</fullName>
+    <active>true</active>
+    <description>This can be used for simple question and answer articles</description>
+    <label>FAQ</label>
+    <picklistValues>
+        <picklist>AFH_Brand__c</picklist>
+        <values>
+            <fullName>Doritos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quaker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Walkers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doritos Loaded</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AFH_Channel_Type__c</picklist>
+        <values>
+            <fullName>Care home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Casual dining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coffee shop / Cafe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fast food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leisure %2F Rec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pub %2F Bar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workplace</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AFH_Highlighted__c</picklist>
+        <values>
+            <fullName>Article Hub</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recipe Hub</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand Hub</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand Page Doritos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand Page Pipers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand Page Quakers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand Page Walkers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HomePage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MarketingPage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MenuBar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recipe Page</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AFH_Type__c</picklist>
+        <values>
+            <fullName>Article</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recipe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

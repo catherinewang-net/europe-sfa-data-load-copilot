@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Followup_Question__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The follow-up question (Assessment Task Ind Definition) to display when this question’s answer matches Show Next Question When Answer Is. Use with Display When Value or Show Next Question When Answer Is (Yes/No).</description>
+    <inlineHelpText>Select the survey question to show as a follow-up when the condition is met. Leave blank if this question has no conditional follow-up.</inlineHelpText>
+    <label>Follow-up Question</label>
+    <referenceTo>AssessmentIndicatorDefinition</referenceTo>
+    <relationshipLabel>Referenced By</relationshipLabel>
+    <relationshipName>Referenced_By</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

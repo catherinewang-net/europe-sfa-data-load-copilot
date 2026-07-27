@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Persona__c</fullName>
+    <label>Persona</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Back-Office</fullName>
+                <default>false</default>
+                <label>Back-Office</label>
+            </value>
+            <value>
+                <fullName>BDR</fullName>
+                <default>false</default>
+                <label>BDR</label>
+            </value>
+            <value>
+                <fullName>Pre-Seller</fullName>
+                <default>false</default>
+                <label>Pre-Seller</label>
+            </value>
+            <value>
+                <fullName>IT Support</fullName>
+                <default>false</default>
+                <label>IT Support</label>
+            </value>
+            <value>
+                <fullName>Teleseller</fullName>
+                <default>false</default>
+                <label>Teleseller</label>
+            </value>
+            <value>
+                <fullName>Supervisor</fullName>
+                <default>false</default>
+                <label>Supervisor</label>
+            </value>
+            <value>
+                <fullName>WDR</fullName>
+                <default>false</default>
+                <label>WDR</label>
+            </value>
+            <value>
+                <fullName>System Admin</fullName>
+                <default>false</default>
+                <label>System Admin</label>
+            </value>
+	    <value>
+                <fullName>Read Only</fullName>
+                <default>false</default>
+                <label>Read Only</label>
+            </value>
+            <value>
+                <fullName>AFH Customer</fullName>
+                <default>false</default>
+                <label>AFH Customer</label>
+            </value>
+            <value>
+                <fullName>AFH Content Editor</fullName>
+                <default>false</default>
+                <label>AFH Content Editor</label>
+            </value>
+            <value>
+                <fullName>AFH Representative</fullName>
+                <default>false</default>
+                <label>AFH Representative</label>
+            </value>
+            <value>
+                <fullName>AFH Approver</fullName>
+                <default>false</default>
+                <label>AFH Approver</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

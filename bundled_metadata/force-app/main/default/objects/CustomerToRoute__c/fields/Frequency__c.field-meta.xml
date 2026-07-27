@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Frequency__c</fullName>
+    <description
+    >Visit frequency for the store-to-route assignment. Determines which calendar weeks the store is visited.</description>
+    <inlineHelpText
+    >Select the visit frequency for this store. Weekly allows multiple visit days. Fortnightly, Monthly and Bi monthly frequencies allow only 1 visit day. Bi monthly frequencies visit the store once every 8 weeks. Allow multiple active routing per store and route is allowed — overlapping date ranges on the same route will be blocked; the same customer may be on multiple routes. Changing to a frequency that allows only one visit day will clear extra visit days beyond the first.</inlineHelpText>
+    <label>Frequency</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+                <label>Weekly</label>
+            </value>
+            <value>
+                <fullName>Fortnightly Week 1 &amp; 3</fullName>
+                <default>false</default>
+                <label>Fortnightly Week 1 &amp; 3</label>
+            </value>
+            <value>
+                <fullName>Fortnightly Week 2 &amp; 4</fullName>
+                <default>false</default>
+                <label>Fortnightly Week 2 &amp; 4</label>
+            </value>
+            <value>
+                <fullName>Monthly Week 1</fullName>
+                <default>false</default>
+                <label>Monthly Week 1</label>
+            </value>
+            <value>
+                <fullName>Monthly Week 2</fullName>
+                <default>false</default>
+                <label>Monthly Week 2</label>
+            </value>
+            <value>
+                <fullName>Monthly Week 3</fullName>
+                <default>false</default>
+                <label>Monthly Week 3</label>
+            </value>
+            <value>
+                <fullName>Monthly Week 4</fullName>
+                <default>false</default>
+                <label>Monthly Week 4</label>
+            </value>
+            <value>
+                <fullName>Bi monthly week 1</fullName>
+                <default>false</default>
+                <label>Bi monthly week 1</label>
+            </value>
+            <value>
+                <fullName>Bi monthly week 2</fullName>
+                <default>false</default>
+                <label>Bi monthly week 2</label>
+            </value>
+            <value>
+                <fullName>Bi monthly week 3</fullName>
+                <default>false</default>
+                <label>Bi monthly week 3</label>
+            </value>
+            <value>
+                <fullName>Bi monthly week 4</fullName>
+                <default>false</default>
+                <label>Bi monthly week 4</label>
+            </value>
+            <value>
+                <fullName>Bi monthly week 5</fullName>
+                <default>false</default>
+                <label>Bi monthly week 5</label>
+            </value>
+            <value>
+                <fullName>Bi monthly week 6</fullName>
+                <default>false</default>
+                <label>Bi monthly week 6</label>
+            </value>
+            <value>
+                <fullName>Bi monthly week 7</fullName>
+                <default>false</default>
+                <label>Bi monthly week 7</label>
+            </value>
+            <value>
+                <fullName>Bi monthly week 8</fullName>
+                <default>false</default>
+                <label>Bi monthly week 8</label>
+            </value>
+            <value>
+                <fullName>Bi-weekly</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bi-weekly</label>
+            </value>
+            <value>
+                <fullName>Every third week</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Every third week</label>
+            </value>
+            <value>
+                <fullName>Fortnightly</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fortnightly</label>
+            </value>
+            <value>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Monthly</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

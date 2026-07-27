@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomMetadata
+    xmlns="http://soap.sforce.com/2006/04/metadata"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+>
+    <label>Products</label>
+    <protected>false</protected>
+    <values>
+        <field>Fields__c</field>
+        <!--
+            ADO 159013 — Product Template field mapping. Mirrors the AC JSON exactly.
+            Mandatory CSV columns are prefixed with '*'.
+            Tax_Classification__c is deprecated in favour of Tax_Rate__c (per Jorge Mejia comment 2026-05-11).
+        -->
+        <value xsi:type="xsd:string">{
+&quot;ExternalId&quot;: &quot;*External ID&quot;,
+&quot;Name&quot;: &quot;*Name&quot;,
+&quot;Short_Name__c&quot;: &quot;*Short Name&quot;,
+&quot;Family&quot;: &quot;*Product Family&quot;,
+&quot;Product_Hierarchy_Level__c&quot;: &quot;*Product Hierarchy Level&quot;,
+&quot;Category__c&quot;: &quot;*Category&quot;,
+&quot;Prod_Line__c&quot;: &quot;Product Line&quot;,
+&quot;Prod_Group__c&quot;: &quot;Product Group&quot;,
+&quot;Prod_Brand__c&quot;: &quot;Product Brand&quot;,
+&quot;Prod_Subbrand__c&quot;: &quot;Product Subbrand&quot;,
+&quot;Container_Type__c&quot;: &quot;Container Type&quot;,
+&quot;Prod_Flavor__c&quot;: &quot;Product Flavor&quot;,
+&quot;Size__c&quot;: &quot;Size&quot;,
+&quot;Prod_Format__c&quot;: &quot;Product Format&quot;,
+&quot;Prod_Count__c&quot;: &quot;Product Count&quot;,
+&quot;Manufacturer__c&quot;: &quot;*Manufacturer&quot;,
+&quot;EAN__c&quot;: &quot;EAN Code&quot;,
+&quot;Tax_Rate__c&quot;: &quot;Tax Classification&quot;,
+&quot;List_Price__c&quot;: &quot;List Price&quot;,
+&quot;IsActive&quot;: &quot;Is Active&quot;,
+&quot;Market__c&quot;: &quot;*Market&quot;
+}</value>
+    </values>
+    <values>
+        <field>Is_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Object_API_Name__c</field>
+        <value xsi:type="xsd:string">Product2</value>
+    </values>
+    <values>
+        <field>Template_Label__c</field>
+        <value xsi:type="xsd:string">Products</value>
+    </values>
+</CustomMetadata>

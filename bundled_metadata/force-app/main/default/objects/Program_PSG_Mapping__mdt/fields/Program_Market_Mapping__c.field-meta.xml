@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Market_Mapping__c</fullName>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>Program Market Mapping</label>
+    <referenceTo>Program_Market_Mapping__mdt</referenceTo>
+    <relationshipLabel>Program PSG Mapping</relationshipLabel>
+    <relationshipName>Program_PSG_Mapping</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

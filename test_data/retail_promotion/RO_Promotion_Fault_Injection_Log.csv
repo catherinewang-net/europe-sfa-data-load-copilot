@@ -1,0 +1,39 @@
+output_file,csv_row_number,column,original_value,faulty_value,validation_being_tested,expected_copilot_behavior
+RO_Promotion_Faulty_Validation_Test.csv,2,*Start Date(dd/mm/yyyy),6/7/2026,06/07/2026,Date format (DIT zero-padded DD/MM/YYYY),Convertable date → propose correction to target tool format
+RO_Promotion_Faulty_Validation_Test.csv,3,*Start Date(dd/mm/yyyy),20/07/2026,2026-07-06,Date format (Workbench ISO YYYY-MM-DD),Convertable date → propose correction to target tool format
+RO_Promotion_Faulty_Validation_Test.csv,4,*Start Date(dd/mm/yyyy),6/7/2026,6/7/2026,Date format (single-digit D/M/YYYY),Convertable date → propose correction with day-first parsing
+RO_Promotion_Faulty_Validation_Test.csv,5,*End Date(dd/mm/yyyy),9/8/2026,07/06/2026,Date format (US-style MM/DD/YYYY ambiguous),Ambiguous date → require source-format confirmation before conversion
+RO_Promotion_Faulty_Validation_Test.csv,6,*End Date(dd/mm/yyyy),15/08/2026,31/02/2026,Invalid calendar date,Invalid calendar date → manual review required
+RO_Promotion_Faulty_Validation_Test.csv,7,*Influence Date(dd/mm/yyyy),22/06/2026,"July 6, 2026",Text date value,Invalid date text → manual review required
+RO_Promotion_Faulty_Validation_Test.csv,8,*Influence Date(dd/mm/yyyy),22/06/2026,46209,Excel serial-like numeric date,Possible Excel date serial → confirmation required
+RO_Promotion_Faulty_Validation_Test.csv,9,*Influence Date(dd/mm/yyyy),6/7/2026,,Blank date (metadata optional; template-required),Blank required/template-required date → blocking issue
+RO_Promotion_Faulty_Validation_Test.csv,10,*Promotion Name,Supeco - Cata 24 Star Snacks 80g,,Required field blank (Name),Blank required field → blocking issue
+RO_Promotion_Faulty_Validation_Test.csv,11,*Market,RO,,Required field blank (Market__c picklist),Blank required field → blocking issue
+RO_Promotion_Faulty_Validation_Test.csv,12,*Promotion Type,Leaflet,INVALID PICKLIST VALUE,Invalid picklist (Promotion_Type__c),Invalid picklist → flag against Salesforce metadata
+RO_Promotion_Faulty_Validation_Test.csv,13,*Promotion Type,Leaflet, In store ,Picklist with surrounding spaces (Promotion_Type__c),Whitespace → propose safe trimming; value valid after trim
+RO_Promotion_Faulty_Validation_Test.csv,14,*Promotion Type,Online campaign,leaflet,Incorrect picklist capitalization (Promotion_Type__c),Invalid picklist capitalization → flag or propose canonical value
+RO_Promotion_Faulty_Validation_Test.csv,15,PS Value Segmentation Snacks,,INVALID PICKLIST VALUE,Invalid picklist (L3_Snacks_Value_Segmentation__c),Invalid picklist → flag against Salesforce metadata
+RO_Promotion_Faulty_Validation_Test.csv,16,PS Value Segmentation Snacks,, A+ ,Picklist with surrounding spaces (L3_Snacks_Value_Segmentation__c),Whitespace → propose safe trimming; value valid after trim
+RO_Promotion_Faulty_Validation_Test.csv,17,PS Value Segmentation Snacks,A+,a+,Incorrect picklist capitalization (L3_Snacks_Value_Segmentation__c),Invalid picklist capitalization → flag or propose canonical value
+RO_Promotion_Faulty_Validation_Test.csv,18,*Market,RO,INVALID PICKLIST VALUE,Invalid picklist (Market__c),Invalid picklist → flag against Salesforce metadata
+RO_Promotion_Faulty_Validation_Test.csv,19,*Promotion Name,Rewe - DDU 6X330ML,  Rewe - DDU 6X330ML,Leading whitespace in Name,Whitespace → propose safe trimming
+RO_Promotion_Faulty_Validation_Test.csv,20,Key Account/Banner Value,Profi,Profi   ,Trailing whitespace in Key Account lookup text,Whitespace → propose safe trimming
+RO_Promotion_Faulty_Validation_Test.csv,21,Placement Type,End of gondola +,End  of  gondola  +,Repeated internal spaces in Placement Type text,Whitespace → propose safe trimming/normalization
+RO_Promotion_Faulty_Validation_Test.csv,22,*Promotion Name,Auchan - Promo 23 Pepsi 1.5L ,"Auchan - Promo 23
+Pepsi 1.5L ",Embedded line break in text field (Name),Embedded line break in text → flag for manual review or safe normalization
+RO_Promotion_Faulty_Validation_Test.csv,23,Key Account/Banner Value,Auchan,LOOKUP_DOES_NOT_EXIST,Invalid lookup reference (Key_Account__c),Invalid lookup → manual review; do not invent Salesforce IDs
+RO_Promotion_Faulty_Validation_Test.csv,24,Account External ID,,LOOKUP_DOES_NOT_EXIST,Invalid lookup reference (Account_External_ID__c),Invalid lookup → manual review; do not invent Salesforce IDs
+RO_Promotion_Faulty_Validation_Test.csv,17,Key Account/Banner Value,,,Blank optional lookup (Key_Account__c),Blank optional lookup allowed; no blocking issue unless business rule requires value
+RO_Promotion_Faulty_Validation_Test.csv,24,Material ID,340059075,340059075,Duplicate Material ID partner row (unchanged),Duplicate External ID → blocking review when uniqueness enforced
+RO_Promotion_Faulty_Validation_Test.csv,25,Material ID,340056730,340059075,Duplicate Material ID matching row 24,Duplicate External ID → blocking review when uniqueness enforced
+RO_Promotion_Faulty_Validation_Test.csv,26,Material ID,340056393,1.23457E+11,Scientific notation identifier,Scientific notation → identifier warning; preserve as text
+RO_Promotion_Faulty_Validation_Test.csv,27,Material ID,340049181,340056393.0,Decimal suffix on identifier,Trailing .0 → propose removal of accidental decimal suffix
+RO_Promotion_Faulty_Validation_Test.csv,28,Material ID,340055716,34049181,Leading zero removed from Material ID,Leading zero removed → identifier warning or propose zero-padding when rule applies
+RO_Promotion_Faulty_Validation_Test.csv,29,Material ID,340056314,0340049181,Leading zero preserved Material ID (control),Correct leading-zero identifier → accept without change
+RO_Promotion_Faulty_Validation_Test.csv,2,*Promotion Type,In store,In store,Valid picklist control (Promotion_Type__c),Valid picklist value kept unchanged
+RO_Promotion_Faulty_Validation_Test.csv,N/A,Methods (MultiPicklist),N/A,N/A,Template column unavailable,Not mapped in Retail Promotion template CSV; multipicklist semicolon test not injected
+RO_Promotion_Faulty_Validation_Test.csv,N/A,IsActive (Boolean),N/A,N/A,Template column unavailable,Not mapped in Retail Promotion template CSV; boolean normalization tests not injected
+RO_Promotion_Faulty_Validation_Test.csv,N/A,Numeric/Currency fields,N/A,N/A,Template column unavailable,No numeric or currency fields mapped in Retail Promotion template CSV
+RO_Promotion_Malformed_Row_Test.csv,71,*Promotion Name,(synthetic row),"Carrefour - Cupon Brand Pepsi, unquoted comma test",Unquoted comma inside text value,Malformed row → CSV structure error; extra parsed column
+RO_Promotion_Malformed_Row_Test.csv,72,Placement Type,(synthetic row),"""End of gondola +,RO",Unmatched quotation mark,Malformed row → CSV structure error
+RO_Promotion_Malformed_Row_Test.csv,73,(row),(synthetic row),6 columns vs 11 header columns,Row with fewer columns than header,Malformed row → CSV structure error; column count mismatch

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Indicates whether the wholesaler or payer record is active. If false the entity is inactive with Pepsico.</description>
+    <label>Active</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

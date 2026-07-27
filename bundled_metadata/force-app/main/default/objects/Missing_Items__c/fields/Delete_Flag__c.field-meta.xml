@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delete_Flag__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Set when the KPI no longer has any missing item references as calculated by EDF</description>
+    <label>Delete Flag</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

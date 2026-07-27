@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Through my wholesaler</fullName>
+        <default>false</default>
+        <label>Through my wholesaler</label>
+    </customValue>
+    <customValue>
+        <fullName>Referred by a PepsiCo employee</fullName>
+        <default>false</default>
+        <label>Referred by a PepsiCo employee</label>
+    </customValue>
+    <customValue>
+        <fullName>Social media</fullName>
+        <default>false</default>
+        <label>Social media</label>
+    </customValue>
+    <customValue>
+        <fullName>At a trade event</fullName>
+        <default>false</default>
+        <label>At a trade event</label>
+    </customValue>
+    <customValue>
+        <fullName>Other (please specify)</fullName>
+        <default>false</default>
+        <label>Other (please specify)</label>
+    </customValue>
+    <masterLabel>AFH Source of Inquiry</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

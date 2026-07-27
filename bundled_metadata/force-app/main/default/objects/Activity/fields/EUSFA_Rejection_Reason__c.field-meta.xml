@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_Rejection_Reason__c</fullName>
+    <label>Rejection Reason</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>G_06 – Competitor Products in Store</fullName>
+                <default>false</default>
+                <label>G_06 – Competitor Products in Store</label>
+            </value>
+            <value>
+                <fullName>P_01 / P_02 – Number of Displays</fullName>
+                <default>false</default>
+                <label>P_01 / P_02 – Number of Displays</label>
+            </value>
+            <value>
+                <fullName>P_03 – Missing MSL Distributed</fullName>
+                <default>false</default>
+                <label>P_03 – Missing MSL Distributed</label>
+            </value>
+            <value>
+                <fullName>P_05 – Missing MSL Available</fullName>
+                <default>false</default>
+                <label>P_05 – Missing MSL Available</label>
+            </value>
+            <value>
+                <fullName>P_06 – Branded POS</fullName>
+                <default>false</default>
+                <label>P_06 – Branded POS</label>
+            </value>
+            <value>
+                <fullName>P_07 – Combo Execution</fullName>
+                <default>false</default>
+                <label>P_07 – Combo Execution</label>
+            </value>
+            <value>
+                <fullName>P_08 – Cooler Removal</fullName>
+                <default>false</default>
+                <label>P_08 – Cooler Removal</label>
+            </value>
+            <value>
+                <fullName>P_09 – Make Profitable Cooler</fullName>
+                <default>false</default>
+                <label>P_09 – Make Profitable Cooler</label>
+            </value>
+            <value>
+                <fullName>P_10 / P_11 – Main PoG Compliance</fullName>
+                <default>false</default>
+                <label>P_10 / P_11 – Main PoG Compliance</label>
+            </value>
+            <value>
+                <fullName>P_12 / P_14 – Main Space Share</fullName>
+                <default>false</default>
+                <label>P_12 / P_14 – Main Space Share</label>
+            </value>
+            <value>
+                <fullName>P_15 – Menu Visibility</fullName>
+                <default>false</default>
+                <label>P_15 – Menu Visibility</label>
+            </value>
+            <value>
+                <fullName>P_16 – Digital Platform Visibility</fullName>
+                <default>false</default>
+                <label>P_16 – Digital Platform Visibility</label>
+            </value>
+            <value>
+                <fullName>P_21 / P_22 – Secondary Space Compliance</fullName>
+                <default>false</default>
+                <label>P_21 / P_22 – Secondary Space Compliance</label>
+            </value>
+            <value>
+                <fullName>G_07 – Competitor Products in Cooler</fullName>
+                <default>false</default>
+                <label>G_07 – Competitor Products in Cooler</label>
+            </value>
+            <value>
+                <fullName>P_36 – Secondary Space Compliance – Segment</fullName>
+                <default>false</default>
+                <label>P_36 – Secondary Space Compliance – Segment</label>
+            </value>
+            <value>
+                <fullName>P_13 – Main Space Share – Segment</fullName>
+                <default>false</default>
+                <label>P_13 – Main Space Share – Segment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

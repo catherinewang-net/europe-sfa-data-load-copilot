@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prod_Subbrand_Id__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Product Subbrand Id</label>
+    <referenceTo>Product2</referenceTo>
+    <relationshipLabel>Products (Product Subbrand Id)</relationshipLabel>
+    <relationshipName>Products3</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

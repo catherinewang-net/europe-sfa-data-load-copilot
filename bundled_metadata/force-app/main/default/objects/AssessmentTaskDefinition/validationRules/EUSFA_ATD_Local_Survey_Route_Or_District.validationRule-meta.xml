@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_ATD_Local_Survey_Route_Or_District</fullName>
+    <active>true</active>
+    <description>Local Survey: populate at most one of Route (Route Sales Geo) or District (Route Sales Geo).</description>
+    <errorConditionFormula>AND(
+  ISPICKVAL(Type__c, &quot;Local Survey&quot;),
+  NOT(ISBLANK(Route_Geo__c)),
+  NOT(ISBLANK(District_Geo__c))
+)</errorConditionFormula>
+    <errorDisplayField>District_Geo__c</errorDisplayField>
+    <errorMessage>For Local Survey, populate only one of Route or District, not both.</errorMessage>
+</ValidationRule>

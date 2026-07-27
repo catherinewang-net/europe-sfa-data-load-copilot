@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_TradeMarkFormURL__c</fullName>
+    <externalId>false</externalId>
+    <formula>$Label.AFH_SiteURL 
+&amp; &apos;/apex/AFH_TrademarkLicense?id=&apos; 
+&amp; Id</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>TradeMarkFormURL</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Route_Day_Start_Time__c</fullName>
+    <description
+    >Base start-of-day time used to derive PlannedVisitStartTime on CTR-generated Visits. Slot = this time + ((Sequence__c - 1) * 30 minutes). Stored as HH:mm in 24-hour format (e.g. 08:00, 09:30) because Custom Metadata Types do not support a native Time data type. Parsed by EUSFA_VisitGenerationService.getRouteDayStartTime and interpreted in the running user's locale to stay consistent with the existing audit-survey timing pattern.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Route Day Start Time</label>
+    <length>5</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

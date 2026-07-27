@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_Execution_Method__c</fullName>
+    <description>Indicates how the operational task is executed: manually by the BDR or via Image Recognition (IR camera).</description>
+    <inlineHelpText>Select the execution method for this task definition: Manual or Image Recognition.</inlineHelpText>
+    <label>Execution Method</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Manual</fullName>
+                <default>true</default>
+                <label>Manual</label>
+            </value>
+            <value>
+                <fullName>Image Recognition</fullName>
+                <default>false</default>
+                <label>Image Recognition</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

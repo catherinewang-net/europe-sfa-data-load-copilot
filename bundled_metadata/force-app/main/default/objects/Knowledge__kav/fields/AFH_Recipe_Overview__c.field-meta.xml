@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_Recipe_Overview__c</fullName>
+    <description>Stores the brief overview of the recipe displayed on the Recipe Detail page.</description>
+    <label>Recipe Overview</label>
+    <length>32768</length>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

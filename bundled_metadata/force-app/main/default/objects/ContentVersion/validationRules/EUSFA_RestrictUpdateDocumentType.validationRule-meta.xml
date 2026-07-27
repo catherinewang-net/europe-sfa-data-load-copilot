@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_RestrictUpdateDocumentType</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    $Profile.Name = &quot;EUSFA&quot;,
+    NOT(ISNEW()),
+    ISCHANGED(EUSFA_Document_Type__c),
+    NOT(
+        ISPICKVAL(
+            PRIORVALUE(EUSFA_Document_Type__c),&quot;&quot;
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Update failed: Document Type is locked and cannot be modified after creation</errorMessage>
+</ValidationRule>

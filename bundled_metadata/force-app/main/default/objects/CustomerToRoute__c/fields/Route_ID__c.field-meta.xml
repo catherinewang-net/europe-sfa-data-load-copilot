@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Route_ID__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description
+  >Lookup to Route Sales Geo. Identifies which route this store is assigned to. Changing the route on an existing record automatically recalculates day sequences as MAX+1 on the new route.</description>
+    <inlineHelpText
+  >Select the route this store belongs to. Changing the route will automatically recalculate day sequences to the next available number (MAX+1) on the new route.</inlineHelpText>
+    <label>Route ID ​</label>
+    <referenceTo>Route_Sales_Geo__c</referenceTo>
+    <relationshipLabel>Customer to Routes</relationshipLabel>
+    <relationshipName>Customer_to_Routes</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

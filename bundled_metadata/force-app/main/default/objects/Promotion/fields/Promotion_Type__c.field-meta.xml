@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promotion_Type__c</fullName>
+    <label>Promotion Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Discount</fullName>
+                <default>false</default>
+                <label>Discount</label>
+            </value>
+            <value>
+                <fullName>BOGO</fullName>
+                <default>false</default>
+                <label>BOGO</label>
+            </value>
+            <value>
+                <fullName>Display</fullName>
+                <default>false</default>
+                <label>Display</label>
+            </value>
+            <value>
+                <fullName>Leaflet</fullName>
+                <default>false</default>
+                <label>Leaflet</label>
+            </value>
+            <value>
+                <fullName>Coupon</fullName>
+                <default>false</default>
+                <label>Coupon</label>
+            </value>
+            <value>
+                <fullName>Online campaign</fullName>
+                <default>false</default>
+                <label>Online campaign</label>
+            </value>
+            <value>
+                <fullName>Voucher</fullName>
+                <default>false</default>
+                <label>Voucher</label>
+            </value>
+            <value>
+                <fullName>In store</fullName>
+                <default>false</default>
+                <label>In store</label>
+            </value>
+            <value>
+                <fullName>TV</fullName>
+                <default>false</default>
+                <label>TV</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

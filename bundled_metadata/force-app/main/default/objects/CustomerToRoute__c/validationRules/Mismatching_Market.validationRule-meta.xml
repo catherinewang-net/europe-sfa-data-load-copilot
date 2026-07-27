@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mismatching_Market</fullName>
+    <active>false</active>
+    <description>Fires when market specified in customer to route is different that the parent route&apos;s market</description>
+    <errorConditionFormula>TEXT(Market__c) &lt;&gt;  TEXT(Route_ID__r.Market__c)</errorConditionFormula>
+    <errorMessage>Mismatching market. Please ensure market field value matches the Route&apos;s market field value.</errorMessage>
+</ValidationRule>

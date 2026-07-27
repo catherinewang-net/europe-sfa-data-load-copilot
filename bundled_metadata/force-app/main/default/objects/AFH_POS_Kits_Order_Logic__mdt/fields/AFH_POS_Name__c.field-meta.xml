@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_POS_Name__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>AFH POS Name</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Doritos</fullName>
+                <default>true</default>
+                <label>Doritos</label>
+            </value>
+            <value>
+                <fullName>Pipers</fullName>
+                <default>false</default>
+                <label>Pipers</label>
+            </value>
+            <value>
+                <fullName>Walkers</fullName>
+                <default>false</default>
+                <label>Walkers</label>
+            </value>
+            <value>
+                <fullName>Quaker</fullName>
+                <default>false</default>
+                <label>Quaker</label>
+            </value>
+            <value>
+                <fullName>Walkers Loaded</fullName>
+                <default>false</default>
+                <label>Walkers Loaded</label>
+            </value>
+            <value>
+                <fullName>Doritos Loaded</fullName>
+                <default>false</default>
+                <label>Doritos Loaded</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

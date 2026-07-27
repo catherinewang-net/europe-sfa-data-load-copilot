@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Route_End_Date_Validation</fullName>
+    <active>true</active>
+    <description>Enforces valid to date to be after valid from date</description>
+    <errorConditionFormula>Route_End_Date__c &lt;  Route_Start_Date__c</errorConditionFormula>
+    <errorMessage>Route End Date must be after Route Start Date</errorMessage>
+</ValidationRule>

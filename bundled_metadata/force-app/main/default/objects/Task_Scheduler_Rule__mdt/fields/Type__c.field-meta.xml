@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PS-related Surveys</fullName>
+                <default>true</default>
+                <label>PS-related Surveys</label>
+            </value>
+            <value>
+                <fullName>Local Survey</fullName>
+                <default>false</default>
+                <label>Local Survey</label>
+            </value>
+            <value>
+                <fullName>Main Space Audit (Beverages)</fullName>
+                <default>false</default>
+                <label>Main Space Audit (Beverages)</label>
+            </value>
+            <value>
+                <fullName>Main Space Audit (Snacks)</fullName>
+                <default>false</default>
+                <label>Main Space Audit (Snacks)</label>
+            </value>
+            <value>
+                <fullName>Secondary Space Audit (POSM)</fullName>
+                <default>false</default>
+                <label>Secondary Space Audit (POSM)</label>
+            </value>
+            <value>
+                <fullName>SKU Audit</fullName>
+                <default>false</default>
+                <label>SKU Audit</label>
+            </value>
+            <value>
+                <fullName>Main Space Audit</fullName>
+                <default>false</default>
+                <label>Main Space Audit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

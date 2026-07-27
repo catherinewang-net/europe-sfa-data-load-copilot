@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Customers</label>
+    <protected>false</protected>
+    <values>
+        <field>Fields__c</field>
+        <value xsi:type="xsd:string">{&quot;Id&quot; : &quot;Salesforce Id&quot;, 
+&quot;CUST_ID__c&quot;: &quot;*External Id&quot;,
+&quot;Name&quot;: &quot;*Name&quot;,
+&quot;Phone&quot;: &quot;Phone&quot;, 
+&quot;Store_Email__c&quot;: &quot;Email&quot;, 
+&quot;Key_Account_Banner__c&quot;: &quot;Key Account/Banner&quot;, 
+&quot;ParentId&quot;: &quot;Contracting Account&quot;,
+&quot;ShippingStreet&quot;: &quot;Street&quot;, 
+&quot;ShippingCity&quot;: &quot;City&quot;, 
+&quot;ShippingCountry&quot;: &quot;Country&quot;,
+&quot;ShippingPostalCode&quot;: &quot;Postal Code&quot;,
+&quot;GLN__c&quot;: &quot;GLN&quot;,
+&quot;L1_Channel__c&quot;: &quot;*L1 Channel&quot;, 
+&quot;L2_SubChannel__c&quot;: &quot;L2 Subchannel&quot;, 
+&quot;L3_Classification__c&quot;: &quot;L3 Classification&quot;, 
+&quot;L4_Classification__c&quot;: &quot;L4 Classification&quot;, 
+&quot;Microsegment__c&quot;: &quot;L4 Microsegments&quot;, 
+&quot;L3_Bevs_Pricegroup_Cluster__c&quot;: &quot;L3 Bevs Pricegroup Cluster&quot;,
+&quot;L3_Snacks_Pricegroup_Cluster__c&quot;: &quot;L3 Snacks Pricegroup Cluster&quot;,
+&quot;L3_Snacks_Value_Segmentation__c&quot;: &quot;L3 Snacks Value Segmentation&quot;, 
+&quot;L3_Bevs_Value_Segmentation__c&quot;: &quot;L3 Bevs Value Segmentation&quot;, 
+&quot;Valid_from_Date__c&quot;: &quot;Customer Valid from Date(dd/mm/yyyy)&quot;,
+&quot;Deactivate_Date__c&quot;: &quot;Deactivate Date(dd/mm/yyyy)&quot;, 
+&quot;Self_Certified__c&quot;: &quot;Self Certification&quot;,
+&quot;Centralization_Degree__c&quot;: &quot;Degree of Centralization&quot;, 
+&quot;Cust_Tax_Class__c&quot;: &quot;Customer Tax Classification&quot;, 
+&quot;B2B_Status__c&quot;: &quot;B2B Status&quot;, 
+&quot;DSD_Status__c&quot;: &quot;DSD Status&quot;,
+&quot;GTM_Status__c&quot;: &quot;GTM Status&quot;,
+&quot;Digital_Platform_Type__c&quot;: &quot;Digital Platform Type&quot;, 
+&quot;GDPR_Date_Last_Checked__c&quot;: &quot;GDPR date last checked(dd/mm/yyyy)&quot;,
+&quot;IBAN__c&quot;: &quot;IBAN&quot;,
+&quot;Tax_ID__c&quot;: &quot;VAT Tax ID&quot;,
+&quot;Market__c&quot;: &quot;*Market&quot;}</value>
+    </values>
+    <values>
+        <field>Is_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Object_API_Name__c</field>
+        <value xsi:type="xsd:string">Account</value>
+    </values>
+    <values>
+        <field>Template_Label__c</field>
+        <value xsi:type="xsd:string">Customers</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DriverID__c</fullName>
+    <label>Driver ID</label>
+    <relationshipName>Drivers</relationshipName>
+    <restrictedAdminField>false</restrictedAdminField>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Hierarchy</type>
+</CustomField>

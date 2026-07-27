@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KPI_ID__c</fullName>
+    <description>Development priority KPI for Development Task Image document types.</description>
+    <label>KPI ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>P41_LV_S</fullName>
+                <default>false</default>
+                <label>P41_LV_S - Number of Displays</label>
+            </value>
+            <value>
+                <fullName>P42_LV_S</fullName>
+                <default>false</default>
+                <label>P42_LV_S - Number of Coolers</label>
+            </value>
+            <value>
+                <fullName>P2_L12W_S_F</fullName>
+                <default>false</default>
+                <label>P2_L12W_S_F - MSL Distribution Foods (Sales)</label>
+            </value>
+            <value>
+                <fullName>P2_L12W_S_B</fullName>
+                <default>false</default>
+                <label>P2_L12W_S_B - MSL Distribution Beverages (Sales)</label>
+            </value>
+            <value>
+                <fullName>P2_LV_S_F</fullName>
+                <default>false</default>
+                <label>P2_LV_S_F - MSL Distribution Foods (audit)</label>
+            </value>
+            <value>
+                <fullName>P2_LV_S_B</fullName>
+                <default>false</default>
+                <label>P2_LV_S_B - MSL Distribution Beverages (audit)</label>
+            </value>
+            <value>
+                <fullName>P3_LV_S</fullName>
+                <default>false</default>
+                <label>P3_LV_S - CDA Distribution</label>
+            </value>
+            <value>
+                <fullName>P30_LV_S_F</fullName>
+                <default>false</default>
+                <label>P30_LV_S_F - Main Space Share Foods</label>
+            </value>
+            <value>
+                <fullName>P30_LV_S_B</fullName>
+                <default>false</default>
+                <label>P30_LV_S_B - Main Space Share Beverages</label>
+            </value>
+            <value>
+                <fullName>P32_LV_S_F</fullName>
+                <default>false</default>
+                <label>P32_LV_S_F - Total Space Share Foods</label>
+            </value>
+            <value>
+                <fullName>P32_LV_S_B</fullName>
+                <default>false</default>
+                <label>P32_LV_S_B - Total Space Share Beverages</label>
+            </value>
+            <value>
+                <fullName>P53_LV_S_F</fullName>
+                <default>false</default>
+                <label>P53_LV_S_F - Main Space Compliance Foods</label>
+            </value>
+            <value>
+                <fullName>P53_LV_S_B</fullName>
+                <default>false</default>
+                <label>P53_LV_S_B - Main Space Compliance Beverages</label>
+            </value>
+            <value>
+                <fullName>P56_LV_S_F</fullName>
+                <default>false</default>
+                <label>P56_LV_S_F - Secondary Space Compliance Foods</label>
+            </value>
+            <value>
+                <fullName>P56_LV_S_B</fullName>
+                <default>false</default>
+                <label>P56_LV_S_B - Secondary Space Compliance Beverages</label>
+            </value>
+            <value>
+                <fullName>G16_LV_S</fullName>
+                <default>false</default>
+                <label>G16_LV_S - PepsiCo Exclusivity</label>
+            </value>
+            <value>
+                <fullName>O11_LV_S</fullName>
+                <default>false</default>
+                <label>O11_LV_S - Visibility: Branded POS</label>
+            </value>
+            <value>
+                <fullName>O03_LV_S</fullName>
+                <default>false</default>
+                <label>O03_LV_S - Variety: Menu Visibility</label>
+            </value>
+            <value>
+                <fullName>O12_LV_S</fullName>
+                <default>false</default>
+                <label>O12_LV_S - Value: Combo Execution / Mixology</label>
+            </value>
+            <value>
+                <fullName>O10_LV_S</fullName>
+                <default>false</default>
+                <label>O10_LV_S - Products on Digital Platform</label>
+            </value>
+            <value>
+                <fullName>G20_L4W_S</fullName>
+                <default>false</default>
+                <label>G20_L4W_S - Frequent Digital Buyer</label>
+            </value>
+            <value>
+                <fullName>G27_L4W_R</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>% Frequent Digital Buyer</label>
+            </value>
+            <value>
+                <fullName>G1_L12W_R</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Active Customers</label>
+            </value>
+            <value>
+                <fullName>S7_QTD_R_F</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Delivered Cases QTD</label>
+            </value>
+            <value>
+                <fullName>G_06</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>G_06 - Competitor Products in Store</label>
+            </value>
+            <value>
+                <fullName>G_07</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>G_07 - Competitor Products in Cooler</label>
+            </value>
+            <value>
+                <fullName>P15_LV_S</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MSL Availability</label>
+            </value>
+            <value>
+                <fullName>S4_MTD_R_B</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Net Sales MTD Route Beverages</label>
+            </value>
+            <value>
+                <fullName>S4_MTD_R_F</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Net Sales MTD Route Foods</label>
+            </value>
+            <value>
+                <fullName>S4_MTD_R_OT</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Net Sales Total OT Channel</label>
+            </value>
+            <value>
+                <fullName>G14_QTD_R</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New Customers</label>
+            </value>
+            <value>
+                <fullName>P54_LV_S_B</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P54_LV_S_B</label>
+            </value>
+            <value>
+                <fullName>P54_LV_S_F</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P54_LV_S_F</label>
+            </value>
+            <value>
+                <fullName>P60_LV_R</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PICOS Points Route</label>
+            </value>
+            <value>
+                <fullName>P60_LV_S</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PICOS Points Store</label>
+            </value>
+            <value>
+                <fullName>P_01</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_01 - Number of Displays</label>
+            </value>
+            <value>
+                <fullName>P_02</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_02 - Number of Displays</label>
+            </value>
+            <value>
+                <fullName>P_03</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_03 - Missing MSL Distributed</label>
+            </value>
+            <value>
+                <fullName>P_05</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_05 - Missing MSL Available</label>
+            </value>
+            <value>
+                <fullName>P_06</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_06 - Branded POS</label>
+            </value>
+            <value>
+                <fullName>P_07</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_07 - Combo Execution</label>
+            </value>
+            <value>
+                <fullName>P_08</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_08 Cooler Removal</label>
+            </value>
+            <value>
+                <fullName>P_09</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_09 - Make Profitable Cooler</label>
+            </value>
+            <value>
+                <fullName>P_10</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_10 - Main PoG Compliance (KPI P_10)</label>
+            </value>
+            <value>
+                <fullName>P_11</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_11 - Main PoG Compliance (KPI P_11)</label>
+            </value>
+            <value>
+                <fullName>P_12</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_12 - Main Space Share (KPI P_12)</label>
+            </value>
+            <value>
+                <fullName>P_13</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_13- Main Space Share - Segment</label>
+            </value>
+            <value>
+                <fullName>P_14</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_14 - Main Space Share (KPI P_14)</label>
+            </value>
+            <value>
+                <fullName>P_15</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_15 - Menu Visibility</label>
+            </value>
+            <value>
+                <fullName>P_16</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_16 - Digital Platform Visibility</label>
+            </value>
+            <value>
+                <fullName>P_21</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_21 - Secondary Space Compliance (KPI P_21)</label>
+            </value>
+            <value>
+                <fullName>P_22</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_22 - Secondary Space Compliance (KPI P_22)</label>
+            </value>
+            <value>
+                <fullName>P_36</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P_36 - Secondary Space Compliance - Segment</label>
+            </value>
+            <value>
+                <fullName>S4_MTD_R_PEP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>S4_MTD_R_PEP - Net Sales MTD Route PepsiCo</label>
+            </value>
+            <value>
+                <fullName>S4_QTD_R_PEP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>S4_QTD_R_PEP - Net Sales MTD Route PepsiCo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

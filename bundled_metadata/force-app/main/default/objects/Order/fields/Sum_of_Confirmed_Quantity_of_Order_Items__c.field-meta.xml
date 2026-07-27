@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sum_of_Confirmed_Quantity_of_Order_Items__c</fullName>
+    <label>Sum of Confirmed Quantity of Order Items</label>
+    <summarizedField>OrderItem.Confirmed_Quantity__c</summarizedField>
+    <summaryForeignKey>OrderItem.OrderId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

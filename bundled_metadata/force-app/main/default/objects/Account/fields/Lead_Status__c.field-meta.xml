@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Status__c</fullName>
+    <description>Current status of the prospective customer</description>
+    <label>Lead Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Contract Expiring</fullName>
+                <default>false</default>
+                <label>Contract Expiring</label>
+            </value>
+            <value>
+                <fullName>Disqualified</fullName>
+                <default>false</default>
+                <label>Disqualified</label>
+            </value>
+            <value>
+                <fullName>Captured</fullName>
+                <default>false</default>
+                <label>Captured</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+                <label>Follow-up</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

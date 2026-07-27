@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Horizon_Days__c</fullName>
+    <description
+  >Number of days into the future for which visits are generated from a CustomerToRoute__c record. The visit window spans from today through today + n (inclusive), yielding n + 1 calendar days.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Horizon Days</label>
+    <precision>4</precision>
+    <required>true</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

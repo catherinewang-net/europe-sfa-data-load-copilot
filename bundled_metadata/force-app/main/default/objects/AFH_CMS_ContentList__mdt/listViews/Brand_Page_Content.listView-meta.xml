@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand_Page_Content</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>NamespacePrefix</columns>
+    <columns>AFH_Page_Name__c</columns>
+    <columns>AFH_Content_Key__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>AFH_Page_Name__c</field>
+        <operation>equals</operation>
+        <value>Brand Page</value>
+    </filters>
+    <label>Brand Page Content</label>
+</ListView>

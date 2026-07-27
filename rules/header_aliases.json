@@ -1,0 +1,14 @@
+{
+  "L1 Channel": "L1_Channel__c",
+  "*L1 Channel": "L1_Channel__c",
+  "Billing Street": "BillingStreet",
+  "Street": "BillingStreet",
+  "Billing City": "BillingCity",
+  "City": "BillingCity",
+  "Billing Country": "BillingCountry",
+  "Country": "BillingCountry",
+  "Billing Postal Code": "BillingPostalCode",
+  "Postal Code": "BillingPostalCode",
+  "Key Account": "KeyAccountId__c",
+  "Salesforce Id": "Id"
+}

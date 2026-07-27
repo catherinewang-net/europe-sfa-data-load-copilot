@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Same_Day_Visit_On_Visit_List</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISNEW()
+&amp;&amp; NOT(ISBLANK(Visit_List__c))
+&amp;&amp; DATEVALUE(PlannedVisitStartTime) &lt;&gt; Visit_List__r.Visit_Date__c</errorConditionFormula>
+    <errorMessage>Please plan the visit on the same day as Visit List!</errorMessage>
+</ValidationRule>

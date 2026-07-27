@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_ExternalId__c</fullName>
+    <description>External ID for the product. For transfer orders, this is populated from StoreProduct.Wholesaler_Product_Id__c. For non-transfer orders, populated based on order type.</description>
+    <externalId>false</externalId>
+    <label>Product External Id</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

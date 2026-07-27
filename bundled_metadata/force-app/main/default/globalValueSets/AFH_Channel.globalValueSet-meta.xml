@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Pub / Bar</fullName>
+        <default>false</default>
+        <label>Pub / Bar</label>
+    </customValue>
+    <customValue>
+        <fullName>Coffee Shop / Cafe</fullName>
+        <default>false</default>
+        <label>Coffee Shop / Cafe</label>
+    </customValue>
+    <customValue>
+        <fullName>Leisure / Rec</fullName>
+        <default>false</default>
+        <label>Leisure / Rec</label>
+    </customValue>
+    <customValue>
+        <fullName>Fast Food</fullName>
+        <default>false</default>
+        <label>Fast Food</label>
+    </customValue>
+    <customValue>
+        <fullName>Casual Dining</fullName>
+        <default>false</default>
+        <label>Casual Dining</label>
+    </customValue>
+    <customValue>
+        <fullName>Hotel</fullName>
+        <default>false</default>
+        <label>Hotel</label>
+    </customValue>
+    <customValue>
+        <fullName>Travel</fullName>
+        <default>false</default>
+        <label>Travel</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare</fullName>
+        <default>false</default>
+        <label>Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>Workplace</fullName>
+        <default>false</default>
+        <label>Workplace</label>
+    </customValue>
+    <customValue>
+        <fullName>Education</fullName>
+        <default>false</default>
+        <label>Education</label>
+    </customValue>
+    <customValue>
+        <fullName>Care Home</fullName>
+        <default>false</default>
+        <label>Care Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Vending</fullName>
+        <default>false</default>
+        <label>Vending</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    
+    <description>Global channel selection across objects</description>
+    <masterLabel>AFH Channel</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

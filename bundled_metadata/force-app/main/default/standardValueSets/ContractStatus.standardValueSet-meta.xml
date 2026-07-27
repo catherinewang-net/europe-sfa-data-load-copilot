@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groupingStringEnum>ContractStatusCode</groupingStringEnum>
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Rejected</fullName>
+        <default>false</default>
+        <label>Rejected</label>
+        <groupingString>Draft</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Draft</fullName>
+        <default>false</default>
+        <label>Draft</label>
+        <groupingString>Draft</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Submitted</fullName>
+        <default>false</default>
+        <label>Submitted</label>
+        <groupingString>InApproval</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Approved</fullName>
+        <default>false</default>
+        <label>Approved</label>
+        <groupingString>InApproval</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Active – Amendment in Progress</fullName>
+        <default>false</default>
+        <label>Active – Amendment in Progress</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Active - Amendment Submitted</fullName>
+        <default>false</default>
+        <label>Active - Amendment Submitted</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Active</fullName>
+        <default>false</default>
+        <label>Active</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Expiring 30-90</fullName>
+        <default>false</default>
+        <label>Expiring 30-90</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Expiring &lt;30</fullName>
+        <default>false</default>
+        <label>Expiring &lt;30</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Expired</fullName>
+        <default>false</default>
+        <label>Expired</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Finalized</fullName>
+        <default>false</default>
+        <label>Finalized</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+</StandardValueSet>

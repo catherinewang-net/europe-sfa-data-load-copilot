@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Call</fullName>
+        <default>false</default>
+        <label>Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting</fullName>
+        <default>false</default>
+        <label>Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>G_06</fullName>
+        <default>false</default>
+        <label>Competitor Products in the store</label>
+    </standardValue>
+    <standardValue>
+        <fullName>G_07</fullName>
+        <default>false</default>
+        <label>Competitor Products in the cooler</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_01</fullName>
+        <default>false</default>
+        <label>Number of Displays(P_01)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_02</fullName>
+        <default>false</default>
+        <label>Number of Displays(P_02)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_03</fullName>
+        <default>false</default>
+        <label>Missing MSL Distributed (Manual Audit or sellout)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_04</fullName>
+        <default>false</default>
+        <label>Secondaries</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_05</fullName>
+        <default>false</default>
+        <label>Missing MSL Available (IR)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_06</fullName>
+        <default>false</default>
+        <label>Branded POS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_07</fullName>
+        <default>false</default>
+        <label>Combo Execution</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_08</fullName>
+        <default>false</default>
+        <label>Cooler Removal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_09</fullName>
+        <default>false</default>
+        <label>Make Profitable Cooler</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_10</fullName>
+        <default>false</default>
+        <label>Main PoG Compliance (Manual Audit or IR)(P_10)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_11</fullName>
+        <default>false</default>
+        <label>Main PoG Compliance (Manual Audit or IR)(P_11)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_12</fullName>
+        <default>false</default>
+        <label>Main Space Share (Manual Audit or IR)(P_12)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_14</fullName>
+        <default>false</default>
+        <label>Main Space Share (Manual Audit or IR)(P_14)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_13</fullName>
+        <default>false</default>
+        <label>Main Space Share - Segment (IR)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_15</fullName>
+        <default>false</default>
+        <label>Menu Visibility</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_16</fullName>
+        <default>false</default>
+        <label>Digital Platform Visibility</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_21</fullName>
+        <default>false</default>
+        <label>Secondary Space Compliance (Manual Audit or IR)(P_21)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_22</fullName>
+        <default>false</default>
+        <label>Secondary Space Compliance (Manual Audit or IR)(P_22)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P_36</fullName>
+        <default>false</default>
+        <label>Secondary Space Compliance - Segment (IR)</label>
+    </standardValue>
+</StandardValueSet>

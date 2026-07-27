@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expire_On__c</fullName>
+    <defaultValue>TODAY() + 7</defaultValue>
+    <description>Date that the notification expires on automatically. If blank, the notification was manually expired</description>
+    <label>Expire On</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

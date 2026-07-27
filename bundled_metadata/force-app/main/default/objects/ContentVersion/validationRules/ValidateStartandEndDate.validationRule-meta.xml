@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValidateStartandEndDate</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+
+  AND(
+    OR(
+      ISPICKVAL(EUSFA_Document_Type__c, &quot;General Document&quot;),
+      ISPICKVAL(EUSFA_Document_Type__c, &quot;Store Specific&quot;)
+    ),
+    OR(
+      ISBLANK(EUSFA_Start_Date__c),
+      ISBLANK(EUSFA_End_Date__c),
+      EUSFA_End_Date__c &lt; EUSFA_Start_Date__c
+    )
+  ),
+
+  
+  AND(
+    ISPICKVAL(EUSFA_Document_Type__c, &quot;Cycle Priorities&quot;),
+    NOT(ISBLANK(EUSFA_Start_Date__c)),
+    NOT(ISBLANK(EUSFA_End_Date__c)),
+    EUSFA_End_Date__c &lt; EUSFA_Start_Date__c
+  )
+)</errorConditionFormula>
+    <errorMessage>Start Date and End Date are required, and End Date cannot be earlier than Start Date.</errorMessage>
+</ValidationRule>

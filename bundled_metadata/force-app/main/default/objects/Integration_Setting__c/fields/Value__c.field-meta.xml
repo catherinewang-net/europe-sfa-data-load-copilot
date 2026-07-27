@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value__c</fullName>
+    <description>Stores the encrypted value of the integration setting such as client IDs or client secret</description>
+    <label>Value</label>
+    <length>175</length>
+    <maskChar>X</maskChar>
+    <maskType>all</maskType>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>EncryptedText</type>
+</CustomField>

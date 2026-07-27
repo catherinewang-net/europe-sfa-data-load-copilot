@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CASH&amp;CARRY</fullName>
+        <default>false</default>
+        <label>CASH&amp;CARRY</label>
+    </customValue>
+    <customValue>
+        <fullName>COBO</fullName>
+        <default>false</default>
+        <label>COBO</label>
+    </customValue>
+    <customValue>
+        <fullName>COMAN</fullName>
+        <default>false</default>
+        <label>COMAN</label>
+    </customValue>
+    <customValue>
+        <fullName>CONCIERGE</fullName>
+        <default>false</default>
+        <label>CONCIERGE</label>
+    </customValue>
+    <customValue>
+        <fullName>CONV&amp;GAS</fullName>
+        <default>false</default>
+        <label>CONV&amp;GAS</label>
+    </customValue>
+    <customValue>
+        <fullName>CONV&amp;GAS DIST</fullName>
+        <default>false</default>
+        <label>CONV&amp;GAS DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>DELI</fullName>
+        <default>false</default>
+        <label>DELI</label>
+    </customValue>
+    <customValue>
+        <fullName>DEPT STORE</fullName>
+        <default>false</default>
+        <label>DEPT STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>DRUG&amp;PHARMACY</fullName>
+        <default>false</default>
+        <label>DRUG&amp;PHARMACY</label>
+    </customValue>
+    <customValue>
+        <fullName>DTC</fullName>
+        <default>false</default>
+        <label>DTC</label>
+    </customValue>
+    <customValue>
+        <fullName>EMPLOYEE SALES</fullName>
+        <default>false</default>
+        <label>EMPLOYEE SALES</label>
+    </customValue>
+    <customValue>
+        <fullName>EXPORT</fullName>
+        <default>false</default>
+        <label>EXPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>FOBO</fullName>
+        <default>false</default>
+        <label>FOBO</label>
+    </customValue>
+    <customValue>
+        <fullName>FOOD SERVICE DIST</fullName>
+        <default>false</default>
+        <label>FOOD SERVICE DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>FREEZER STORE</fullName>
+        <default>false</default>
+        <label>FREEZER STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>GROCERY</fullName>
+        <default>false</default>
+        <label>GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>GROCERY DIST</fullName>
+        <default>false</default>
+        <label>GROCERY DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>HYPER SUPER CENTER</fullName>
+        <default>false</default>
+        <label>HYPER SUPER CENTER</label>
+    </customValue>
+    <customValue>
+        <fullName>IBS</fullName>
+        <default>false</default>
+        <label>IBS</label>
+    </customValue>
+    <customValue>
+        <fullName>INTERCO</fullName>
+        <default>false</default>
+        <label>INTERCO</label>
+    </customValue>
+    <customValue>
+        <fullName>LARGE DISCOUNTER</fullName>
+        <default>false</default>
+        <label>LARGE DISCOUNTER</label>
+    </customValue>
+    <customValue>
+        <fullName>MILITARY&amp;GOVT</fullName>
+        <default>false</default>
+        <label>MILITARY&amp;GOVT</label>
+    </customValue>
+    <customValue>
+        <fullName>MISC SALES</fullName>
+        <default>false</default>
+        <label>MISC SALES</label>
+    </customValue>
+    <customValue>
+        <fullName>MULTIFORMAT</fullName>
+        <default>false</default>
+        <label>MULTIFORMAT</label>
+    </customValue>
+    <customValue>
+        <fullName>MULTIFORMAT DIST</fullName>
+        <default>false</default>
+        <label>MULTIFORMAT DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>NATURAL DIST</fullName>
+        <default>false</default>
+        <label>NATURAL DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>OMNI</fullName>
+        <default>false</default>
+        <label>OMNI</label>
+    </customValue>
+    <customValue>
+        <fullName>PURE PLAY</fullName>
+        <default>false</default>
+        <label>PURE PLAY</label>
+    </customValue>
+    <customValue>
+        <fullName>RECREATION&amp;RETAIL</fullName>
+        <default>false</default>
+        <label>RECREATION&amp;RETAIL</label>
+    </customValue>
+    <customValue>
+        <fullName>RESTAURANT</fullName>
+        <default>false</default>
+        <label>RESTAURANT</label>
+    </customValue>
+    <customValue>
+        <fullName>SF GROCERY</fullName>
+        <default>false</default>
+        <label>SF GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>SMALL DISCOUNTER</fullName>
+        <default>false</default>
+        <label>SMALL DISCOUNTER</label>
+    </customValue>
+    <customValue>
+        <fullName>SMALL RETAIL CLUB</fullName>
+        <default>false</default>
+        <label>SMALL RETAIL CLUB</label>
+    </customValue>
+    <customValue>
+        <fullName>SPECIALTY DIST</fullName>
+        <default>false</default>
+        <label>SPECIALTY DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>TT CONV&amp;GAS</fullName>
+        <default>false</default>
+        <label>TT CONV&amp;GAS</label>
+    </customValue>
+    <customValue>
+        <fullName>TT DRUG&amp;PHARMACY</fullName>
+        <default>false</default>
+        <label>TT DRUG&amp;PHARMACY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT GROCERY</fullName>
+        <default>false</default>
+        <label>TT GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT IBS</fullName>
+        <default>false</default>
+        <label>TT IBS</label>
+    </customValue>
+    <customValue>
+        <fullName>VENDING</fullName>
+        <default>false</default>
+        <label>VENDING</label>
+    </customValue>
+    <customValue>
+        <fullName>WHOLESALE CLUB</fullName>
+        <default>false</default>
+        <label>WHOLESALE CLUB</label>
+    </customValue>
+    <customValue>
+        <fullName>WHOLESALE CONV</fullName>
+        <default>false</default>
+        <label>WHOLESALE CONV</label>
+    </customValue>
+    <customValue>
+        <fullName>WORKPLACE</fullName>
+        <default>false</default>
+        <label>WORKPLACE</label>
+    </customValue>
+    <customValue>
+        <fullName>NA</fullName>
+        <default>false</default>
+        <label>NA</label>
+    </customValue>
+    <customValue>
+        <fullName>SUPER MARKET</fullName>
+        <default>false</default>
+        <label>SUPER MARKET</label>
+    </customValue>
+    <description>L2 Subchannel</description>
+    <masterLabel>L2 Subchannel</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

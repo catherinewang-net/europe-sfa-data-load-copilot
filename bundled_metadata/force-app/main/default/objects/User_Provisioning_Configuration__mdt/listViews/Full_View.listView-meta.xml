@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Full_View</fullName>
+    <columns>MasterLabel</columns>
+    <columns>Program__c</columns>
+    <columns>Market__c</columns>
+    <columns>Channel__c</columns>
+    <columns>Persona__c</columns>
+    <columns>Permission_Set_Group_Id__c</columns>
+    <columns>Profile_Id__c</columns>
+    <columns>Is_Active__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Full View</label>
+    <language>en_US</language>
+</ListView>

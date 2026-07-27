@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allow_valid_status_updates</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISCHANGED(Status),
+    OR(
+        AND(
+            ISPICKVAL(PRIORVALUE(Status), &apos;Active&apos;),
+            OR(
+                ISPICKVAL(Status, &apos;Expiring &lt;30 days&apos;),
+                ISPICKVAL(Status, &apos;Expired&apos;)
+            )
+        ),
+        AND(
+            ISPICKVAL(PRIORVALUE(Status), &apos;Expiring 30-90 days&apos;),
+            NOT(ISPICKVAL(Status, &apos;Expiring &lt;30 days&apos;))
+        ),
+        AND(
+            ISPICKVAL(PRIORVALUE(Status), &apos;Expiring &lt;30 days&apos;),
+            NOT(ISPICKVAL(Status, &apos;Expired&apos;))
+        ),
+        AND(
+            ISPICKVAL(PRIORVALUE(Status), &apos;Expired&apos;),
+            NOT(ISPICKVAL(Status, &apos;Finalized&apos;))
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>This status update is invalid</errorMessage>
+</ValidationRule>

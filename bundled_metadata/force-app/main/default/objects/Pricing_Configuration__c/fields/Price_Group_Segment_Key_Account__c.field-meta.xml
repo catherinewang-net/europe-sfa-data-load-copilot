@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Group_Segment_Key_Account__c</fullName>
+    <description>Key Account customer hierarchy attribute for group pricing. When populated, pricing rules are applied to all stores belonging to this Key Account. Only one customer attribute (Snacks, Beverages, or Key Account) may be selected per pricing configuration.</description>
+    <label>Price Group Segment Key Account</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BRP</fullName>
+                <default>false</default>
+                <label>BRP</label>
+            </value>
+            <value>
+                <fullName>SPAR</fullName>
+                <default>false</default>
+                <label>SPAR</label>
+            </value>
+            <value>
+                <fullName>Carrefour</fullName>
+                <default>false</default>
+                <label>Carrefour</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Investment_Reason__c</fullName>
+    <label>Investment Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Animation &amp; Commercial Operations</fullName>
+                <default>false</default>
+                <label>Animation &amp; Commercial Operations</label>
+            </value>
+            <value>
+                <fullName>Brand Visibility &amp; Menu Offering</fullName>
+                <default>false</default>
+                <label>Brand Visibility &amp; Menu Offering</label>
+            </value>
+            <value>
+                <fullName>Point of Sale Branding</fullName>
+                <default>false</default>
+                <label>Point of Sale Branding</label>
+            </value>
+            <value>
+                <fullName>Equipment &amp; POS Materials</fullName>
+                <default>false</default>
+                <label>Equipment &amp; POS Materials</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

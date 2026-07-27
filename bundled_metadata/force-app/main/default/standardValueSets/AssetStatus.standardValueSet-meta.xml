@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Removal Requested</fullName>
+        <default>false</default>
+        <label>Removal Requested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Requested</fullName>
+        <default>false</default>
+        <label>Requested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Delivered</fullName>
+        <default>false</default>
+        <label>Delivered</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Missing Asset</fullName>
+        <default>false</default>
+        <label>Missing Asset</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Missing Contract</fullName>
+        <default>false</default>
+        <label>Missing Contract</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending</fullName>
+        <default>false</default>
+        <label>Pending</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent</fullName>
+        <default>false</default>
+        <label>Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Failed to Send</fullName>
+        <default>false</default>
+        <label>Failed to Send</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Removed</fullName>
+        <default>false</default>
+        <label>Removed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In Transit</fullName>
+        <default>false</default>
+        <label>In Transit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rejected</fullName>
+        <default>false</default>
+        <label>Rejected</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Anomalie</fullName>
+        <default>false</default>
+        <label>Anomalie</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requested_Status__c</fullName>
+    <description
+    >ADO 220029 AC1 - backend-only field (not on any page layout). Holds the intended Order status (Delivered/Ordered/Unfulfilled) when an order cannot be activated at header-upload time because Salesforce requires at least one Order Product. The Order Item Confirmation upload applies this status once products exist, then clears it.</description>
+    <externalId>false</externalId>
+    <inlineHelpText
+    >Backend-only field used by the order upload to remember the intended status until the order has at least one product.</inlineHelpText>
+    <label>Requested Status</label>
+    <length>40</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

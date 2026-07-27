@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_ATD_Sales_Hierarchy_Local_Survey</fullName>
+    <active>true</active>
+    <description>Route and District may only be set when Type is Local Survey. Aligns with EUSFA_TaskSchedulerHelper (sales hierarchy used for Local Survey matching).</description>
+    <errorConditionFormula>AND(
+  NOT(ISPICKVAL(Type__c, &quot;Local Survey&quot;)),
+  OR(
+    NOT(ISBLANK(Route_Geo__c)),
+    NOT(ISBLANK(District_Geo__c)),
+    NOT(ISBLANK(Zone__c)),
+    NOT(ISBLANK(Region__c)),
+    NOT(ISBLANK(Division__c))
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Type__c</errorDisplayField>
+    <errorMessage>Route and District may only be populated when Type is Local Survey. Clear those fields or set Type to Local Survey.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QuantityUnitOfMeasure__c</fullName>
+    <label>UoM Name</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EA</fullName>
+                <default>false</default>
+                <label>Each</label>
+            </value>
+            <value>
+                <fullName>CS</fullName>
+                <default>false</default>
+                <label>Case</label>
+            </value>
+            <value>
+                <fullName>PAL</fullName>
+                <default>false</default>
+                <label>Pallet</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

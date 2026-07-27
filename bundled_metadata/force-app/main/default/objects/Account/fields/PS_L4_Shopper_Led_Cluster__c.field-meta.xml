@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_L4_Shopper_Led_Cluster__c</fullName>
+    <label>PS L4 Shopper Led Cluster</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>PS_L4_Shopper_Led_Cluster</valueSetName>
+    </valueSet>
+</CustomField>

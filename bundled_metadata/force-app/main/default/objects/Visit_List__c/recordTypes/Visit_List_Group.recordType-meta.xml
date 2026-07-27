@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visit_List_Group</fullName>
+    <active>true</active>
+    <description>All the visits for one user for a week</description>
+    <label>Visit List Group</label>
+    <picklistValues>
+        <picklist>Delivery_Load_Status__c</picklist>
+        <values>
+            <fullName>EOD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extrn In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extrn Proc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FSV Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FSV Revenue Fail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FSV Revenue In Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FSV Revenue Retry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FSV Revenue%2FMech Rte Recalc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FSV Wait</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Await</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In and Valid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loaded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Extrn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terminated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Processed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

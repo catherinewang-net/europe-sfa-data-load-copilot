@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_Issue_Type__c</fullName>
+    <label>Issue Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I am unable to register my account / Find my Post Code</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>I am unable to register my account / Find my Post Code</label>
+            </value>
+            <value>
+                <fullName>I want to buy directly from PepsiCo</fullName>
+                <default>false</default>
+                <label>I want to buy directly from PepsiCo</label>
+            </value>
+            <value>
+                <fullName>I want a sales rep to visit my outlet</fullName>
+                <default>false</default>
+                <label>I want a sales rep to visit my outlet</label>
+            </value>
+            <value>
+                <fullName>I need more point of sale / display kits</fullName>
+                <default>false</default>
+                <label>I need more point of sale / display kits</label>
+            </value>
+            <value>
+                <fullName>Other enquiry</fullName>
+                <default>false</default>
+                <label>Other enquiry</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

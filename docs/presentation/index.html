@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Europe SFA Data Load Copilot — Presentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1: Title -->
+  <section class="slide slide--hero active" data-notes="Open with the hook: 'How many of you have spent hours fixing a CSV in Excel, only to have Salesforce reject it anyway?' Pause for nods. Introduce yourself and the Europe SFA Data Load Copilot — a Streamlit app that prepares and validates CSV files before upload, using the same EUSFA Salesforce metadata your org already trusts.">
+    <span class="slide-number">1 / 13</span>
+    <p class="eyebrow">Europe SFA · PepsiCo</p>
+    <h1>Europe SFA<br>Data Load Copilot</h1>
+    <p class="subtitle">Prepare and validate CSV files before Salesforce upload — metadata-driven, user-in-control, fewer failed loads.</p>
+    <div class="meta-row">
+      <span>Streamlit Application</span>
+      <span>July 2026</span>
+      <span>15-min Presentation</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 2: The Problem -->
+  <section class="slide slide--section" data-notes="Emphasize the pain is real and recurring — every data load cycle. Teams spend 30–60+ minutes per file in Excel fixing dates, picklists, and headers. Upload failures in Workbench or DIT mean starting over. The Copilot targets the gap between 'I have a business CSV' and 'Salesforce will accept this file.'">
+    <span class="slide-number">2 / 13</span>
+    <p class="eyebrow">The Problem</p>
+    <h2>Manual CSV prep is slow, error-prone, and costly</h2>
+    <div class="content-grid">
+      <div>
+        <ul class="bullet-list">
+          <li>Business teams export spreadsheets with wrong date formats, extra whitespace, and invalid picklist labels</li>
+          <li>Excel rework is manual — find/replace dates, trim cells, guess API picklist values</li>
+          <li>Upload failures in Workbench or Data Import Tool waste time and erode confidence</li>
+          <li>Errors often surface <em>only at upload</em>, after hours of preparation</li>
+          <li>No single tool validates against live EUSFA metadata before the upload attempt</li>
+        </ul>
+      </div>
+      <div>
+        <div class="stat-row" style="flex-direction: column;">
+          <div class="stat">
+            <div class="stat-value">30–60+</div>
+            <div class="stat-label">Minutes per file in Excel</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">↑ Failures</div>
+            <div class="stat-label">At Salesforce upload time</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Pre-upload metadata validation (before Copilot)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: Who It Helps -->
+  <section class="slide slide--section" data-notes="Name the personas in the room. Data loaders and ops teams are primary users. SFA business teams benefit indirectly — fewer back-and-forth cycles. IT/Salesforce admins benefit from cleaner uploads and less firefighting.">
+    <span class="slide-number">3 / 13</span>
+    <p class="eyebrow">Audience</p>
+    <h2>Who It Helps</h2>
+    <div class="content-grid content-grid--3">
+      <div class="card">
+        <h3>Data Loaders & Ops</h3>
+        <p>Primary users who prepare CSV files for Workbench and Data Import Tool uploads across Account, Product, Promotion, Route, and Contract templates.</p>
+      </div>
+      <div class="card card--red">
+        <h3>SFA Business Teams</h3>
+        <p>Market teams in RO, PL, and across Europe who need reliable bulk loads without deep Salesforce API knowledge.</p>
+      </div>
+      <div class="card">
+        <h3>Salesforce Admins</h3>
+        <p>Fewer failed uploads, clearer audit trails, and validation aligned to EUSFA SFDX metadata — not guesswork.</p>
+      </div>
+    </div>
+    <div class="highlight-box" style="margin-top: 2rem;">
+      <p>Supports both upload paths: <span class="tag">Workbench</span> (API field names, YYYY-MM-DD) and <span class="tag tag--red">Data Import Tool</span> (friendly headers, DD/MM/YYYY)</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: Our Approach -->
+  <section class="slide slide--section" data-notes="Three pillars: metadata-driven means we read from the local EUSFA SFDX clone — same source of truth as production validation. User-in-control means nothing auto-applies without approval — safe fixes are proposed, blocking issues require explicit action. Phased workflow mirrors how loaders actually work: headers first, then rows, then download.">
+    <span class="slide-number">4 / 13</span>
+    <p class="eyebrow">Approach</p>
+    <h2>Metadata-driven · User-in-control · Phased workflow</h2>
+    <div class="content-grid">
+      <div class="card">
+        <h3>Metadata-Driven Validation</h3>
+        <ul>
+          <li>Reads EUSFA Salesforce DX metadata from local clone (<code>EUSFA_SFDX_REPO_PATH</code>)</li>
+          <li>Picklist values, field types, required fields, and template configs from <code>Template_Config__mdt</code></li>
+          <li>Session metadata version lock — warns if metadata changes mid-session</li>
+          <li>Git fetch/pull panel for approved metadata updates</li>
+        </ul>
+      </div>
+      <div class="card card--red">
+        <h3>User Stays in Control</h3>
+        <ul>
+          <li>Safe changes <em>proposed</em> — never auto-applied without approval</li>
+          <li>Never invents Salesforce IDs or guesses lookup values</li>
+          <li>Blocking issues must be resolved or acknowledged before Tool-Ready download</li>
+          <li>Dual download: Tool-Ready CSV vs Review CSV for audit</li>
+        </ul>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <p>Design principle: The Copilot <em>prepares and explains</em> — it does not replace Workbench or the Data Import Tool.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: Key Decisions & Tradeoffs -->
+  <section class="slide slide--section" data-notes="These are the 'why' decisions leadership cares about. No auto-guessing picklists prevents silent data corruption. Dual download separates 'safe to upload' from 'here's what changed.' Local metadata vs live SF: we chose local SFDX for speed, offline use, and alignment with org validation rules — live record lookup is optional for Workbench Update flows.">
+    <span class="slide-number">5 / 13</span>
+    <p class="eyebrow">Decisions</p>
+    <h2>Key Decisions & Tradeoffs</h2>
+    <div class="two-col">
+      <div>
+        <div class="card" style="margin-bottom: 1rem;">
+          <h3>No Auto-Guessing Picklists</h3>
+          <p>Invalid picklist values surface for manual correction with valid API values shown. Prevents silent mis-mapping of business labels to wrong API values.</p>
+          <span class="tag tag--green">Implemented</span>
+        </div>
+        <div class="card" style="margin-bottom: 1rem;">
+          <h3>Dual Download Model</h3>
+          <p><strong>Tool-Ready CSV</strong> — gated until all blocking issues resolved.<br><strong>Review CSV</strong> — always available with change log for audit, even when not upload-ready.</p>
+          <span class="tag tag--green">Implemented</span>
+        </div>
+        <div class="card">
+          <h3>Local Metadata vs Live Salesforce</h3>
+          <p>Validation uses local SFDX clone (fast, offline-capable). Live record existence check available for Workbench Update — no invented IDs.</p>
+          <span class="tag">Tradeoff: metadata refresh is manual</span>
+        </div>
+      </div>
+      <div>
+        <div class="card card--warn" style="margin-bottom: 1rem;">
+          <h3>Workbench-Richer Than DIT (Today)</h3>
+          <p>Picklist correction UI, header mapping confirmation, and unified download gate are Workbench-first. DIT path covers template comparison, dates, and row validation — picklist UI on roadmap.</p>
+          <span class="tag tag--red">Known gap</span>
+        </div>
+        <div class="card card--warn" style="margin-bottom: 1rem;">
+          <h3>Detect-Only for Some Issues</h3>
+          <p>Scientific notation, duplicate keys, and numeric format issues are flagged as blocking manual review — not auto-corrected (by design, to preserve data integrity).</p>
+        </div>
+        <div class="card">
+          <h3>Dependency Rules — Stub</h3>
+          <p>Cross-object dependencies (e.g., load Pepsi products before competitors) not yet configured. Upload order guidance provides human-readable prerequisites instead.</p>
+          <span class="tag tag--red">Roadmap</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: Solution Overview -->
+  <section class="slide slide--section" data-notes="Walk through the architecture top-down. app.py is a thin Streamlit orchestrator. UI components render each phase. Workflow layer calls engines and validators. Metadata adapter reads from EUSFA SFDX. Emphasize separation of concerns — easy to extend validators without touching UI.">
+    <span class="slide-number">6 / 13</span>
+    <p class="eyebrow">Architecture</p>
+    <h2>Solution Overview</h2>
+    <div class="two-col">
+      <div class="arch-diagram">┌─────────────────────────────────────────┐
+│           Streamlit UI (app.py)          │
+│  Metadata Panel · Steps 1–4 · Review UI  │
+└──────────────────┬──────────────────────┘
+                   │
+┌──────────────────▼──────────────────────┐
+│         Workflow (workflow/copilot.py)   │
+│  Template compare · Validation · Prep    │
+└──────────────────┬──────────────────────┘
+                   │
+     ┌─────────────┼─────────────┐
+     ▼             ▼             ▼
+┌─────────┐  ┌──────────┐  ┌───────────┐
+│ Engines │  │Validators│  │ Services  │
+│ template│  │ picklist │  │ date conv │
+│ validate│  │ date     │  │ picklist  │
+│ prepare │  │ phone    │  │ readiness │
+└────┬────┘  │ address  │  └─────┬─────┘
+     │       │ identifier│        │
+     └───────┴──────────┴────────┘
+                   │
+     ┌─────────────▼─────────────┐
+     │  EUSFA SFDX Metadata       │
+     │  (local clone, read-only)  │
+     │  Template_Config · Picklists│
+     └───────────────────────────┘</div>
+      <div>
+        <h3 style="margin-bottom: 1rem;">Tech Stack</h3>
+        <ul class="bullet-list bullet-list--blue">
+          <li><strong>Python 3.11+</strong> with Streamlit web UI</li>
+          <li><strong>20+ validators</strong> — picklist, date, phone, address, boolean, duplicate keys, CSV structure</li>
+          <li><strong>Metadata adapter</strong> — reads SFDX project, never modifies it</li>
+          <li><strong>140+ unit tests</strong> across validation, preparation, and download flows</li>
+          <li><strong>Immutable original_df</strong> — all corrections applied to corrected_df copy</li>
+        </ul>
+        <div class="highlight-box" style="margin-top: 1.5rem;">
+          <p>Data flow: UI → Workflow → Engines → Validators → corrected_df → Revalidation → Download</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7: Unified Workflow -->
+  <section class="slide slide--section" data-notes="This is the core story — the unified Prepare & Validate workflow. Both DIT and Workbench follow the same logical phases. DIT has 12 steps in the audit; Workbench adds mapping confirmation and picklist UI. Emphasize the readiness panel tells you exactly what's blocking download.">
+    <span class="slide-number">7 / 13</span>
+    <p class="eyebrow">Workflow</p>
+    <h2>Unified Prepare & Validate Flow</h2>
+    <div class="flow-steps">
+      <span class="flow-step">1 · Select Tool</span>
+      <span class="flow-step">2 · Template</span>
+      <span class="flow-step">3 · Task</span>
+      <span class="flow-step">4 · Upload CSV</span>
+      <span class="flow-step">5 · Header Review</span>
+      <span class="flow-step">6 · Row Validation</span>
+      <span class="flow-step">7 · Safe Corrections</span>
+      <span class="flow-step">8 · User Approval</span>
+      <span class="flow-step">9 · Apply Fixes</span>
+      <span class="flow-step">10 · Revalidate</span>
+      <span class="flow-step">11 · Readiness</span>
+      <span class="flow-step">12 · Download</span>
+    </div>
+    <div class="content-grid" style="margin-top: 1.5rem;">
+      <div class="card">
+        <h3>Data Import Tool Path</h3>
+        <ul>
+          <li>Compare to exact reference template headers</li>
+          <li>Approve header rename / reorder / exclude</li>
+          <li>DD/MM/YYYY date conversion with review UI</li>
+          <li>Row-level correction plan with approval</li>
+          <li>Download DIT-ready CSV (friendly headers)</li>
+        </ul>
+      </div>
+      <div class="card card--red">
+        <h3>Workbench Path (+ extras)</h3>
+        <ul>
+          <li>Header mapping confirmation (business → API names)</li>
+          <li>Picklist validation with manual correction UI</li>
+          <li>Live Salesforce record existence check (Update)</li>
+          <li>Insert/Update load action validation</li>
+          <li>Upload order guidance for dependencies</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: Key Features -->
+  <section class="slide slide--section" data-notes="Hit the feature highlights quickly — these map to real lessons learned from R1 TCO. Don't read every bullet; pick 3-4 that resonate with your audience. In-app issue editing is implemented via ui/issue_editor.py.">
+    <span class="slide-number">8 / 13</span>
+    <p class="eyebrow">Capabilities</p>
+    <h2>Key Features Built</h2>
+    <div class="content-grid content-grid--3">
+      <div class="card">
+        <h3>Validation Engine</h3>
+        <ul>
+          <li>Metadata-driven picklist (incl. multipicklist)</li>
+          <li>Date format detection & conversion</li>
+          <li>Leading-zero & identifier rules</li>
+          <li>Phone, address, boolean validators</li>
+          <li>Duplicate external ID detection</li>
+          <li>CSV structure checks</li>
+        </ul>
+      </div>
+      <div class="card card--red">
+        <h3>Preparation & Review</h3>
+        <ul>
+          <li>Data Preparation Review (unified approval UI)</li>
+          <li>Date format review with per-cell analysis</li>
+          <li>Picklist manual correction (Workbench)</li>
+          <li>Fix Issues in Copilot (in-app editing)</li>
+          <li>Upload order guidance</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Output & Governance</h3>
+        <ul>
+          <li>Dual download: Tool-Ready vs Review CSV</li>
+          <li>Change log & mapping report</li>
+          <li>Phase-aware readiness panel</li>
+          <li>Metadata session version lock</li>
+          <li>Git-based metadata refresh panel</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: Demo Script -->
+  <section class="slide slide--section" data-notes="This is your 2-3 minute demo script. Have Streamlit running beforehand: streamlit run app.py. Pre-load the test file. Practice the flow once before presenting. If live demo fails, walk through screenshots or the test CSV contents.">
+    <span class="slide-number">9 / 13</span>
+    <p class="eyebrow">Live Demo · 2–3 min</p>
+    <h2>Demo Script — Retail Promotion (DIT)</h2>
+    <p style="margin-bottom: 1rem; color: var(--gray-600);">Test file: <span class="file-path">test_data/retail_promotion/RO_Promotion_Faulty_Validation_Test.csv</span></p>
+
+    <div class="demo-step">
+      <span class="demo-time">0:00</span>
+      <p><strong>Setup:</strong> Select <em>Data Import Tool</em> → <em>Retail Promotion</em> → <em>Prepare & Validate</em>. Show metadata source panel (local EUSFA clone connected).</p>
+    </div>
+    <div class="demo-step">
+      <span class="demo-time">0:20</span>
+      <p><strong>Upload CSV:</strong> Upload the faulty test file. Point out file overview — 27 rows with intentional faults (dates, picklists, whitespace, duplicates).</p>
+    </div>
+    <div class="demo-step">
+      <span class="demo-time">0:45</span>
+      <p><strong>Header Review:</strong> Show template comparison — missing/extra columns, required field markers. Approve safe header corrections.</p>
+    </div>
+    <div class="demo-step">
+      <span class="demo-time">1:15</span>
+      <p><strong>Data Cleanup:</strong> Walk through Data Preparation Review — whitespace trims, date issues (Excel serial, invalid calendar), leading spaces. Approve safe fixes.</p>
+    </div>
+    <div class="demo-step">
+      <span class="demo-time">1:45</span>
+      <p><strong>Picklist Fix:</strong> Show invalid picklist values (e.g., "INVALID_TYPE", case mismatch "leaflet"). Demonstrate manual correction or Fix Issues in Copilot.</p>
+    </div>
+    <div class="demo-step">
+      <span class="demo-time">2:15</span>
+      <p><strong>Readiness & Download:</strong> Show readiness panel status. Download <strong>Review CSV</strong> (always available) and explain <strong>Tool-Ready CSV</strong> gate when blocking issues remain.</p>
+    </div>
+    <div class="demo-step">
+      <span class="demo-time">2:45</span>
+      <p><strong>Close:</strong> "Same file that would have failed in DIT — now we caught 15+ issues before upload, with an audit trail."</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 10: Impact & Value -->
+  <section class="slide slide--section" data-notes="Quantify where you can; qualify where you can't yet. The DIT lessons learned audit shows 62 known failure patterns — Copilot covers many partially, with clear roadmap for gaps. Time saved is the headline: prep that took an hour now takes minutes with confidence.">
+    <span class="slide-number">10 / 13</span>
+    <p class="eyebrow">Impact</p>
+    <h2>End Result & Value</h2>
+    <div class="stat-row">
+      <div class="stat">
+        <div class="stat-value">↓ 70%</div>
+        <div class="stat-label">Est. Excel rework time per file</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">Pre-upload</div>
+        <div class="stat-label">Issue detection (not post-failure)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">62</div>
+        <div class="stat-label">R1 lessons mapped & tracked</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">140+</div>
+        <div class="stat-label">Automated unit tests</div>
+      </div>
+    </div>
+    <div class="content-grid" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>Before Copilot</h3>
+        <ul>
+          <li>Manual Excel find/replace for dates and whitespace</li>
+          <li>Picklist values guessed from memory or old files</li>
+          <li>Upload → fail → download error log → repeat</li>
+          <li>No audit trail of what was changed</li>
+        </ul>
+      </div>
+      <div class="card card--red">
+        <h3>With Copilot</h3>
+        <ul>
+          <li>Metadata-validated picklists with valid API values shown</li>
+          <li>Date conversion with per-cell review and approval</li>
+          <li>Blocking issues caught before leaving the tool</li>
+          <li>Change log + dual CSV download for audit and upload</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 11: Roadmap -->
+  <section class="slide slide--section" data-notes="Be honest about gaps — leadership respects transparency. Top priorities from the feature audit: connect formatting review, DIT picklist UI, dependency rules, validation report download. Frame as Phase 2, not failures.">
+    <span class="slide-number">11 / 13</span>
+    <p class="eyebrow">Roadmap</p>
+    <h2>What's Next</h2>
+    <div class="content-grid">
+      <div class="card">
+        <h3>Near Term (P1)</h3>
+        <ul>
+          <li>DIT picklist correction UI (parity with Workbench)</li>
+          <li>Connect formatting review (general whitespace, blank rows)</li>
+          <li>Unified download readiness gate for DIT</li>
+          <li>Dependency rules from <code>rules/dependencies.json</code></li>
+        </ul>
+        <span class="tag tag--red">Priority</span>
+      </div>
+      <div class="card">
+        <h3>Medium Term (P2)</h3>
+        <ul>
+          <li>Validation report JSON download</li>
+          <li>Numeric/decimal safe conversion with approval</li>
+          <li>Email format validation</li>
+          <li>Expanded EAN/SKU leading-zero rules</li>
+          <li>End-to-end UI integration tests</li>
+        </ul>
+      </div>
+    </div>
+    <div class="highlight-box" style="margin-top: 1.5rem;">
+      <p>Future: CI metadata sync pipeline (see <code>docs/METADATA_SYNC.md</code>) for automated metadata freshness without manual Git pull.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 12: Q&A -->
+  <section class="slide slide--section" data-notes="Use these as backup if questions are slow. Each answer is 2-3 sentences max. Open the floor: 'What upload scenarios would you want validated next?'">
+    <span class="slide-number">12 / 13</span>
+    <p class="eyebrow">Q&A · 5 min</p>
+    <h2>Anticipated Questions</h2>
+    <div class="two-col">
+      <div>
+        <div class="qa-item">
+          <div class="qa-q">Does this replace Workbench or DIT?</div>
+          <div class="qa-a">No. The Copilot prepares and validates CSVs <em>before</em> you upload via Workbench or DIT. It reduces failures; the actual upload still happens in Salesforce.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Does it connect to live Salesforce?</div>
+          <div class="qa-a">Validation uses your local EUSFA SFDX metadata clone (read-only). Workbench Update flows can optionally check record existence live. No data is written to Salesforce.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">What if metadata is out of date?</div>
+          <div class="qa-a">The app has a metadata panel with fetch/pull controls. Sessions lock to the metadata version at upload time and warn if it changes mid-session.</div>
+        </div>
+      </div>
+      <div>
+        <div class="qa-item">
+          <div class="qa-q">Can it fix all errors automatically?</div>
+          <div class="qa-a">Safe fixes (whitespace trim, date conversion, header rename) are proposed for approval. Blocking issues like scientific notation, duplicates, and invalid picklists require manual action — by design.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Is it ready for production use?</div>
+          <div class="qa-a">Core Workbench and DIT flows are implemented with 140+ tests. Known gaps (DIT picklist UI, dependency rules) are documented with a clear roadmap. Suitable for pilot with ops teams now.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">How do we run it?</div>
+          <div class="qa-a"><code>pip install -r requirements.txt</code> then <code>streamlit run app.py</code>. Requires Python 3.11+ and a local EUSFA SFDX clone.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 13: Timing Guide -->
+  <section class="slide slide--section" data-notes="Keep this slide visible during Q&A or as a reference. Total must stay within 15 minutes per person. If running long, shorten Key Features (slide 8) and Roadmap (slide 11).">
+    <span class="slide-number">13 / 13</span>
+    <p class="eyebrow">Presenter Guide</p>
+    <h2>Timing Guide — 15 Minutes</h2>
+    <table class="timing-table">
+      <thead>
+        <tr>
+          <th>Section</th>
+          <th>Slides</th>
+          <th>Time</th>
+          <th>Focus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hook & Problem</td>
+          <td>1–2</td>
+          <td class="time-col">2 min</td>
+          <td>Pain points, why this matters</td>
+        </tr>
+        <tr>
+          <td>Audience & Approach</td>
+          <td>3–4</td>
+          <td class="time-col">2 min</td>
+          <td>Who benefits, design principles</td>
+        </tr>
+        <tr>
+          <td>Decisions & Architecture</td>
+          <td>5–6</td>
+          <td class="time-col">2 min</td>
+          <td>Tradeoffs, tech stack</td>
+        </tr>
+        <tr>
+          <td>Workflow & Features</td>
+          <td>7–8</td>
+          <td class="time-col">2 min</td>
+          <td>12-step flow, key capabilities</td>
+        </tr>
+        <tr>
+          <td><strong>Live Demo</strong></td>
+          <td>9</td>
+          <td class="time-col">2–3 min</td>
+          <td>Retail Promotion faulty CSV walkthrough</td>
+        </tr>
+        <tr>
+          <td>Impact & Roadmap</td>
+          <td>10–11</td>
+          <td class="time-col">1 min</td>
+          <td>Value delivered, what's next</td>
+        </tr>
+        <tr>
+          <td>Q&A</td>
+          <td>12</td>
+          <td class="time-col">5 min</td>
+          <td>Open floor + anticipated questions</td>
+        </tr>
+        <tr>
+          <td><strong>Total</strong></td>
+          <td>1–13</td>
+          <td class="time-col">15 min</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="highlight-box" style="margin-top: 1.5rem;">
+      <p>Keyboard: ← → navigate · N toggle presenter notes · F11 fullscreen · Click dots to jump</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- Presenter Notes Panel -->
+<div class="notes-panel" id="notesPanel">
+  <div class="notes-label">Presenter Notes</div>
+  <div id="notesContent"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="nav-bar" aria-label="Slide navigation">
+  <button class="nav-btn" id="prevBtn" aria-label="Previous slide">←</button>
+  <div class="progress-dots" id="progressDots"></div>
+  <button class="nav-btn" id="nextBtn" aria-label="Next slide">→</button>
+  <span class="nav-hint">← → · N notes</span>
+</nav>
+
+<script>
+(function () {
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+  let notesVisible = false;
+
+  const notesPanel = document.getElementById('notesPanel');
+  const notesContent = document.getElementById('notesContent');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dotsContainer = document.getElementById('progressDots');
+
+  // Build progress dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll('.dot');
+
+  function goTo(index) {
+    if (index < 0 || index >= total) return;
+    slides[current].classList.remove('active');
+    slides[current].classList.add('prev');
+    current = index;
+    slides.forEach((s, i) => {
+      s.classList.toggle('prev', i < current);
+      s.classList.toggle('active', i === current);
+    });
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === total - 1;
+    notesContent.textContent = slides[current].dataset.notes || 'No notes for this slide.';
+    history.replaceState(null, '', '#slide-' + (current + 1));
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function toggleNotes() {
+    notesVisible = !notesVisible;
+    notesPanel.classList.toggle('visible', notesVisible);
+  }
+
+  prevBtn.addEventListener('click', prev);
+  nextBtn.addEventListener('click', next);
+
+  document.addEventListener('keydown', (e) => {
+    switch (e.key) {
+      case 'ArrowRight':
+      case 'ArrowDown':
+      case ' ':
+      case 'PageDown':
+        e.preventDefault();
+        next();
+        break;
+      case 'ArrowLeft':
+      case 'ArrowUp':
+      case 'PageUp':
+        e.preventDefault();
+        prev();
+        break;
+      case 'Home':
+        e.preventDefault();
+        goTo(0);
+        break;
+      case 'End':
+        e.preventDefault();
+        goTo(total - 1);
+        break;
+      case 'n':
+      case 'N':
+        toggleNotes();
+        break;
+    }
+  });
+
+  // Deep link support
+  const hash = location.hash.match(/^#slide-(\d+)$/);
+  if (hash) {
+    const idx = parseInt(hash[1], 10) - 1;
+    if (idx >= 0 && idx < total) current = idx;
+  }
+
+  goTo(current);
+})();
+</script>
+
+</body>
+</html>

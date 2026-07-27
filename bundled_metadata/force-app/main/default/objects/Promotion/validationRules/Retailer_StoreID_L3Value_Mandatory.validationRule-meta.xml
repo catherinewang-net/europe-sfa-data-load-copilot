@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retailer_StoreID_L3Value_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    $UserRole.DeveloperName == 'Back_office',
+    OR(
+        AND(NOT(ISBLANK(Key_Account__c)), NOT(ISBLANK(Account_External_ID__c))),
+        AND(
+            ISBLANK(Key_Account__c),
+            ISBLANK(Account_External_ID__c),
+            ISPICKVAL(L3_Snacks_Value_Segmentation__c, &quot;&quot;)
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Provide Key Account or Account External ID (not both), or PS Value Segmentation Snacks only when both are blank.</errorMessage>
+</ValidationRule>

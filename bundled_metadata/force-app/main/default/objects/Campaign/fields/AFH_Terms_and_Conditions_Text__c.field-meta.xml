@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_Terms_and_Conditions_Text__c</fullName>
+    <description>Stores campaign‑specific Terms &amp; Conditions content to show on the page.</description>
+    <label>AFH Terms and Conditions Text</label>
+    <length>32768</length>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

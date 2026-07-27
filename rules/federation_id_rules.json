@@ -1,0 +1,13 @@
+{
+  "fields": [
+    {
+      "match_patterns": ["federation id", "federationidentifier", "federation identifier", "user id"],
+      "api_names": ["FederationIdentifier"],
+      "preserve_as_text": true,
+      "leading_zero_rule": true,
+      "expected_length": 9,
+      "missing_leading_zero_pattern": "^9\\d{7}$",
+      "reason": "Federation ID appears too short and starts with 9. Confirm whether a leading zero is missing."
+    }
+  ]
+}

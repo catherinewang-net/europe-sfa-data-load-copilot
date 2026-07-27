@@ -1,0 +1,29 @@
+{
+  "fields": [
+    {
+      "match_patterns": ["ean code", "ean"],
+      "api_names": ["EAN__c", "EAN_Code__c"],
+      "preserve_as_text": true,
+      "leading_zero_rule": true,
+      "allowed_lengths": [8, 13],
+      "optional_checksum": true,
+      "reason": "EAN values must remain text with leading zeroes preserved"
+    },
+    {
+      "match_patterns": ["gln"],
+      "api_names": ["GLN__c"],
+      "preserve_as_text": true,
+      "leading_zero_rule": true,
+      "allowed_lengths": [13],
+      "optional_checksum": true,
+      "reason": "GLN values must remain text with leading zeroes preserved"
+    }
+  ],
+  "live_lookup": {
+    "enabled": true,
+    "objects": [
+      {"object_api_name": "Product2", "identifier_field": "EAN__c", "match_patterns": ["ean code", "ean"]},
+      {"object_api_name": "UoM__c", "identifier_field": "EAN_Code__c", "match_patterns": ["ean code", "ean"]}
+    ]
+  }
+}

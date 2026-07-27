@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ingredients__c</fullName>
+    <description>Stores the detailed list of ingredients.</description>
+    <label>Ingredients</label>
+    <length>32768</length>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

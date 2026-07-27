@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Planned_Duration__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+  OR(
+    ISBLANK(PlannedVisitStartTime),
+    ISBLANK(PlannedVisitEndTime),
+    PlannedVisitEndTime &lt; PlannedVisitStartTime
+  ),
+  NULL,
+  ROUND((PlannedVisitEndTime - PlannedVisitStartTime) * 1440, 0)
+)</formula>
+    <label>Planned Duration</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

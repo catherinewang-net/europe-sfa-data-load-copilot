@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Digital_Platform_Type__c</fullName>
+    <description>TBD</description>
+    <label>Digital Platform Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CEDO</fullName>
+                <default>false</default>
+                <label>CEDO</label>
+            </value>
+            <value>
+                <fullName>CE</fullName>
+                <default>false</default>
+                <label>CE</label>
+            </value>
+            <value>
+                <fullName>DO</fullName>
+                <default>false</default>
+                <label>DO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

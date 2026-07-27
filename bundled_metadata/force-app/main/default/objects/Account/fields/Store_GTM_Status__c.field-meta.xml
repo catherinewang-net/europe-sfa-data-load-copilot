@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store_GTM_Status__c</fullName>
+    <description>Go-To-Market status of a store</description>
+    <label>Store GTM Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Contacted</fullName>
+                <default>false</default>
+                <label>Contacted</label>
+            </value>
+            <value>
+                <fullName>Captured</fullName>
+                <default>false</default>
+                <label>Captured</label>
+            </value>
+            <value>
+                <fullName>Disqualified</fullName>
+                <default>false</default>
+                <label>Disqualified</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>At-Risk</fullName>
+                <default>false</default>
+                <label>At-Risk</label>
+            </value>
+            <value>
+                <fullName>Lost</fullName>
+                <default>false</default>
+                <label>Lost</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

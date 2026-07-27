@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requesting_Apps__c</fullName>
+    <description>This field captures all the apps (For Ex: Savvy  or SFS) that can request user creation using this persona. APP&apos;s should be delimited using semi-colon delimiter</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Requesting Apps</label>
+    <length>100</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

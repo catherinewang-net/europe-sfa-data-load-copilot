@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_Market_Required</fullName>
+    <active>true</active>
+    <description>Market is required when Document Type is populated (EUSFA documents only).</description>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(TEXT(EUSFA_Document_Type__c))),
+    ISBLANK(TEXT(Market__c))
+)</errorConditionFormula>
+    <errorMessage>Market is required for EUSFA documents. Please select a Market.</errorMessage>
+</ValidationRule>

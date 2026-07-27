@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_fields_edits_Cust_Id</fullName>
+    <active>true</active>
+    <description>Prevents Account External Id edits by back office users</description>
+    <errorConditionFormula>AND(
+ISCHANGED(CUST_ID__c),
+NOT(ISNEW()),
+TEXT($User.Persona__c) == &apos;Back-Office&apos;
+)</errorConditionFormula>
+    <errorMessage>Account External Id cannot be updated</errorMessage>
+</ValidationRule>

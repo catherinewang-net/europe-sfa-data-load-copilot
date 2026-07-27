@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Recipe Hub WHAT’S SHAPING SNACKING?</label>
+    <protected>false</protected>
+    <values>
+        <field>AFH_Content_Key__c</field>
+        <value xsi:type="xsd:string">MCL3O36ZRS3NDRTNF3X4PUQGEQHU</value>
+    </values>
+    <values>
+        <field>AFH_Page_Name__c</field>
+        <value xsi:type="xsd:string">Recipe Hub</value>
+    </values>
+</CustomMetadata>

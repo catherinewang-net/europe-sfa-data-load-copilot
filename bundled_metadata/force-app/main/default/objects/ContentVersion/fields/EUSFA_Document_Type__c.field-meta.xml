@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_Document_Type__c</fullName>
+    <label>Document Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>General Document</fullName>
+                <default>false</default>
+                <label>General Document</label>
+            </value>
+            <value>
+                <fullName>Cycle Priorities</fullName>
+                <default>false</default>
+                <label>Commercial Priorities</label>
+            </value>
+            <value>
+                <fullName>Store Specific</fullName>
+                <default>false</default>
+                <label>Store Specific</label>
+            </value>
+            <value>
+                <fullName>Development Task Image</fullName>
+                <default>false</default>
+                <label>Development Task Image</label>
+            </value>
+            <value>
+                <fullName>IBAN Verification</fullName>
+                <default>false</default>
+                <label>IBAN Verification</label>
+            </value>
+            <value>
+                <fullName>Customer Image</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Image</label>
+            </value>
+            <value>
+                <fullName>Operational Task Image</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Operational Task Image</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

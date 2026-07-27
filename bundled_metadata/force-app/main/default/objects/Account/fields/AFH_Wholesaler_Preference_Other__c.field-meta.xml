@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_Wholesaler_Preference_Other__c</fullName>
+    <description>Stores the name of the preferred wholesaler.</description>
+    <externalId>false</externalId>
+    <label>Wholesaler Preference Other</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

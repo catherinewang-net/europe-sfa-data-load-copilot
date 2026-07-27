@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>3RD PARTY SERV OP</fullName>
+        <default>false</default>
+        <label>3RD PARTY SERV OP</label>
+    </customValue>
+    <customValue>
+        <fullName>ACCESS</fullName>
+        <default>false</default>
+        <label>ACCESS</label>
+    </customValue>
+    <customValue>
+        <fullName>AFH VENDING</fullName>
+        <default>false</default>
+        <label>AFH VENDING</label>
+    </customValue>
+    <customValue>
+        <fullName>AIRLINE</fullName>
+        <default>false</default>
+        <label>AIRLINE</label>
+    </customValue>
+    <customValue>
+        <fullName>AIRPORT</fullName>
+        <default>false</default>
+        <label>AIRPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>AMUSEMENT</fullName>
+        <default>false</default>
+        <label>AMUSEMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>ARENA</fullName>
+        <default>false</default>
+        <label>ARENA</label>
+    </customValue>
+    <customValue>
+        <fullName>BOWLING</fullName>
+        <default>false</default>
+        <label>BOWLING</label>
+    </customValue>
+    <customValue>
+        <fullName>BRAND OWNED</fullName>
+        <default>false</default>
+        <label>BRAND OWNED</label>
+    </customValue>
+    <customValue>
+        <fullName>BYPRODUCT</fullName>
+        <default>false</default>
+        <label>BYPRODUCT</label>
+    </customValue>
+    <customValue>
+        <fullName>CASH&amp;CARRY</fullName>
+        <default>false</default>
+        <label>CASH&amp;CARRY</label>
+    </customValue>
+    <customValue>
+        <fullName>CHAIN BAR</fullName>
+        <default>false</default>
+        <label>CHAIN BAR</label>
+    </customValue>
+    <customValue>
+        <fullName>CHAIN BUFFET</fullName>
+        <default>false</default>
+        <label>CHAIN BUFFET</label>
+    </customValue>
+    <customValue>
+        <fullName>CHAIN CAFETERIA</fullName>
+        <default>false</default>
+        <label>CHAIN CAFETERIA</label>
+    </customValue>
+    <customValue>
+        <fullName>CHAIN CONV&amp;GAS</fullName>
+        <default>false</default>
+        <label>CHAIN CONV&amp;GAS</label>
+    </customValue>
+    <customValue>
+        <fullName>CHAIN FSR</fullName>
+        <default>false</default>
+        <label>CHAIN FSR</label>
+    </customValue>
+    <customValue>
+        <fullName>CHAIN HOTEL CASINO</fullName>
+        <default>false</default>
+        <label>CHAIN HOTEL CASINO</label>
+    </customValue>
+    <customValue>
+        <fullName>CHAIN HOTELS</fullName>
+        <default>false</default>
+        <label>CHAIN HOTELS</label>
+    </customValue>
+    <customValue>
+        <fullName>CHAIN LSR</fullName>
+        <default>false</default>
+        <label>CHAIN LSR</label>
+    </customValue>
+    <customValue>
+        <fullName>CHAIN PIZZERIA</fullName>
+        <default>false</default>
+        <label>CHAIN PIZZERIA</label>
+    </customValue>
+    <customValue>
+        <fullName>CHAIN QSR</fullName>
+        <default>false</default>
+        <label>CHAIN QSR</label>
+    </customValue>
+    <customValue>
+        <fullName>COBO</fullName>
+        <default>false</default>
+        <label>COBO</label>
+    </customValue>
+    <customValue>
+        <fullName>COMAN</fullName>
+        <default>false</default>
+        <label>COMAN</label>
+    </customValue>
+    <customValue>
+        <fullName>CONCIERGE AFH</fullName>
+        <default>false</default>
+        <label>CONCIERGE AFH</label>
+    </customValue>
+    <customValue>
+        <fullName>CONCIERGE CONV</fullName>
+        <default>false</default>
+        <label>CONCIERGE CONV</label>
+    </customValue>
+    <customValue>
+        <fullName>CONCIERGE GROCERY</fullName>
+        <default>false</default>
+        <label>CONCIERGE GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>CONV&amp;GAS DIST</fullName>
+        <default>false</default>
+        <label>CONV&amp;GAS DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>DAIRY</fullName>
+        <default>false</default>
+        <label>DAIRY</label>
+    </customValue>
+    <customValue>
+        <fullName>DELI</fullName>
+        <default>false</default>
+        <label>DELI</label>
+    </customValue>
+    <customValue>
+        <fullName>DEPT STORE</fullName>
+        <default>false</default>
+        <label>DEPT STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>DIRECT VENDING</fullName>
+        <default>false</default>
+        <label>DIRECT VENDING</label>
+    </customValue>
+    <customValue>
+        <fullName>EDUCATION ELEMENTARY</fullName>
+        <default>false</default>
+        <label>EDUCATION ELEMENTARY</label>
+    </customValue>
+    <customValue>
+        <fullName>EDUCATION HIGH SCH</fullName>
+        <default>false</default>
+        <label>EDUCATION HIGH SCH</label>
+    </customValue>
+    <customValue>
+        <fullName>EDUCATION MIDDLE SCH</fullName>
+        <default>false</default>
+        <label>EDUCATION MIDDLE SCH</label>
+    </customValue>
+    <customValue>
+        <fullName>EDUCATION OTHER</fullName>
+        <default>false</default>
+        <label>EDUCATION OTHER</label>
+    </customValue>
+    <customValue>
+        <fullName>EDUCATION PRIMARY</fullName>
+        <default>false</default>
+        <label>EDUCATION PRIMARY</label>
+    </customValue>
+    <customValue>
+        <fullName>EMPLOYEE SALES</fullName>
+        <default>false</default>
+        <label>EMPLOYEE SALES</label>
+    </customValue>
+    <customValue>
+        <fullName>EXPORT</fullName>
+        <default>false</default>
+        <label>EXPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>FITNESS CENTER</fullName>
+        <default>false</default>
+        <label>FITNESS CENTER</label>
+    </customValue>
+    <customValue>
+        <fullName>FIXED DISCOUNTER</fullName>
+        <default>false</default>
+        <label>FIXED DISCOUNTER</label>
+    </customValue>
+    <customValue>
+        <fullName>FOBO</fullName>
+        <default>false</default>
+        <label>FOBO</label>
+    </customValue>
+    <customValue>
+        <fullName>FOOD SERVICE DIST</fullName>
+        <default>false</default>
+        <label>FOOD SERVICE DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>FREEZER STORE</fullName>
+        <default>false</default>
+        <label>FREEZER STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>GAMING&amp;CASINO</fullName>
+        <default>false</default>
+        <label>GAMING&amp;CASINO</label>
+    </customValue>
+    <customValue>
+        <fullName>GOLF</fullName>
+        <default>false</default>
+        <label>GOLF</label>
+    </customValue>
+    <customValue>
+        <fullName>GOVT</fullName>
+        <default>false</default>
+        <label>GOVT</label>
+    </customValue>
+    <customValue>
+        <fullName>GROCERY</fullName>
+        <default>false</default>
+        <label>GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>GROCERY DIST</fullName>
+        <default>false</default>
+        <label>GROCERY DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>HOSPITAL&amp;HEALTHCARE</fullName>
+        <default>false</default>
+        <label>HOSPITAL&amp;HEALTHCARE</label>
+    </customValue>
+    <customValue>
+        <fullName>IBS DRUG</fullName>
+        <default>false</default>
+        <label>IBS DRUG</label>
+    </customValue>
+    <customValue>
+        <fullName>IBS DRUG&amp;PHARMACY</fullName>
+        <default>false</default>
+        <label>IBS DRUG&amp;PHARMACY</label>
+    </customValue>
+    <customValue>
+        <fullName>IBS LOCAL CONV&amp;GAS</fullName>
+        <default>false</default>
+        <label>IBS LOCAL CONV&amp;GAS</label>
+    </customValue>
+    <customValue>
+        <fullName>IBS PHARMACY</fullName>
+        <default>false</default>
+        <label>IBS PHARMACY</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIRECT VENDING</fullName>
+        <default>false</default>
+        <label>INDIRECT VENDING</label>
+    </customValue>
+    <customValue>
+        <fullName>INTERCO DOMESTIC</fullName>
+        <default>false</default>
+        <label>INTERCO DOMESTIC</label>
+    </customValue>
+    <customValue>
+        <fullName>INTERCO EXPORT</fullName>
+        <default>false</default>
+        <label>INTERCO EXPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>JAIL PRISON</fullName>
+        <default>false</default>
+        <label>JAIL PRISON</label>
+    </customValue>
+    <customValue>
+        <fullName>LARGE DISCOUNTER</fullName>
+        <default>false</default>
+        <label>LARGE DISCOUNTER</label>
+    </customValue>
+    <customValue>
+        <fullName>LARGE WHOLESALER</fullName>
+        <default>false</default>
+        <label>LARGE WHOLESALER</label>
+    </customValue>
+    <customValue>
+        <fullName>LF MULTIFORMAT</fullName>
+        <default>false</default>
+        <label>LF MULTIFORMAT</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL BAR</fullName>
+        <default>false</default>
+        <label>LOCAL BAR</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL BUFFET</fullName>
+        <default>false</default>
+        <label>LOCAL BUFFET</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL CAFETERIA</fullName>
+        <default>false</default>
+        <label>LOCAL CAFETERIA</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL CONV&amp;GAS</fullName>
+        <default>false</default>
+        <label>LOCAL CONV&amp;GAS</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL FSR</fullName>
+        <default>false</default>
+        <label>LOCAL FSR</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL HOTEL CASINO</fullName>
+        <default>false</default>
+        <label>LOCAL HOTEL CASINO</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL HOTELS</fullName>
+        <default>false</default>
+        <label>LOCAL HOTELS</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL LSR</fullName>
+        <default>false</default>
+        <label>LOCAL LSR</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL PIZZERIA</fullName>
+        <default>false</default>
+        <label>LOCAL PIZZERIA</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL QSR</fullName>
+        <default>false</default>
+        <label>LOCAL QSR</label>
+    </customValue>
+    <customValue>
+        <fullName>MASS MERCHANDISER</fullName>
+        <default>false</default>
+        <label>MASS MERCHANDISER</label>
+    </customValue>
+    <customValue>
+        <fullName>MILITARY&amp;GOVT AFH</fullName>
+        <default>false</default>
+        <label>MILITARY&amp;GOVT AFH</label>
+    </customValue>
+    <customValue>
+        <fullName>MILITARY&amp;GOVT DIST</fullName>
+        <default>false</default>
+        <label>MILITARY&amp;GOVT DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>MISC SALES</fullName>
+        <default>false</default>
+        <label>MISC SALES</label>
+    </customValue>
+    <customValue>
+        <fullName>MOVIE THEATER</fullName>
+        <default>false</default>
+        <label>MOVIE THEATER</label>
+    </customValue>
+    <customValue>
+        <fullName>MULTIFORMAT DIST</fullName>
+        <default>false</default>
+        <label>MULTIFORMAT DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>NATURAL DIST</fullName>
+        <default>false</default>
+        <label>NATURAL DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>NATURAL&amp;GOURMET</fullName>
+        <default>false</default>
+        <label>NATURAL&amp;GOURMET</label>
+    </customValue>
+    <customValue>
+        <fullName>OCCUPATIONAL</fullName>
+        <default>false</default>
+        <label>OCCUPATIONAL</label>
+    </customValue>
+    <customValue>
+        <fullName>OFFICE</fullName>
+        <default>false</default>
+        <label>OFFICE</label>
+    </customValue>
+    <customValue>
+        <fullName>OMNI AFH</fullName>
+        <default>false</default>
+        <label>OMNI AFH</label>
+    </customValue>
+    <customValue>
+        <fullName>OMNI CONV</fullName>
+        <default>false</default>
+        <label>OMNI CONV</label>
+    </customValue>
+    <customValue>
+        <fullName>OMNI GROCERY</fullName>
+        <default>false</default>
+        <label>OMNI GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>PURE PLAY DELIVERY</fullName>
+        <default>false</default>
+        <label>PURE PLAY DELIVERY</label>
+    </customValue>
+    <customValue>
+        <fullName>PURE PLAY SHIP</fullName>
+        <default>false</default>
+        <label>PURE PLAY SHIP</label>
+    </customValue>
+    <customValue>
+        <fullName>RELIGIOUS AFFIL</fullName>
+        <default>false</default>
+        <label>RELIGIOUS AFFIL</label>
+    </customValue>
+    <customValue>
+        <fullName>RETAIL CLUB</fullName>
+        <default>false</default>
+        <label>RETAIL CLUB</label>
+    </customValue>
+    <customValue>
+        <fullName>RETAIL GOVT</fullName>
+        <default>false</default>
+        <label>RETAIL GOVT</label>
+    </customValue>
+    <customValue>
+        <fullName>RETAIL MILITARY</fullName>
+        <default>false</default>
+        <label>RETAIL MILITARY</label>
+    </customValue>
+    <customValue>
+        <fullName>RETAIL STORE</fullName>
+        <default>false</default>
+        <label>RETAIL STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>SF CHAIN LG GROCERY</fullName>
+        <default>false</default>
+        <label>SF CHAIN LG GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>SF CHAIN MED GROCERY</fullName>
+        <default>false</default>
+        <label>SF CHAIN MED GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>SF CHAIN SM GROCERY</fullName>
+        <default>false</default>
+        <label>SF CHAIN SM GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>SF CONFECTIONERY</fullName>
+        <default>false</default>
+        <label>SF CONFECTIONERY</label>
+    </customValue>
+    <customValue>
+        <fullName>SF DELI</fullName>
+        <default>false</default>
+        <label>SF DELI</label>
+    </customValue>
+    <customValue>
+        <fullName>SF DEPT STORE</fullName>
+        <default>false</default>
+        <label>SF DEPT STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>SF DISCO&amp;CLUB</fullName>
+        <default>false</default>
+        <label>SF DISCO&amp;CLUB</label>
+    </customValue>
+    <customValue>
+        <fullName>SF DIY</fullName>
+        <default>false</default>
+        <label>SF DIY</label>
+    </customValue>
+    <customValue>
+        <fullName>SF DRUG&amp;PHARMACY</fullName>
+        <default>false</default>
+        <label>SF DRUG&amp;PHARMACY</label>
+    </customValue>
+    <customValue>
+        <fullName>SF ELECTRONICS</fullName>
+        <default>false</default>
+        <label>SF ELECTRONICS</label>
+    </customValue>
+    <customValue>
+        <fullName>SF FIXED DISCOUNTER</fullName>
+        <default>false</default>
+        <label>SF FIXED DISCOUNTER</label>
+    </customValue>
+    <customValue>
+        <fullName>SF FREEZER STORE</fullName>
+        <default>false</default>
+        <label>SF FREEZER STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>SF GOODS&amp;SERVICES</fullName>
+        <default>false</default>
+        <label>SF GOODS&amp;SERVICES</label>
+    </customValue>
+    <customValue>
+        <fullName>SF GROCERY</fullName>
+        <default>false</default>
+        <label>SF GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>SF KIOSK</fullName>
+        <default>false</default>
+        <label>SF KIOSK</label>
+    </customValue>
+    <customValue>
+        <fullName>SF LIQUOR STORE</fullName>
+        <default>false</default>
+        <label>SF LIQUOR STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>SF LOCAL LG GROCERY</fullName>
+        <default>false</default>
+        <label>SF LOCAL LG GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>SF LOCAL MED GROCERY</fullName>
+        <default>false</default>
+        <label>SF LOCAL MED GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>SF LOCAL SM GROCERY</fullName>
+        <default>false</default>
+        <label>SF LOCAL SM GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>SF MINI MARKET</fullName>
+        <default>false</default>
+        <label>SF MINI MARKET</label>
+    </customValue>
+    <customValue>
+        <fullName>SF NATURAL</fullName>
+        <default>false</default>
+        <label>SF NATURAL</label>
+    </customValue>
+    <customValue>
+        <fullName>SF PERFUMERY</fullName>
+        <default>false</default>
+        <label>SF PERFUMERY</label>
+    </customValue>
+    <customValue>
+        <fullName>SF PRESS RM</fullName>
+        <default>false</default>
+        <label>SF PRESS RM</label>
+    </customValue>
+    <customValue>
+        <fullName>SF SELFSERVE RETAIL</fullName>
+        <default>false</default>
+        <label>SF SELFSERVE RETAIL</label>
+    </customValue>
+    <customValue>
+        <fullName>SF SPECIALTY</fullName>
+        <default>false</default>
+        <label>SF SPECIALTY</label>
+    </customValue>
+    <customValue>
+        <fullName>SF TRAVEL SERVICES</fullName>
+        <default>false</default>
+        <label>SF TRAVEL SERVICES</label>
+    </customValue>
+    <customValue>
+        <fullName>SKI</fullName>
+        <default>false</default>
+        <label>SKI</label>
+    </customValue>
+    <customValue>
+        <fullName>SMALL RETAIL CLUB</fullName>
+        <default>false</default>
+        <label>SMALL RETAIL CLUB</label>
+    </customValue>
+    <customValue>
+        <fullName>SMALL WHOLESALER</fullName>
+        <default>false</default>
+        <label>SMALL WHOLESALER</label>
+    </customValue>
+    <customValue>
+        <fullName>SOCIAL COMMERCE</fullName>
+        <default>false</default>
+        <label>SOCIAL COMMERCE</label>
+    </customValue>
+    <customValue>
+        <fullName>SPAZA</fullName>
+        <default>false</default>
+        <label>SPAZA</label>
+    </customValue>
+    <customValue>
+        <fullName>SPECIAL EVENTS</fullName>
+        <default>false</default>
+        <label>SPECIAL EVENTS</label>
+    </customValue>
+    <customValue>
+        <fullName>SPECIALTY DIST</fullName>
+        <default>false</default>
+        <label>SPECIALTY DIST</label>
+    </customValue>
+    <customValue>
+        <fullName>SPOKE&amp;BIKE</fullName>
+        <default>false</default>
+        <label>SPOKE&amp;BIKE</label>
+    </customValue>
+    <customValue>
+        <fullName>SPORTING</fullName>
+        <default>false</default>
+        <label>SPORTING</label>
+    </customValue>
+    <customValue>
+        <fullName>SUPERCENTER</fullName>
+        <default>false</default>
+        <label>SUPERCENTER</label>
+    </customValue>
+    <customValue>
+        <fullName>TENNIS&amp;RACQUET CLUB</fullName>
+        <default>false</default>
+        <label>TENNIS&amp;RACQUET CLUB</label>
+    </customValue>
+    <customValue>
+        <fullName>THEATRE</fullName>
+        <default>false</default>
+        <label>THEATRE</label>
+    </customValue>
+    <customValue>
+        <fullName>THEME PARK</fullName>
+        <default>false</default>
+        <label>THEME PARK</label>
+    </customValue>
+    <customValue>
+        <fullName>TRADITIONAL EATERY</fullName>
+        <default>false</default>
+        <label>TRADITIONAL EATERY</label>
+    </customValue>
+    <customValue>
+        <fullName>TRAVEL</fullName>
+        <default>false</default>
+        <label>TRAVEL</label>
+    </customValue>
+    <customValue>
+        <fullName>TT CONFECTIONARY</fullName>
+        <default>false</default>
+        <label>TT CONFECTIONARY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT CONV</fullName>
+        <default>false</default>
+        <label>TT CONV</label>
+    </customValue>
+    <customValue>
+        <fullName>TT DELI</fullName>
+        <default>false</default>
+        <label>TT DELI</label>
+    </customValue>
+    <customValue>
+        <fullName>TT DEPT STORE</fullName>
+        <default>false</default>
+        <label>TT DEPT STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>TT DIY</fullName>
+        <default>false</default>
+        <label>TT DIY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT DRUG</fullName>
+        <default>false</default>
+        <label>TT DRUG</label>
+    </customValue>
+    <customValue>
+        <fullName>TT DRUG&amp;PHARMACY</fullName>
+        <default>false</default>
+        <label>TT DRUG&amp;PHARMACY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT ELECTRONICS</fullName>
+        <default>false</default>
+        <label>TT ELECTRONICS</label>
+    </customValue>
+    <customValue>
+        <fullName>TT FREEZER STORE</fullName>
+        <default>false</default>
+        <label>TT FREEZER STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>TT GAS</fullName>
+        <default>false</default>
+        <label>TT GAS</label>
+    </customValue>
+    <customValue>
+        <fullName>TT GOODS&amp;SERVICES</fullName>
+        <default>false</default>
+        <label>TT GOODS&amp;SERVICES</label>
+    </customValue>
+    <customValue>
+        <fullName>TT GROCERY</fullName>
+        <default>false</default>
+        <label>TT GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT KIOSK</fullName>
+        <default>false</default>
+        <label>TT KIOSK</label>
+    </customValue>
+    <customValue>
+        <fullName>TT LARGE GROCERY</fullName>
+        <default>false</default>
+        <label>TT LARGE GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT LIQUOR STORE</fullName>
+        <default>false</default>
+        <label>TT LIQUOR STORE</label>
+    </customValue>
+    <customValue>
+        <fullName>TT MEDIUM GROCERY</fullName>
+        <default>false</default>
+        <label>TT MEDIUM GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT MINI MARKET</fullName>
+        <default>false</default>
+        <label>TT MINI MARKET</label>
+    </customValue>
+    <customValue>
+        <fullName>TT NATURAL</fullName>
+        <default>false</default>
+        <label>TT NATURAL</label>
+    </customValue>
+    <customValue>
+        <fullName>TT PERFUMERY</fullName>
+        <default>false</default>
+        <label>TT PERFUMERY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT PHARMACY</fullName>
+        <default>false</default>
+        <label>TT PHARMACY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT PRESS RM</fullName>
+        <default>false</default>
+        <label>TT PRESS RM</label>
+    </customValue>
+    <customValue>
+        <fullName>TT SELFSERVE RETAIL</fullName>
+        <default>false</default>
+        <label>TT SELFSERVE RETAIL</label>
+    </customValue>
+    <customValue>
+        <fullName>TT SMALL GROCERY</fullName>
+        <default>false</default>
+        <label>TT SMALL GROCERY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT SPECIALTY</fullName>
+        <default>false</default>
+        <label>TT SPECIALTY</label>
+    </customValue>
+    <customValue>
+        <fullName>TT WHOLESALER</fullName>
+        <default>false</default>
+        <label>TT WHOLESALER</label>
+    </customValue>
+    <customValue>
+        <fullName>UNIVERSITY</fullName>
+        <default>false</default>
+        <label>UNIVERSITY</label>
+    </customValue>
+    <customValue>
+        <fullName>VENDING</fullName>
+        <default>false</default>
+        <label>VENDING</label>
+    </customValue>
+    <customValue>
+        <fullName>YOUTH SPORT</fullName>
+        <default>false</default>
+        <label>YOUTH SPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>KEBAB</fullName>
+        <default>false</default>
+        <label>KEBAB</label>
+    </customValue>
+    <customValue>
+        <fullName>BURGER</fullName>
+        <default>false</default>
+        <label>BURGER</label>
+    </customValue>
+    <customValue>
+        <fullName>PIZZA</fullName>
+        <default>false</default>
+        <label>PIZZA</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASSERIE​</fullName>
+        <default>false</default>
+        <label>BRASSERIE​</label>
+    </customValue>
+    <customValue>
+        <fullName>BARS​</fullName>
+        <default>false</default>
+        <label>BARS​</label>
+    </customValue>
+    <customValue>
+        <fullName>RESTAURANTS​</fullName>
+        <default>false</default>
+        <label>RESTAURANTS​</label>
+    </customValue>
+    <customValue>
+        <fullName>COFFEE SHOPS​</fullName>
+        <default>false</default>
+        <label>COFFEE SHOPS​</label>
+    </customValue>
+    <customValue>
+        <fullName>HOTEL​</fullName>
+        <default>false</default>
+        <label>HOTEL​</label>
+    </customValue>
+    <customValue>
+        <fullName>BOITE DE NUIT</fullName>
+        <default>false</default>
+        <label>BOITE DE NUIT</label>
+    </customValue>
+    <customValue>
+        <fullName>BOWLING​</fullName>
+        <default>false</default>
+        <label>BOWLING​</label>
+    </customValue>
+    <customValue>
+        <fullName>CINEMA​</fullName>
+        <default>false</default>
+        <label>CINEMA​</label>
+    </customValue>
+    <customValue>
+        <fullName>AIR DE JEUX / PARCS​</fullName>
+        <default>false</default>
+        <label>AIR DE JEUX / PARCS​</label>
+    </customValue>
+    <customValue>
+        <fullName>JEUX &amp; CASINO</fullName>
+        <default>false</default>
+        <label>JEUX &amp; CASINO</label>
+    </customValue>
+    <customValue>
+        <fullName>STADE</fullName>
+        <default>false</default>
+        <label>STADE</label>
+    </customValue>
+    <description>L4 Local Definition</description>
+    <masterLabel>L4 Local Definition</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

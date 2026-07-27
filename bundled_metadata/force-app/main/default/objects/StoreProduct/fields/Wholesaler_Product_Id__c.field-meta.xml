@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Wholesaler_Product_Id__c</fullName>
+    <description>Id of the related product as stored in the Wholesaler&apos;s ERP system</description>
+    <externalId>true</externalId>
+    <label>Wholesaler Product Id</label>
+    <length>40</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

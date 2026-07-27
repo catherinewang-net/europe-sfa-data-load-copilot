@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>L2_Subchannel__c</fullName>
+    <inlineHelpText>Targets store sub-channel attributes. Only populate the store assignment group (L2/L3/L4) when sales and customer fields are blank.</inlineHelpText>
+    <label>L2 Subchannel</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>L2_Subchannel</valueSetName>
+    </valueSet>
+</CustomField>

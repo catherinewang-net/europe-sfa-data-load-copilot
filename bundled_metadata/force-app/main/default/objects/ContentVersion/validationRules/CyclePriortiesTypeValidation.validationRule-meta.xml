@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CyclePriortiesTypeValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(EUSFA_Document_Type__c, &quot;Cycle Priorities&quot;),
+    OR(
+        ISBLANK(Title),
+        ISBLANK(Description),
+        ISBLANK( Thumbnail_Image__c )
+    )
+)</errorConditionFormula>
+    <errorMessage>For ‘Cycle Priorities’, Title, Description, Thumbnail Image URL are required.</errorMessage>
+</ValidationRule>

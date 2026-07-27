@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location__c</fullName>
+    <label>Asset Location</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Checkout area</fullName>
+                <default>false</default>
+                <label>Checkout area</label>
+            </value>
+            <value>
+                <fullName>Behind the counter</fullName>
+                <default>false</default>
+                <label>Behind the counter</label>
+            </value>
+            <value>
+                <fullName>Self-Service area</fullName>
+                <default>false</default>
+                <label>Self-Service area</label>
+            </value>
+            <value>
+                <fullName>Next To Counter</fullName>
+                <default>false</default>
+                <label>Next To Counter</label>
+            </value>
+            <value>
+                <fullName>Beers, Wines and Spirits</fullName>
+                <default>false</default>
+                <label>Beers, Wines and Spirits</label>
+            </value>
+            <value>
+                <fullName>Soft Drinks</fullName>
+                <default>false</default>
+                <label>Soft Drinks</label>
+            </value>
+            <value>
+                <fullName>Hot Drinks</fullName>
+                <default>false</default>
+                <label>Hot Drinks</label>
+            </value>
+            <value>
+                <fullName>Food To Go</fullName>
+                <default>false</default>
+                <label>Food To Go</label>
+            </value>
+            <value>
+                <fullName>Confectionary</fullName>
+                <default>false</default>
+                <label>Confectionary</label>
+            </value>
+            <value>
+                <fullName>Next To Beverages</fullName>
+                <default>false</default>
+                <label>Next To Beverages</label>
+            </value>
+            <value>
+                <fullName>Central aisle</fullName>
+                <default>false</default>
+                <label>Central aisle</label>
+            </value>
+            <value>
+                <fullName>L_01</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>L_01</label>
+            </value>
+            <value>
+                <fullName>L_02</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>L_02</label>
+            </value>
+            <value>
+                <fullName>L_03</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>L_03</label>
+            </value>
+            <value>
+                <fullName>L_04</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>L_04</label>
+            </value>
+            <value>
+                <fullName>L_05</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>L_05</label>
+            </value>
+            <value>
+                <fullName>L_06</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>L_06</label>
+            </value>
+            <value>
+                <fullName>L_07</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>L_07</label>
+            </value>
+            <value>
+                <fullName>L_08</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>L_08</label>
+            </value>
+            <value>
+                <fullName>L_09</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>L_09</label>
+            </value>
+            <value>
+                <fullName>L_10</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>L_10</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

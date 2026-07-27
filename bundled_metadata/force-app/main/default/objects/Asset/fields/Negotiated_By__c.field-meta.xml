@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Negotiated_By__c</fullName>
+    <label>Negotiated By</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BDR</fullName>
+                <default>false</default>
+                <label>BDR</label>
+            </value>
+            <value>
+                <fullName>Key Account</fullName>
+                <default>false</default>
+                <label>Key Account</label>
+            </value>
+            <value>
+                <fullName>Store Owner</fullName>
+                <default>false</default>
+                <label>Store Owner</label>
+            </value>
+            <value>
+                <fullName>Store Manager</fullName>
+                <default>false</default>
+                <label>Store Manager</label>
+            </value>
+            <value>
+                <fullName>Store Assistant</fullName>
+                <default>false</default>
+                <label>Store Assistant</label>
+            </value>
+            <value>
+                <fullName>N_01</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>N_01</label>
+            </value>
+            <value>
+                <fullName>N_02</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>N_02</label>
+            </value>
+            <value>
+                <fullName>N_03</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>N_03</label>
+            </value>
+            <value>
+                <fullName>N_04</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>N_04</label>
+            </value>
+            <value>
+                <fullName>N_05</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>N_05</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

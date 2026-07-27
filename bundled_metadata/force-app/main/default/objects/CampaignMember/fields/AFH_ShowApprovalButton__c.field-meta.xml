@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_ShowApprovalButton__c</fullName>
+    <description>To display Approval button</description>
+    <formula>AND(
+    ISPICKVAL(AFH_Approval_Status__c, &quot;Pending&quot;),
+
+    OR(
+        ISPICKVAL($User.Persona__c, &quot;AFH Representative&quot;),
+        ISPICKVAL($User.Persona__c, &quot;AFH Approver&quot;)
+    ),
+
+    Campaign.AFH_CampaignKey__c = &quot;Doritos-Loaded&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ShowApprovalButton</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applicable_User_Roles__c</fullName>
+    <description>List of user roles for which this survey is visible; if blank, survey applies to all roles.</description>
+    <label>Applicable User Roles</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sales Rep</fullName>
+                <default>false</default>
+                <label>Sales Rep</label>
+            </value>
+            <value>
+                <fullName>Merchandiser</fullName>
+                <default>false</default>
+                <label>Merchandiser</label>
+            </value>
+            <value>
+                <fullName>Supervisor</fullName>
+                <default>false</default>
+                <label>Supervisor</label>
+            </value>
+            <value>
+                <fullName>Key Account Manager</fullName>
+                <default>false</default>
+                <label>Key Account Manager</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

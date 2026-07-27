@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_Page_Name__c</fullName>
+    <description>Stores the name of the page where the CMS content will be displayed. Used to determine which content keys to return for that page.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Page Name</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>HomePage</fullName>
+                <default>true</default>
+                <label>HomePage</label>
+            </value>
+            <value>
+                <fullName>Brand Hub</fullName>
+                <default>false</default>
+                <label>Brand Hub</label>
+            </value>
+            <value>
+                <fullName>Brand Page</fullName>
+                <default>false</default>
+                <label>Brand Page</label>
+            </value>
+            <value>
+                <fullName>About Us</fullName>
+                <default>false</default>
+                <label>About Us</label>
+            </value>
+            <value>
+                <fullName>Contact Us</fullName>
+                <default>false</default>
+                <label>Contact Us</label>
+            </value>
+            <value>
+                <fullName>POS Kit Page</fullName>
+                <default>false</default>
+                <label>POS Kit Page</label>
+            </value>
+            <value>
+                <fullName>Downloads</fullName>
+                <default>false</default>
+                <label>Downloads</label>
+            </value>
+            <value>
+                <fullName>Profile</fullName>
+                <default>false</default>
+                <label>Profile</label>
+            </value>
+            <value>
+                <fullName>Article Hub</fullName>
+                <default>false</default>
+                <label>Article Hub</label>
+            </value>
+            <value>
+                <fullName>Logo Section</fullName>
+                <default>false</default>
+                <label>Logo Section</label>
+            </value>
+            <value>
+                <fullName>Article</fullName>
+                <default>false</default>
+                <label>Article</label>
+            </value>
+            <value>
+                <fullName>SignUp Page</fullName>
+                <default>false</default>
+                <label>SignUp Page</label>
+            </value>
+            <value>
+                <fullName>Recipe Hub</fullName>
+                <default>false</default>
+                <label>Recipe Hub</label>
+            </value>
+            <value>
+                <fullName>Doritos Loaded Guest</fullName>
+                <default>false</default>
+                <label>Doritos Loaded Guest</label>
+            </value>
+            <value>
+                <fullName>Doritos Loaded Approved</fullName>
+                <default>false</default>
+                <label>Doritos Loaded Approved</label>
+            </value>
+            <value>
+                <fullName>Doritos Loaded Pending</fullName>
+                <default>false</default>
+                <label>Doritos Loaded Pending</label>
+            </value>
+            <value>
+                <fullName>Doritos Loaded No Status</fullName>
+                <default>false</default>
+                <label>Doritos Loaded No Status</label>
+            </value>
+            <value>
+                <fullName>Doritos Loaded</fullName>
+                <default>false</default>
+                <label>Doritos Loaded</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

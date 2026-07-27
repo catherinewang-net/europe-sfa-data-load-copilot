@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>District_Geo__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Route Sales Geo at hierarchy level District. Local Survey matching uses this Id against visit account CTR Route_ID__c values.</description>
+    <inlineHelpText>Search by Route Sales Geo name (e.g. RSG-00000285). Only District-level geos in your market are available.</inlineHelpText>
+    <label>District</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Route_Sales_Geo__c.Hierarchy_Level__c</field>
+            <operation>equals</operation>
+            <value>District</value>
+        </filterItems>
+        <filterItems>
+            <field>Route_Sales_Geo__c.Market__c</field>
+            <operation>equals</operation>
+            <valueField>$User.Market__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Route_Sales_Geo__c</referenceTo>
+    <relationshipLabel>Assessment Task Definitions (District Geo)</relationshipLabel>
+    <relationshipName>Assessment_Task_Definitions_District_Geo</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

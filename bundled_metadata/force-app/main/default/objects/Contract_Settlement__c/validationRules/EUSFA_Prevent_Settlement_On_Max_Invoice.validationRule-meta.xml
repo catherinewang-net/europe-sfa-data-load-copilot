@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_Prevent_Settlement_On_Max_Invoice</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISNEW(),
+Contract_Id__r.Max_Invoices_Reached__c
+)</errorConditionFormula>
+    <errorMessage>Invoice limit reached based on contract duration. No additional invoices can be generated.</errorMessage>
+</ValidationRule>

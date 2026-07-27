@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Task_Scheduler_List_View</fullName>
+    <columns>Type__c</columns>
+    <columns>Market__c</columns>
+    <columns>L1_Channel__c</columns>
+    <columns>L2_Subchannel__c</columns>
+    <columns>L3_Snacks_Val_Segment__c</columns>
+    <columns>EUSFA_Visit_Frequency__c</columns>
+    <columns>EUSFA_Visit_Pattern__c</columns>
+    <columns>ActiveStartDate__c</columns>
+    <columns>ActiveEndDate__c</columns>
+    <columns>IsActive__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Task Scheduler List View</label>
+</ListView>

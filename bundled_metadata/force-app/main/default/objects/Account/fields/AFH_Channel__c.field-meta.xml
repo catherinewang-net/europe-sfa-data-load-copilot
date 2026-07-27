@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_Channel__c</fullName>
+    <description>Stores the customer’s sub‑channel.</description>
+    <label>Sub Channel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Family pub</fullName>
+                <default>false</default>
+                <label>Family pub</label>
+            </value>
+            <value>
+                <fullName>Gastro pub</fullName>
+                <default>false</default>
+                <label>Gastro pub</label>
+            </value>
+            <value>
+                <fullName>Stadia</fullName>
+                <default>false</default>
+                <label>Stadia</label>
+            </value>
+            <value>
+                <fullName>Sports clubs</fullName>
+                <default>false</default>
+                <label>Sports clubs</label>
+            </value>
+            <value>
+                <fullName>Visitor attractions</fullName>
+                <default>false</default>
+                <label>Visitor attractions</label>
+            </value>
+            <value>
+                <fullName>Entertainment venue</fullName>
+                <default>false</default>
+                <label>Entertainment venue</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Dry led</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dry led</label>
+            </value>
+            <value>
+                <fullName>Wet led</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wet led</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

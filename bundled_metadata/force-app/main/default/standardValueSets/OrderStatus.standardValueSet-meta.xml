@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groupingStringEnum>OrderStatusCode</groupingStringEnum>
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Draft</fullName>
+        <default>false</default>
+        <label>Draft</label>
+        <groupingString>Draft</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Canceled</fullName>
+        <default>false</default>
+        <label>Canceled</label>
+        <groupingString>Superseded</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending</fullName>
+        <default>false</default>
+        <label>Pending</label>
+        <groupingString>Draft</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Ordered</fullName>
+        <default>false</default>
+        <label>Ordered</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent To Warehouse</fullName>
+        <default>false</default>
+        <label>Sent To Warehouse</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Delivered</fullName>
+        <default>false</default>
+        <label>Delivered</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Unfulfilled</fullName>
+        <default>false</default>
+        <label>Unfulfilled</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent</fullName>
+        <default>false</default>
+        <label>Sent</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent to External System</fullName>
+        <default>false</default>
+        <label>Sent to External System</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Failed</fullName>
+        <default>false</default>
+        <label>Failed</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EUSFA_DevTaskImage_Kpi_Prohibited</fullName>
+    <active>true</active>
+    <description>KPI ID (KPI_ID__c) only when Document Type is Development Task Image.</description>
+    <errorConditionFormula>AND(
+  NOT(ISPICKVAL(EUSFA_Document_Type__c, &quot;Development Task Image&quot;)),
+  NOT(ISBLANK(TEXT(KPI_ID__c)))
+)</errorConditionFormula>
+    <errorDisplayField>KPI_ID__c</errorDisplayField>
+    <errorMessage>KPI ID can only be set when Document Type is Development Task Image.</errorMessage>
+</ValidationRule>

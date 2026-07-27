@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promotion_Required_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    $UserRole.DeveloperName == &apos;Back-office&apos;,
+    OR(
+        ISBLANK(TEXT(Promotion_Type__c)),
+        ISPICKVAL(Market__c, &apos;&apos;),
+        ISBLANK(StartDate),
+        ISBLANK(EndDate),
+        ISBLANK(Influence_Date__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>For back office users, Promotion Type, Market, Start Date, End Date, and Influence Date are required.</errorMessage>
+</ValidationRule>

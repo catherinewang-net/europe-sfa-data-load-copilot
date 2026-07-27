@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Amount__c</fullName>
+    <formula>IF(
+  ISBLANK(Confirmed_Quantity__c),
+  Quantity * Customer_Price__c,
+  Confirmed_Quantity__c * Customer_Price__c
+)</formula>
+    <label>Total Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

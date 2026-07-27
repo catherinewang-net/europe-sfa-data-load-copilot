@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Only_One_Product_Level_Populated</fullName>
+    <active>false</active>
+    <errorConditionFormula>(
+  (IF(ISBLANK(Product_Line__c),0,1)) +
+  (IF(ISBLANK(Product_Group__c),0,1)) +
+  (IF(ISBLANK(Product_Brand__c),0,1)) +
+  (IF(ISBLANK(Product_Subbrand__c),0,1)) +
+  (IF(ISBLANK(Product_SKU__c),0,1)) +
+  (IF(ISBLANK(Manufacturer__c),0,1))
+) &gt; 1
+||
+(
+  (IF(ISPICKVAL(Container__c, &quot;&quot;),0,1)) +
+  (IF(ISPICKVAL(Size__c, &quot;&quot;),0,1))
+) &gt; 1</errorConditionFormula>
+    <errorMessage>Only one field per hierarchy level is allowed. Select at most one from L1 (Product Line / Product Brand Group / Product Brand / Product Subbrand / Product SKU / Manufacturer) and at most one from L2 (Container / Size).</errorMessage>
+</ValidationRule>

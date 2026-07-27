@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Walkers - Coffee Shop / Café</label>
+    <protected>false</protected>
+    <values>
+        <field>AFH_Capacity__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>AFH_Channel__c</field>
+        <value xsi:type="xsd:string">Coffee Shop / Cafe</value>
+    </values>
+    <values>
+        <field>AFH_Interval_in_Months__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>AFH_Max_Quantity_per_type__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>AFH_POS_Name__c</field>
+        <value xsi:type="xsd:string">Walkers</value>
+    </values>
+    <values>
+        <field>AFH_Type__c</field>
+        <value xsi:type="xsd:string">General</value>
+    </values>
+</CustomMetadata>

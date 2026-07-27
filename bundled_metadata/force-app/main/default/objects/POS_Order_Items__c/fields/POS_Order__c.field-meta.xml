@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POS_Order__c</fullName>
+    <description>Links the order item to the parent POS Order.</description>
+    <label>POS Order</label>
+    <referenceTo>POS_Orders__c</referenceTo>
+    <relationshipLabel>POS Order Items</relationshipLabel>
+    <relationshipName>POS_Order_Items</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

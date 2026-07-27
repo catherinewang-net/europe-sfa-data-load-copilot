@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_PepsiCo_Products_Stocked__c</fullName>
+    <description>Stores which PepsiCo products the business currently stocks. Multiple options can be selected.</description>
+    <label>PepsiCo Products Stocked</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I don&apos;t currently stock PepsiCo</fullName>
+                <default>false</default>
+                <label>I don&apos;t currently stock PepsiCo</label>
+            </value>
+            <value>
+                <fullName>Walkers</fullName>
+                <default>false</default>
+                <label>Walkers</label>
+            </value>
+            <value>
+                <fullName>Doritos</fullName>
+                <default>false</default>
+                <label>Doritos</label>
+            </value>
+            <value>
+                <fullName>Pipers</fullName>
+                <default>false</default>
+                <label>Pipers</label>
+            </value>
+           
+            <value>
+                <fullName>Quaker</fullName>
+                <default>false</default>
+                <isActive>true</isActive>
+                <label>Quaker</label>
+            </value>
+            <value>
+                <fullName>Scotts</fullName>
+                <default>false</default>
+                <label>Scotts</label>
+            </value>
+            <value>
+                <fullName>Snack A Jacks</fullName>
+                <default>false</default>
+                <label>Snack A Jacks</label>
+            </value>
+            <value>
+                <fullName>Smiths</fullName>
+                <default>false</default>
+                <label>Smiths</label>
+            </value>
+            <value>
+                <fullName>Nobby&apos;s Nuts</fullName>
+                <default>false</default>
+                <label>Nobby&apos;s Nuts</label>
+            </value>
+            <value>
+                <fullName>That&apos;s Nuts</fullName>
+                <default>false</default>
+                <label>That&apos;s Nuts</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

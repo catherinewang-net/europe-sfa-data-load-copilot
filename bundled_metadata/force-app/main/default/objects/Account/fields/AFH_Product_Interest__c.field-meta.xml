@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AFH_Product_Interest__c</fullName>
+    <description>Stores the PepsiCo products that the customer is interested in. Multiple options can be selected.</description>
+    <label>Product Interest</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>AFH_Brand</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

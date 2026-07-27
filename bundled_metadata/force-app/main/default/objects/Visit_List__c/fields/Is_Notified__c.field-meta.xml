@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Notified__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Set this field to true, when a late start day notification is sent to sales reps.</description>
+    <label>Is Notified</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

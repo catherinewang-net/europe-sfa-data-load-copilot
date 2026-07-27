@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Task_Type__c</fullName>
+    <label>Task Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Main Space Audit (Snacks)</fullName>
+                <default>false</default>
+                <label>Main Space Audit (Snacks)</label>
+            </value>
+            <value>
+                <fullName>Main Space Audit (Beverages)</fullName>
+                <default>false</default>
+                <label>Main Space Audit (Beverages)</label>
+            </value>
+            <value>
+                <fullName>Secondary Space Audit</fullName>
+                <default>false</default>
+                <label>Secondary Space Audit</label>
+            </value>
+            <value>
+                <fullName>SKU Audit</fullName>
+                <default>false</default>
+                <label>SKU Audit</label>
+            </value>
+            <value>
+                <fullName>PS-related Surveys</fullName>
+                <default>false</default>
+                <label>PS-related Surveys</label>
+            </value>
+            <value>
+                <fullName>Local Survey</fullName>
+                <default>false</default>
+                <label>Local Survey</label>
+            </value>
+            <value>
+                <fullName>Census</fullName>
+                <default>false</default>
+                <label>Census</label>
+            </value>
+            <value>
+                <fullName>POSM Audit</fullName>
+                <default>false</default>
+                <label>POSM Audit</label>
+            </value>
+            <value>
+                <fullName>Main Space Audit</fullName>
+                <default>false</default>
+                <label>Main Space Audit</label>
+            </value>
+            <value>
+                <fullName>Retail Promotion</fullName>
+                <default>false</default>
+                <label>Retail Promotion</label>
+            </value>         
+            <value>
+                <fullName>Total Space Audit</fullName>
+                <default>false</default>
+                <label>Total Space Audit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

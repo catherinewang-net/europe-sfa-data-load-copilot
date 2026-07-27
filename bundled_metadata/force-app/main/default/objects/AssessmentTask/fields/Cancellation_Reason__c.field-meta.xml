@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Reason__c</fullName>
+    <label>Cancellation Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+             <value>
+                <fullName>Competitor Products</fullName>
+                <default>false</default>
+                <label>Competitor Products</label>
+            </value>
+            <value>
+                <fullName>Number of Displays</fullName>
+                <default>false</default>
+                <label>Number of Displays</label>
+            </value>
+            <value>
+                <fullName>Missing MSL (Distributed)</fullName>
+                <default>false</default>
+                <label>Missing MSL (Distributed)</label>
+            </value>
+            <value>
+                <fullName>Missing MSL (Available)</fullName>
+                <default>false</default>
+                <label>Missing MSL (Available)</label>
+            </value>
+            <value>
+                <fullName>Branded POS</fullName>
+                <default>false</default>
+                <label>Branded POS</label>
+            </value>
+            <value>
+                <fullName>Combo Execution</fullName>
+                <default>false</default>
+                <label>Combo Execution</label>
+            </value>
+            <value>
+                <fullName>Cooler Removal</fullName>
+                <default>false</default>
+                <label>Cooler Removal</label>
+            </value>
+            <value>
+                <fullName>Make Profitable Cooler</fullName>
+                <default>false</default>
+                <label>Make Profitable Cooler</label>
+            </value>
+            <value>
+                <fullName>Main PoG Compilance</fullName>
+                <default>false</default>
+                <label>Main PoG Compilance</label>
+            </value>
+            <value>
+                <fullName>Main Space Share</fullName>
+                <default>false</default>
+                <label>Main Space Share</label>
+            </value>
+            <value>
+                <fullName>Menu Visibility</fullName>
+                <default>false</default>
+                <label>Menu Visibility</label>
+            </value>
+            <value>
+                <fullName>digital Platform Visibility</fullName>
+                <default>false</default>
+                <label>digital Platform Visibility</label>
+            </value>
+            <value>
+                <fullName>Secondary Space Compliance</fullName>
+                <default>false</default>
+                <label>Secondary Space Compliance</label>
+            </value>
+            <value>
+                <fullName>Carry Forward</fullName>
+                <default>false</default>
+                <label>Carry Forward</label>
+            </value>
+            <value>
+                <fullName>No time to execute</fullName>
+                <default>false</default>
+                <label>No time to execute</label>
+            </value>
+            <value>
+                <fullName>Store conditions not suitable</fullName>
+                <default>false</default>
+                <label>Store conditions not suitable</label>
+            </value>
+            <value>
+                <fullName>Manager unavailable</fullName>
+                <default>false</default>
+                <label>Manager unavailable</label>
+            </value>
+            <value>
+                <fullName>Task does not apply</fullName>
+                <default>false</default>
+                <label>Task does not apply</label>
+            </value>
+            <value>
+                <fullName>Technical issue / connectivity problem</fullName>
+                <default>false</default>
+                <label>Technical issue / connectivity problem</label>
+            </value>
+            <value>
+                <fullName>Pepiris Failure</fullName>
+                <default>false</default>
+                <label>Pepiris Failure</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

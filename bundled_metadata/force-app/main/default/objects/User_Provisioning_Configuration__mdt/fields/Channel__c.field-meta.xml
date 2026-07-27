@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel__c</fullName>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>Channel</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>AWAY FROM HOME</fullName>
+                <default>true</default>
+                <label>AWAY FROM HOME</label>
+            </value>
+            <value>
+                <fullName>ORGANIZED TRADE</fullName>
+                <default>false</default>
+                <label>ORGANIZED TRADE</label>
+            </value>
+            <value>
+                <fullName>TRADITIONAL SALE</fullName>
+                <default>false</default>
+                <label>TRADITIONAL SALE</label>
+            </value>
+            <value>
+                <fullName>TRADITIONAL TRADE</fullName>
+                <default>false</default>
+                <label>TRADITIONAL TRADE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

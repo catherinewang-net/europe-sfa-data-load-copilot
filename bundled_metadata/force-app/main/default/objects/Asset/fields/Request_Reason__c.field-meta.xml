@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Reason__c</fullName>
+    <label>Request Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>REN</fullName>
+                <default>false</default>
+                <label>Reducing coolers number</label>
+            </value>
+            <value>
+                <fullName>CO</fullName>
+                <default>false</default>
+                <label>Closed store</label>
+            </value>
+            <value>
+                <fullName>LV</fullName>
+                <default>false</default>
+                <label>Low level of acquisitions</label>
+            </value>
+            <value>
+                <fullName>SC</fullName>
+                <default>false</default>
+                <label>Customer’s request</label>
+            </value>
+            <value>
+                <fullName>SA</fullName>
+                <default>false</default>
+                <label>Removal Seasonal allocation</label>
+            </value>
+            <value>
+                <fullName>IN</fullName>
+                <default>false</default>
+                <label>Inappropriately used</label>
+            </value>
+            <value>
+                <fullName>RE</fullName>
+                <default>false</default>
+                <label>Replacing cooler</label>
+            </value>
+            <value>
+                <fullName>NE</fullName>
+                <default>false</default>
+                <label>New store</label>
+            </value>
+            <value>
+                <fullName>CE</fullName>
+                <default>false</default>
+                <label>Existing store</label>
+            </value>
+            <value>
+                <fullName>CE/AD</fullName>
+                <default>false</default>
+                <label>Existing store, additional cooler</label>
+            </value>
+            <value>
+                <fullName>SE</fullName>
+                <default>false</default>
+                <label>Special event</label>
+            </value>
+            <value>
+                <fullName>SB</fullName>
+                <default>false</default>
+                <label>Install Seasonal allocation</label>
+            </value>
+            <value>
+                <fullName>DAM</fullName>
+                <default>false</default>
+                <label>Replacing broken cooler</label>
+            </value>
+            <value>
+                <fullName>OUTF</fullName>
+                <default>false</default>
+                <label>Replacing outdated cooler</label>
+            </value>
+            <value>
+                <fullName>EXCAP</fullName>
+                <default>false</default>
+                <label>Different capacity replacement</label>
+            </value>
+            <value>
+                <fullName>MICC</fullName>
+                <default>false</default>
+                <label>Client closed/Does not exist</label>
+            </value>
+            <value>
+                <fullName>MIDE</fullName>
+                <default>false</default>
+                <label>Decrease of Eqp qty</label>
+            </value>
+            <value>
+                <fullName>MIEB</fullName>
+                <default>false</default>
+                <label>Eqp broken</label>
+            </value>
+            <value>
+                <fullName>MIES</fullName>
+                <default>false</default>
+                <label>Event/Seasonal</label>
+            </value>
+            <value>
+                <fullName>MILE</fullName>
+                <default>false</default>
+                <label>Low Efficiency</label>
+            </value>
+            <value>
+                <fullName>MIOT</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>MIRE</fullName>
+                <default>false</default>
+                <label>Replacement</label>
+            </value>
+            <value>
+                <fullName>MISC</fullName>
+                <default>false</default>
+                <label>Stop of cooperation</label>
+            </value>
+            <value>
+                <fullName>MRCR</fullName>
+                <default>false</default>
+                <label>Closed for Renovation</label>
+            </value>
+            <value>
+                <fullName>MROE</fullName>
+                <default>false</default>
+                <label>Use of Own Eqp</label>
+            </value>
+            <value>
+                <fullName>MRVP</fullName>
+                <default>false</default>
+                <label>Virtual Pickup</label>
+            </value>
+            <value>
+                <fullName>MIFE</fullName>
+                <default>false</default>
+                <label>Found Equipment</label>
+            </value>
+            <value>
+                <fullName>MIIE</fullName>
+                <default>false</default>
+                <label>Increase Eqp qty</label>
+            </value>
+            <value>
+                <fullName>MINC</fullName>
+                <default>false</default>
+                <label>New client</label>
+            </value>
+            <value>
+                <fullName>MIVI</fullName>
+                <default>false</default>
+                <label>Virtual Install</label>
+            </value>
+            <value>
+                <fullName>MSCT</fullName>
+                <default>false</default>
+                <label>Connection - Tower</label>
+            </value>
+            <value>
+                <fullName>MSET</fullName>
+                <default>false</default>
+                <label>Equipment Check - Tower</label>
+            </value>
+            <value>
+                <fullName>MSOT</fullName>
+                <default>false</default>
+                <label>Equipment Audit - Tower</label>
+            </value>
+            <value>
+                <fullName>MSRT</fullName>
+                <default>false</default>
+                <label>Equipment Reposition - Tower</label>
+            </value>
+            <value>
+                <fullName>MSST</fullName>
+                <default>false</default>
+                <label>Equipment Shutdown - Tower</label>
+            </value>
+            <value>
+                <fullName>MSVT</fullName>
+                <default>false</default>
+                <label>Repair - Tower</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

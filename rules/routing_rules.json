@@ -1,0 +1,30 @@
+{
+  "templates": {
+    "Routing Import": {
+      "route_field": "*Route",
+      "customer_field": "*Customer External Id",
+      "invalid_route_values": ["0", "0.0"],
+      "start_date_fields": ["*Effective From(dd/MM/yyyy)"],
+      "end_date_fields": ["*Effective To(dd/MM/yyyy)"],
+      "sequence_fields": [
+        "Monday Sequence",
+        "Tuesday Sequence",
+        "Wednesday Sequence",
+        "Thursday Sequence",
+        "Friday Sequence",
+        "Saturday Sequence",
+        "Sunday Sequence"
+      ],
+      "detect_overlapping_periods": true,
+      "reject_past_end_dates": true,
+      "require_unique_sequence_per_route_day": true
+    },
+    "Customer to Route": {
+      "route_field": "*Route External Id",
+      "customer_field": "*Customer External Id",
+      "duplicate_key_fields": ["*Route External Id", "*Customer External Id"],
+      "required_fields": ["*Route External Id"],
+      "large_file_row_threshold": 8000
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GeneralDocumentTypeValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(	
+       ISPICKVAL(EUSFA_Document_Type__c, &quot;General Document&quot;),
+       ISPICKVAL(EUSFA_Document_Type__c, &quot;Cycle Priorities&quot;)
+    ),
+
+    OR(
+        NOT(ISBLANK(EUSFA_Key_Account__c)),
+        NOT(ISBLANK(EUSFA_Customer__c)),
+        NOT(ISPICKVAL(EUSFA_PS_L3_Bevs_Value_Segmt__c, &quot;&quot;)),
+        NOT(ISPICKVAL(EUSFA_L2_Subchannel__c, &quot;&quot;)),
+        NOT(ISPICKVAL(EUSFA_PS_L3_Snack_Value_Segmt__c, &quot;&quot;))
+    )
+)</errorConditionFormula>
+    <errorMessage>For &quot;General Document/Cycle Priorities&quot; document type, Customer Hierarchy fields must be blank.</errorMessage>
+</ValidationRule>

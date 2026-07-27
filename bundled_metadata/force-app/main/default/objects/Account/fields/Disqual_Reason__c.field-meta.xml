@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disqual_Reason__c</fullName>
+    <description>Reason why the lead was disqualified</description>
+    <label>Disqualification Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Store Closed</fullName>
+                <default>false</default>
+                <label>Store Closed</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Competitor Exclusive Agreement</fullName>
+                <default>false</default>
+                <label>Competitor Exclusive Agreement</label>
+            </value>
+            <value>
+                <fullName>Location Not Suitable</fullName>
+                <default>false</default>
+                <label>Location Not Suitable</label>
+            </value>
+            <value>
+                <fullName>Legal / Compliance Restriction</fullName>
+                <default>false</default>
+                <label>Legal / Compliance Restriction</label>
+            </value>
+            <value>
+                <fullName>Already Serviced by Another Channel</fullName>
+                <default>false</default>
+                <label>Already Serviced by Another Channel</label>
+            </value>
+            <value>
+                <fullName>Financial / Credit Issues</fullName>
+                <default>false</default>
+                <label>Financial / Credit Issues</label>
+            </value>
+            <value>
+                <fullName>Duplicate Lead / Already Converted</fullName>
+                <default>false</default>
+                <label>Duplicate Lead / Already Converted</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

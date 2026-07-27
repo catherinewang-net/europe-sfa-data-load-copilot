@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Unit__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Optional sales hierarchy filter for surveys that should target a specific Sales Unit. Leave customer/store assignment groups empty when this is populated.</inlineHelpText>
+    <label>Sales Unit</label>
+    <referenceTo>CustomerToRoute__c</referenceTo>
+    <relationshipLabel>Assessment Task Definitions (Sales Unit)</relationshipLabel>
+    <relationshipName>Assessment_Task_Definitions_Sales_Unit</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

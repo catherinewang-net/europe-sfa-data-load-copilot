@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Reason__c</fullName>
+    <label>Request Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>Existing store</fullName>
+                <default>false</default>
+                <label>Existing store</label>
+            </value>
+            <value>
+                <fullName>Existing store, additional cooler</fullName>
+                <default>false</default>
+                <label>Existing store, additional cooler</label>
+            </value>
+            <value>
+                <fullName>New client</fullName>
+                <default>false</default>
+                <label>New client</label>
+            </value>
+            <value>
+                <fullName>Replacement</fullName>
+                <default>false</default>
+                <label>Replacement</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Found Equipment</fullName>
+                <default>false</default>
+                <label>Found Equipment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

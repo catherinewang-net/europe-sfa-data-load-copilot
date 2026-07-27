@@ -1,0 +1,15 @@
+﻿{
+    "contents": [
+        "sfdx-project.json",
+        "force-app/main/default/globalValueSets",
+        "force-app/main/default/standardValueSets",
+        "force-app/main/default/objects",
+        "force-app/main/default/customMetadata"
+    ],
+    "branch": null,
+    "source_repo": "EUSFA_SFDX_REPO (local clone — path not stored in manifest)",
+    "notes": "Read-only validation metadata only. No Apex, LWC, git history, or secrets.",
+    "commit_date": null,
+    "bundled_at_utc": "2026-07-27T16:03:00.8240939Z",
+    "commit_hash": null
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sellable_Return_Reason__c</fullName>
+    <label>Sellable Return Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Order entry error</fullName>
+                <default>false</default>
+                <label>Order entry error</label>
+            </value>
+            <value>
+                <fullName>Order loading error</fullName>
+                <default>false</default>
+                <label>Order loading error</label>
+            </value>
+            <value>
+                <fullName>Not delivered</fullName>
+                <default>false</default>
+                <label>Not delivered</label>
+            </value>
+            <value>
+                <fullName>Not accepted BBE date</fullName>
+                <default>false</default>
+                <label>Not accepted BBE date</label>
+            </value>
+            <value>
+                <fullName>Empties return</fullName>
+                <default>false</default>
+                <label>Empties return</label>
+            </value>
+            <value>
+                <fullName>Not received by customer</fullName>
+                <default>false</default>
+                <label>Not received by customer</label>
+            </value>
+            <value>
+                <fullName>Return from customer, agreement with sales (goods)</fullName>
+                <default>false</default>
+                <label>Return from customer, agreement with sales (goods)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

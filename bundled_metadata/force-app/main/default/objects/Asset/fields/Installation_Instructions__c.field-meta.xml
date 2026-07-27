@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Installation_Instructions__c</fullName>
+    <label>Installation Instructions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Central aisle</fullName>
+                <default>false</default>
+                <label>Central aisle</label>
+            </value>
+            <value>
+                <fullName>Checkout area</fullName>
+                <default>false</default>
+                <label>Checkout area</label>
+            </value>
+            <value>
+                <fullName>Behind the counter facing the customers</fullName>
+                <default>false</default>
+                <label>Behind the counter facing the customers</label>
+            </value>
+            <value>
+                <fullName>Self-service area in the store</fullName>
+                <default>false</default>
+                <label>Self-service area in the store</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

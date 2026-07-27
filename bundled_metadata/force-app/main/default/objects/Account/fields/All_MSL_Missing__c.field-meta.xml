@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_MSL_Missing__c</fullName>
+    <description>Checkbox to display when all MSL products are missing</description>
+    <defaultValue>false</defaultValue>
+    <label>All MSL Missing</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>
